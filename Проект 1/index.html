@@ -5,48 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">  
     <link rel="stylesheet" type="text/css" href="css/mysite.css">
 </head>
 <body class="body">
     <section class="block1">
         <header>
-            <div class="block1_head">
-                <div class="block1_link">
-                    <a href="http://university.innopolis.ru" target="_blank">  
-                        <svg width="156" height="40">
-                            <use xlink:href="#link_logo">
+            <div class="block1_link">
+                <a href="http://university.innopolis.ru" target="_blank">  
+                    <svg width="156" height="40">
+                        <use xlink:href="#link_logo">
+                    </svg>
+                </a>
+            </div>
+            <div class="block1_menu">
+                <div class="block1_addres">
+                    <a class="block1_contact" href="tel:+78003551256">+7 (800) 355 12-56</a> 
+                    <a class="block1_mail" href="mailto:kino@innopolis.ru">kino@innopolis.ru</a> 
+                    <a class="block1_contact" href="#">ул.Спортивная д.1</a> 
+                    <a class="block1_phone" href="#" target="_blank">  
+                        <svg width="10" height="10">
+                            <use xlink:href="#phone">
                         </svg>
+                        <span>Заказать звонок</span>
                     </a>
-                </div>
-                <div class="block1_menu">
-                    <div class="block1_addres">
-                        <a class="block1_contact" href="tel:+78003551256">+7 (800) 355 12-56</a> 
-                        <a class="block1_contact mail" href="mailto:kino@innopolis.ru">kino@innopolis.ru</a> 
-                        <a class="block1_contact" href="#">ул.Спортивная д.1</a> 
-                        <a class="block1_phone" href="#" target="_blank">  
-                            <svg width="10" height="10">
-                                <use xlink:href="#phone">
-                            </svg>
-                            <span>Заказать звонок</span>
-                        </a>
-                        <div class="block1_lang">
-                            <span>RU</span>
-                            <a href="#" target="_blank">  
-                                <svg  class="block3_link" width="8" height="4">
-                                    <use xlink:href="#lang">
+                    <nav>
+                        <div class="lang-menu">
+                            <a href="#" class="lang-menu selected-lang">
+                                <span class="selected-lang">RU</span>
+                                <svg class="selected-lang" width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"/>
                                 </svg>
+                            </a> 
+                            <a href="#">   
+                                <ul>
+                                    <li>
+                                        <a href="#" class="ru">RU</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="en">EN</a>
+                                    </li>
+                                </ul>						
                             </a>
                         </div>
-                    </div>
-                    <div class="block1_nav">
-                        <ul style="list-style-type: none;">
-                            <li><a href="#event_details">EVENT DETAILS</a></li>
-                            <li><a href="#speakers">SPEAKERS</a></li>
-                            <li><a href="#sponsors">SPONSORS</a></li>
-                            <li><a href="#past_events">PAST EVENTS</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
-                        </ul>
-                    </div>
+                    </nav>
+                </div>
+                <div class="block1_nav">
+                    <ul style="list-style-type: none;">
+                        <li><a href="#event_details">EVENT DETAILS</a></li>
+                        <li><a href="#speakers">SPEAKERS</a></li>
+                        <li><a href="#sponsors">SPONSORS</a></li>
+                        <li><a href="#past_events">PAST EVENTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -249,7 +260,7 @@
     </section>
     <section>
         <div class="container8">
-            <div><img src="/images/spectators.jpg"></div>
+            <div><img  class="container8" src="/images/spectators.jpg"></div>
             <div class="div8">
                 <p class="p8">Обратная связь</p>
                 <form action="/order">
@@ -279,12 +290,11 @@
                             <textarea name="feedback">Напишите свой отзыв</textarea>
                         </label>
                     </div>
-                    <div class="div8_2">
-                        <input  id="cb1" type="checkbox" required>
-                        <label for="cb1">
-                            Я согласен на обработку своих персональных данных
-                        </label>
-                    </div>
+                    <label class="div8_2">
+                        <input type="checkbox" class="checkbox">
+                        <span class="fake_checkbox"></span>
+                        Я согласен на обработку своих персональных данных
+                    </label>
                     <div>
                         <button class="div8_3">Послать</button>
                     </div>
@@ -351,9 +361,13 @@
             <path d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z" fill="#333333"/>
         </symbol>
         <symbol id="lang" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"/>
         </symbol>
                         
     </svg>
 </body>
 </html>
+<svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z" fill="white"/>
+    </svg>
+    
