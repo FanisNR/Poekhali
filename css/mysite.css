@@ -1,103 +1,820 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/** Reset */
+/** Шрифты */
+@font-face {
+    display: swap;
+	font-family: '100IBMPlexSans-Thin';
+	src: url('../fonts/100IBMPlexSans-Thin.eot');
+	src: local('☺'), url('../fonts/100IBMPlexSans-Thin.woff') format('woff'), url('../fonts/100IBMPlexSans-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+    display: swap;
+	font-family: '400IBMPlexSans-Regular';
+	src: url('../fonts/400IBMPlexSans-Regular.eot');
+	src: local('☺'), url('../fonts/400IBMPlexSans-Regular.woff') format('woff'), url('../fonts/400IBMPlexSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    display: swap;
+	font-family: '500IBMPlexSans-Medium';
+	src: url('../fonts/500IBMPlexSans-Medium.eot');
+	src: local('☺'), url('../fonts/500IBMPlexSans-Medium.woff') format('woff'), url('../fonts/500IBMPlexSans-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+    display: swap;
+	font-family: '600IBMPlexSans-SemiBold';
+	src: url('../fonts/600IBMPlexSans-SemiBold.eot');
+	src: local('☺'), url('../fonts/600IBMPlexSans-SemiBold.woff') format('woff'), url('../fonts/600IBMPlexSans-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+    display: swap;
+	font-family: '700IBMPlexSans-Bold';
+	src: url('../fonts/700IBMPlexSans-Bold.eot');
+	src: local('☺'), url('../fonts/700IBMPlexSans-Bold.woff') format('woff'), url('../fonts/700IBMPlexSans-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+/** Общие стили ========================================================*/
+
+.cinema{
+    font-family: IBM Plex Sans, sans-serif;
+}
+.part {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.29;
+    color: #A3CC40;
+
+}
+/** Сетка макета */
+/** Компоненты */
+/** Медиа – правила */
 
 
-.block3_table {
-    border-collapse: collapse;
-    width: 849px;
-    border-radius: 10px;
-    overflow: hidden;
-    font-family: IBM Plex Sans;
+/* Шапка ========================================================*/
+
+.header {
+   
+    margin-top: 50px;
+    position: absolute;
+    z-index: 1000;
+    max-width: 100%  
 }
-.block3_table th {
-    background: #A3CC40;
-    padding: 10px 20px;
-    text-align: left;  
+.header__link{    
+    float: left;
+    padding-left: 90px; 
+    padding-right: 45px;   
 }
-.block3_link {
+.header__contact { 
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    color:#FFFFFF;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+.header__contact:hover {
+    color: #a3cc40;
+}
+
+.cinema__mail{
     text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.3;
-    color: #fff;
+    color:#FFFFFF;
+    border-bottom: 1px solid;
+    padding-bottom: 0;
+    display: inline;
+    margin-right: 50px;
+    transition: 0.2s;
 }
-.block3_link svg {
-    display: inline-block;
-    vertical-align: middle;
+.cinema__mail:hover {
+    color: #a3cc40;
 }
-.block3_table td {
-    background: #373737;
-    padding: 12px 22px;
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.3;
+.cinema__tel,
+.cinema__addres {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    color:#FFFFFF;
+    text-decoration: none;
+    margin-right: 55px;
+    transition: 0.2s;
 }
-.block3_table tr:nth-child(2n+1) td {
-    background: #4C4D4F;
+.cinema__tel:hover,
+.cinema__addres:hover {
+    color: #a3cc40;
+}
+.phone{    
+    text-decoration: none;
+    border-radius: 6px;
+    background: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    color: #333333;
+    margin-right: 120px;
+    
+}
+.header__lang{
+    float: right;
+    width: 30px;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+	color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform:uppercase
+}
+.header__lang_svg{
+    fill: #FFFFFF;
+    margin-left: -3px;
+    vertical-align: middle;  
+}
+.header__lang ul {
+    margin: -1px;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+.header__lang:hover ul {
+    display: block;
+    padding-top: 5px;
+    transition: 0.2s;
+}
+.header__lang ul li {
+    list-style: none;
+    text-align: left;
+}
+.header__lang ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.header__lang ul li a:hover,
+.header__lang_title:hover  {
+    color: #A3CC40;
 }
 
-.container2 {
+.header__lang_title{
+    position: relative;
+    box-sizing: border-box;
+}
+.header__lang:hover svg {
+    transform: rotate(180deg); 
+    fill: #A3CC40;
+}
+.header__lang:hover span {
+    color: #A3CC40;
+}
+
+.header__menu  {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+}  
+.header__menu  ul{
+    list-style:none;
+    height:16px;
+}  
+.header__menu  ul li{
+    float:left;
+}  
+.header__menu  ul li a{
+    color:#fff;
+    display:block;
+    margin-right: 65px;
+    text-transform:uppercase;
+    text-decoration:none;
+    line-height: 1.33;
+}  
+.header__menu  ul li a:hover{
+    color: #a3cc40;
+}
+
+/*  Приветствие ========================================================*/
+.intro__subtitle {
+    color: #FFFFFF;
+}
+
+.intro {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 695px;
+    background: url('../images/cinema_hall.jpg') no-repeat center / cover, pink;
+    overflow: hidden;
+}
+.intro::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    border-top: 125px solid transparent;
+    border-right: 100vw solid #FFFFFF;
+}
+.intro__inner {
+    width: 100%;
+    /*max-width: 850px;*/
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro__title {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 68px;
+    line-height: 1.29;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.intro__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41px;
+    line-height: 1.29;
+    text-align: center;
+    color: #FFFFFF;
+}
+.intro__footer {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 27px 39px rgba(163, 204, 64, 0.18);
+    border-radius: 10px;
+    width: 426px;
+    height: 221px;
+    margin-top: 525px;
+    margin-left: 50%;
+    z-index: 1000;
+}
+.intro__footer_point {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 43px;
+    color: #333333;
+    text-align: left;
+}
+.intro__footer_item {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 14px;
+    color: #333333;
+    text-align: left;
+}
+.intro__footer_item:last-child {
+    padding-top: 10px;
+}
+/* о нас ========================================================*/
+.about_us {
     width: 850px;
     margin: 0 auto;
-    padding: 0 27px;
 }
-.parent2 {
+
+
+.about_us__container {
+    margin-top: 95px;
+}
+
+.about_us__block {
     overflow: hidden;
-    margin: 0 -27px;
+    margin: 0 -28px;
+    
 }
-.div2 {
+.about_us__part {
     float: left;
-    width: 33.33%;
-    padding: 0 27px;
     box-sizing: border-box;
-    font-family: IBM Plex Sans;
     color: #333333;
+    width: 33.333%;
+    padding: 0 28px;
 }
-.div2 img {
+.about_us__part img {
     width: 245px;
     height: 169px;
 }
-.p2 {    
+.about_us__title {    
     width: 245px;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.3;
     text-align: center;
+    padding-top: 45px;
 }
-.p2.1 { 
+.about_us__subtitle { 
     width: 245px;
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
     line-height: 1.3;
     text-align:center;
+    padding-top: 30px;
+    padding-bottom: 45px;
 }
 
-.container8 {
-    width: 767px;
+/* расписание  ========================================================*/
+
+
+.schedule h2 {
+    width: 850px;
     margin: 0 auto;
+}
+.schedule__block {
+    margin-top: 95px;
+}
+.schedule__table {
+    border-collapse: collapse;
+    width: 850px;
+    margin: 0 auto;
+    border-radius: 10px;
     overflow: hidden;
 }
-.container8 img {
+.schedule__table th {
+    background: #A3CC40;
+    padding: 10px 20px;
+    text-align: left;  
+}
+.schedule__link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #fff;
+}
+.schedule__link svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+.schedule__table td {
+    padding: 12px 22px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.3;
+}
+.schedule__dark_ground {
+    background: #373737;
+}
+.schedule__gray_ground {
+    background: #4C4D4F;
+}
+.schedule__subtitle {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.27x;
+    text-align: center;
+}
+
+/* Подарки ===============================================*/
+
+
+.present {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: right;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 695px;
+    background: url('../images/Filmstock.jpg') no-repeat center / cover, pink;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.present::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: block;
+    border-bottom: 100px solid transparent;
+    border-left: 100vw solid #FFFFFF;
+}
+.present::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    border-top: 100px solid transparent;
+    border-right: 100vw solid #FFFFFF;
+}
+.present__block {
+    width: 850px;
+    margin: 0 auto;
+}
+.presnt__block {
+    padding-top: 50px;
+    width: 540px;
+    float: right;
+}
+.present__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #FFFFFF;
+}
+.present__title_middle {
+    padding: 10px;
+    text-indent: 15px
+}
+.present__button {
+    width: 850px;
+    margin: 0 auto;
+    float: right;
+    padding-top: 30px;
+}
+.present__btn {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.28;
+    color: #FFFFFF;
+    background: #A3CC40;
+    border-radius: 6px;
+    width: 190px;
+    Height: 31px;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+  
+}
+.present__gift {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -230px;
+}
+.present__block h2 {
+    color: #FFFFFF;
+}
+
+/* Фильмы ==================================================*/
+
+.playbill {
+    border-collapse: collapse;
+    width: 850px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.playbill_suptitle {
+    margin-top: 40px;
+    width: 548px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #333333;
+}
+.playbill__movies {
+    overflow: hidden;
+    margin-top: 65px;
+}
+.playbill__movies a {
+    display: inline-block; 
+    float: left; 
+    position: relative;
+    width: 283px;
+    height: 283px;    
+}
+.playbill__movies a:hover p {
+    opacity: 1;
+}
+.playbill__movies img {
+    width: 283px;
+    height: 283px;
+
+}
+
+.playbill__title {
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 25px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 1.31;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: 0.2s;
+    width: 283px;
+    height: 283px;
+}
+
+.playbill__subtitle {
+    position: absolute;
+    padding-top: 70px;
+    padding-left: 25px;
+    Width: 237px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: 0.2s;
+}
+/* покупки ===============================================*/
+
+.shopping {
+    width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+}
+.shopping__suptitle {
+    margin-top: 44px;
+    margin-bottom: 60px;
+    width: 548px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #333333;
+}
+
+.shopping__block {
+    overflow: hidden;
+    margin: 0 -28px;
+}
+.shopping__link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 33.333%;
+    padding: 0 28px;
+    float: left;    
+    box-sizing: border-box;
+}
+.shopping__part {
+    float: left;    
+    
+    color: #333333;
+}
+.shopping__part img {
+    width: 245px;
+    height: 331px;
+
+}
+.shopping__title {
+
+    position: absolute;
+    text-align:center;
+    margin-top: 72%;
+    margin-left: 14%;
+    margin-right: 14%;
+    width: 177px;
+    height: 153px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+}
+/* отзывы ==============================================*/
+
+ .reviews {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    max-width: 100%;
+    position: relative; 
+    height: 792px;
+    background: url('../images/Clapperboard.jpg') no-repeat center / cover, pink;
+    overflow: hidden;
+    margin-top: 30px;
+    padding-top: 140px;
+}
+.reviews::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: block;
+    border-bottom: 100px solid transparent;
+    border-left: 100vw solid #FFFFFF;
+}
+.reviews::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    border-top: 100px solid transparent;
+    border-right: 100vw solid #FFFFFF;
+}
+.reviews__container {
+    width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+}
+.reviews__block {
+    width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    position: relative;
+}
+.reviews__suptitle {
+    margin-top: 40px;
+    width: 548px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #FFFFFF;
+}
+.reviews__part_first,
+.reviews__part_third {
+    width: 210px;
+    height: 284px;
+    position: absolute;
+    background: #97B13C;
+    border-radius: 6px;
+    margin-top: 22px;
+
+}
+.reviews__part_first img,
+.reviews__part_third img {
+    width: 210px;
+    height: 152px;
+    position: absolute; 
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px; 
+}
+.reviews__part_second {    
+    width: 245px;
+    height: 332px;
+    position: absolute;
+    background: #97B13C;
+    border-radius: 10px;
+    margin-left: 302px; 
+}
+.reviews__part_second img {
+    width: 245px;
+    height: 178px;
+    position: absolute;
+    background: #97B13C;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.reviews__part_first {
+    margin-left: 0;    
+}
+
+.reviews__part_third {
+    margin-left: 640px;
+}
+.reviews__svg_left,
+.reviews__svg_right {
+    position: absolute;
+    margin-top: 55px;
+    z-index: 3;
+}
+.reviews__svg_left {
+    margin-left: 255px;
+}
+.reviews__svg_right {
+    margin-left: 578px;
+}
+.reviews__part_third b,
+.reviews__part_third q,
+.reviews__part_third p,
+.reviews__part_second b,
+.reviews__part_second q,
+.reviews__part_second p,
+.reviews__part_first b,
+.reviews__part_first q,
+.reviews__part_first p {
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 2;
+}
+.reviews__part_third b,
+.reviews__part_first b {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.27;
+    margin-top: 175px;
+    margin-left: 20px;
+}
+.reviews__part_third q,
+.reviews__part_first q {
+    width: 171px;
+    height: 52px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.3;
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+.reviews__part_third p,
+.reviews__part_first p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 1.25;
+    margin-top: 265px;
+    margin-left: 158px;
+}
+.reviews__part_second b {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.27;
+    margin-top: 204px;
+    margin-left: 20px;
+}
+
+.reviews__part_second q {
+    width: 220px;
+    height: 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.27;
+    text-align: left;
+    margin-top: 240px;
+    margin-left: 20px;
+}
+
+.reviews__part_second p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 1.33;
+    margin-top: 310px;
+    margin-left: 184px;
+}
+
+/* обратная связь ==============================================*/
+
+.feedback {
+    width: 767px;
+    min-height: 527px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    background: url('/images/spectators.jpg') 0 0/auto 100% no-repeat;    
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.feedback__block {
     float: left;
     width: 50%;
-    height: 527px;
+    margin-left: 383px;
 }
-.div8 {
-    float: left;
-    width: 50%;
-    height: 527px;
-}
-.p8 {
-    font-family: IBM Plex Sans;
+.feedback__form {
+    margin-top: 45px;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 1.28;
     color: #A3CC40;
 }
-.div8.1 {
-    font-family: IBM Plex Sans;
+.feedback__name,
+.feedback__place_number,
+.feedback__opinion {
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -105,6 +822,141 @@
     color: #A1A1A1;
     width: 344px;
     height: 40px;
-    background: #DEDEDE;
     border-radius: 5px;
+    margin-top: 30px;
+}
+
+.feedback__block label {
+    Width: 344px;
+}
+
+.feedback__checkbox {                   /*check*/           
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.3;
+    color: #333333;
+    padding-left: 2.5em;
+    margin-bottom: 30px;
+}
+.feedback__checkbox:hover {
+    color: #A3CC40;
+}
+.feedback__checkbox:hover span{
+    box-shadow: 0 0 0 0.1em #4C4D4F;
+}
+.feedback__input {                   /*check__input*/   
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+.feedback__fake_checkbox {                   /*check__box*/ 
+    position: absolute;
+    margin-left: -2.5em;
+    width: 18px;
+    height: 17px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.1em #A3CC40;
+    background-color: #FFFFFF;
+}
+
+.feedback__input:checked + .feedback__fake_checkbox{
+    background-color: #4C4D4F;
+    background-image: url("data:image/svg+xml,%3Csvg width='0.9375em' height='0.813em' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.feedback__button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #A3CC40;
+    border-radius: 6px;
+    width: 344px;
+    Height: 57px;
+    margin-top: 46px;
+}
+
+/* карта =================================================================*/
+.map {
+    width: 973px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 67px;
+    overflow: hidden;
+}
+.map img {
+    max-width: 100%;
+}
+
+/* подвал ====================================================*/
+
+.footer {
+    max-width: 100%;
+    height: 363px;
+    background-color: #A3CC40;
+    position: relative;    
+}
+.footer__container {
+    width: 947px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 90px;
+    position: relative;
+    color: #FFFFFF; 
+}
+.footer__block {
+    float: left;
+}
+.footer__block p {
+    margin-top: 30px;
+    width: 269px;
+}
+.footer__part {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+
+}
+.footer_menu,
+.footer_contact {
+    margin-top: 30px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px; 
+    height: 170px;
+    line-height: 1.33;
+}
+.footer_menu {
+    margin-left: 530px;
+    float: left;
+    max-width: 160px;
+}
+.footer_contact {
+    margin-left: 738px;
+    float: left;
+    max-width: 190px;
+ 
+
+}
+.footer_contact a {
+    margin-top: 20px;
+}
+.footer__brand {
+    margin-top: 225px;
+    float: left;
+    position: absolute;
+
 }

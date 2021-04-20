@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            background:#293462;
+        }
+        .div1 {
+            position: relative;
+            left: 50%;
+            top: 42px;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50% 50% 50% 50%;
+            background: #FFF1C1;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .div2 {
+            position: absolute;
+            top: 58px; 
+            bottom: 0; 
+            left: -7px; 
+            right: 0;
+            width: 0; 
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 150px solid #FE5F55;
+            display: inline-block;
+        }
+        .div3 {
+            position: absolute;
+          	top: 129px;
+            left: -70px;
+            width: 0; 
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid #FE5F55;
+            display: inline-block;
+        }
+      </style>
+</head>
+<body class="div">  
+    <div class="div1">
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+</body>
+</html>

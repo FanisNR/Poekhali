@@ -2,7 +2,7 @@
     display: swap;
 	font-family: '100IBMPlexSans-Thin';
 	src: url('../fonts/100IBMPlexSans-Thin.eot');
-	src: local('☺'), url('../fonts/100IBMPlexSans-Thin.woff') format('woff'), url('../fonts/100IBMPlexSans-Thin.ttf') format('truetype'), url('../fonts/100IBMPlexSans-Thin.svg') format('svg');
+	src: local('☺'), url('../fonts/100IBMPlexSans-Thin.woff') format('woff'), url('../fonts/100IBMPlexSans-Thin.ttf') format('truetype');
 	font-weight: 100;
 	font-style: normal;
 }
@@ -10,7 +10,7 @@
     display: swap;
 	font-family: '400IBMPlexSans-Regular';
 	src: url('../fonts/400IBMPlexSans-Regular.eot');
-	src: local('☺'), url('../fonts/400IBMPlexSans-Regular.woff') format('woff'), url('../fonts/400IBMPlexSans-Regular.ttf') format('truetype'), url('../fonts/400IBMPlexSans-Regular.svg') format('svg');
+	src: local('☺'), url('../fonts/400IBMPlexSans-Regular.woff') format('woff'), url('../fonts/400IBMPlexSans-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -18,7 +18,7 @@
     display: swap;
 	font-family: '500IBMPlexSans-Medium';
 	src: url('../fonts/500IBMPlexSans-Medium.eot');
-	src: local('☺'), url('../fonts/500IBMPlexSans-Medium.woff') format('woff'), url('../fonts/500IBMPlexSans-Medium.ttf') format('truetype'), url('../fonts/500IBMPlexSans-Medium.svg') format('svg');
+	src: local('☺'), url('../fonts/500IBMPlexSans-Medium.woff') format('woff'), url('../fonts/500IBMPlexSans-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
@@ -26,7 +26,7 @@
     display: swap;
 	font-family: '600IBMPlexSans-SemiBold';
 	src: url('../fonts/600IBMPlexSans-SemiBold.eot');
-	src: local('☺'), url('../fonts/600IBMPlexSans-SemiBold.woff') format('woff'), url('../fonts/600IBMPlexSans-SemiBold.ttf') format('truetype'), url('../fonts/600IBMPlexSans-SemiBold.svg') format('svg');
+	src: local('☺'), url('../fonts/600IBMPlexSans-SemiBold.woff') format('woff'), url('../fonts/600IBMPlexSans-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
@@ -34,7 +34,7 @@
     display: swap;
 	font-family: '700IBMPlexSans-Bold';
 	src: url('../fonts/700IBMPlexSans-Bold.eot');
-	src: local('☺'), url('../fonts/700IBMPlexSans-Bold.woff') format('woff'), url('../fonts/700IBMPlexSans-Bold.ttf') format('truetype'), url('../fonts/700IBMPlexSans-Bold.svg') format('svg');
+	src: local('☺'), url('../fonts/700IBMPlexSans-Bold.woff') format('woff'), url('../fonts/700IBMPlexSans-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 }
@@ -287,6 +287,7 @@
 }
 
 .lang-menu {
+    float: right;
     width: 30px;
     text-align: left;
     font-weight: bold;
@@ -348,3 +349,5 @@
 .lang-menu:hover span {
     color: #A3CC40;
 }
+
+
