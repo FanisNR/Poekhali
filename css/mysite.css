@@ -1,40 +1,40 @@
 /** Reset */
 /** Шрифты */
 @font-face {
-    display: swap;
-	font-family: '100IBMPlexSans-Thin';
+    font-font-display: swap;
+	font-family: 'IBM Plex Sans';
 	src: url('../fonts/100IBMPlexSans-Thin.eot');
 	src: local('☺'), url('../fonts/100IBMPlexSans-Thin.woff') format('woff'), url('../fonts/100IBMPlexSans-Thin.ttf') format('truetype');
 	font-weight: 100;
 	font-style: normal;
 }
 @font-face {
-    display: swap;
-	font-family: '400IBMPlexSans-Regular';
+    font-display: swap;
+	font-family: 'IBM Plex Sans';
 	src: url('../fonts/400IBMPlexSans-Regular.eot');
 	src: local('☺'), url('../fonts/400IBMPlexSans-Regular.woff') format('woff'), url('../fonts/400IBMPlexSans-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-    display: swap;
-	font-family: '500IBMPlexSans-Medium';
+    font-display: swap;
+	font-family: 'IBM Plex Sans';
 	src: url('../fonts/500IBMPlexSans-Medium.eot');
 	src: local('☺'), url('../fonts/500IBMPlexSans-Medium.woff') format('woff'), url('../fonts/500IBMPlexSans-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-    display: swap;
-	font-family: '600IBMPlexSans-SemiBold';
+    font-display: swap;
+	font-family: 'IBM Plex Sans';
 	src: url('../fonts/600IBMPlexSans-SemiBold.eot');
 	src: local('☺'), url('../fonts/600IBMPlexSans-SemiBold.woff') format('woff'), url('../fonts/600IBMPlexSans-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-    display: swap;
-	font-family: '700IBMPlexSans-Bold';
+    font-display: swap;
+	font-family: 'IBM Plex Sans';
 	src: url('../fonts/700IBMPlexSans-Bold.eot');
 	src: local('☺'), url('../fonts/700IBMPlexSans-Bold.woff') format('woff'), url('../fonts/700IBMPlexSans-Bold.ttf') format('truetype');
 	font-weight: 700;
@@ -43,7 +43,7 @@
 /** Общие стили ========================================================*/
 
 .cinema{
-    font-family: IBM Plex Sans, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 .part {
     font-style: normal;
@@ -65,7 +65,7 @@
     margin-top: 50px;
     position: absolute;
     z-index: 1000;
-    max-width: 100%  
+    max-width: 100%;  
 }
 .header__link{    
     float: left;
@@ -111,33 +111,57 @@
 .cinema__addres:hover {
     color: #a3cc40;
 }
-.phone{    
-    text-decoration: none;
-    border-radius: 6px;
+.phone svg{
+    fill: #333333;
+    padding-left: 8px;
+    /*margin-left: 0px;
+    vertical-align: middle;  */
+}
+.phone  span {
+    padding: 8px 8px 6px 8px;
+}
+.cinema__call {
+    width: 130px;
+    height: 21px;
     background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.phone{    
+    text-decoration: none;    
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.33;
     text-align: center;
     color: #333333;
-    margin-right: 120px;
-    
+    margin-right: 120px; 
+    transition: all 0.2s ease;
+       
+}
+.phone:hover {
+    background: #A3CC40;
+    border: 2px solid #EAEDE2;
+    color: #FFFFFF;
+}
+.phone:hover svg{
+    fill: #FFFFFF;
 }
 .header__lang{
+     
     float: right;
     width: 30px;
     font-size: 12px;
     line-height: 1.33;
     text-align: left;
-    font-weight: bold;
     position: relative;
 	color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
     text-transform:uppercase
 }
-.header__lang_svg{
+.header__down-arrow{
     fill: #FFFFFF;
     margin-left: -3px;
     vertical-align: middle;  
@@ -153,12 +177,12 @@
     width: 20px;
     border-radius: 5px;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 .header__lang:hover ul {
     display: block;
     padding-top: 5px;
-    transition: 0.2s;
+    
 }
 .header__lang ul li {
     list-style: none;
@@ -167,15 +191,17 @@
 .header__lang ul li a{
     text-decoration: none;
     color: #000;
+    transition: all 0.2s ease;
 }
 .header__lang ul li a:hover,
 .header__lang_title:hover  {
     color: #A3CC40;
 }
 
-.header__lang_title{
+.header__block{
     position: relative;
     box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 .header__lang:hover svg {
     transform: rotate(180deg); 
@@ -201,13 +227,15 @@
 .header__menu  ul li a{
     color:#fff;
     display:block;
-    margin-right: 65px;
+    margin-right: 73px;
     text-transform:uppercase;
     text-decoration:none;
     line-height: 1.33;
 }  
 .header__menu  ul li a:hover{
     color: #a3cc40;
+    border-bottom: 1px solid;
+    padding-bottom: 1;
 }
 
 /*  Приветствие ========================================================*/
@@ -221,7 +249,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
-    min-height: 695px;
+    min-height: 100vh;
     background: url('../images/cinema_hall.jpg') no-repeat center / cover, pink;
     overflow: hidden;
 }
@@ -258,18 +286,19 @@
     text-align: center;
     color: #FFFFFF;
 }
-.intro__footer {
+.welcome__footer {
     position: absolute;
     background: #FFFFFF;
     box-shadow: 0px 27px 39px rgba(163, 204, 64, 0.18);
     border-radius: 10px;
     width: 426px;
     height: 221px;
-    margin-top: 525px;
+    margin-top: 750px;
     margin-left: 50%;
+    padding-bottom: 5px;
     z-index: 1000;
 }
-.intro__footer_point {
+.welcome__footer-point {
     padding-top: 30px;
     padding-left: 50px;
     padding-bottom: 20px;
@@ -281,7 +310,7 @@
     color: #333333;
     text-align: left;
 }
-.intro__footer_item {
+.welcome__footer-item {
     padding-left: 50px;
     padding-right: 50px;
     font-style: normal;
@@ -291,37 +320,46 @@
     color: #333333;
     text-align: left;
 }
-.intro__footer_item:last-child {
+.welcome__footer-item:last-child {
     padding-top: 10px;
 }
 /* о нас ========================================================*/
-.about_us {
+.about-us {
     width: 850px;
     margin: 0 auto;
+    position: relative;
 }
 
 
-.about_us__container {
-    margin-top: 95px;
+.about-us__container {
+    margin-top: 75px;
 }
 
-.about_us__block {
+.about-us__block {
     overflow: hidden;
     margin: 0 -28px;
-    
+        
 }
-.about_us__part {
+.about-us__part {
+    padding-top: 20px;
     float: left;
     box-sizing: border-box;
     color: #333333;
     width: 33.333%;
-    padding: 0 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+    transition: all 0.2s ease;
 }
-.about_us__part img {
+.about-us__part:hover {
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
+}
+.about-us__part img {
     width: 245px;
     height: 169px;
 }
-.about_us__title {    
+.about-us__title {    
     width: 245px;
     font-style: normal;
     font-weight: 600;
@@ -330,7 +368,7 @@
     text-align: center;
     padding-top: 45px;
 }
-.about_us__subtitle { 
+.about-us__subtitle { 
     width: 245px;
     font-style: normal;
     font-weight: normal;
@@ -380,10 +418,10 @@
     font-size: 14px;
     line-height: 1.3;
 }
-.schedule__dark_ground {
+.schedule__dark-ground {
     background: #373737;
 }
-.schedule__gray_ground {
+.schedule__gray-ground {
     background: #4C4D4F;
 }
 .schedule__subtitle {
@@ -445,7 +483,7 @@
     line-height: 1.27;
     color: #FFFFFF;
 }
-.present__title_middle {
+.present__title-middle {
     padding: 10px;
     text-indent: 15px
 }
@@ -467,7 +505,17 @@
     font-size: 14px;
     align-items: center;
     text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: all 0.2s ease;
   
+}
+.present__btn:hover {
+    color: #A3CC40;
+    background: #FFFFFF;
+    border: 1px solid rgba(163, 204, 64, 0.62);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 9px rgba(144, 210, 61, 0.3);
+    border-radius: 6px;
 }
 .present__gift {
     position: absolute;
@@ -501,21 +549,25 @@
 .playbill__movies {
     overflow: hidden;
     margin-top: 65px;
+    background: rgba(22, 22, 22, 0.8); 
+
 }
 .playbill__movies a {
     display: inline-block; 
     float: left; 
     position: relative;
     width: 283px;
-    height: 283px;    
+    height: 283px;
 }
-.playbill__movies a:hover p {
+.playbill__movies a:hover span {
     opacity: 1;
+}
+.playbill__movies a:hover .playbill__green {
+    background: rgba(144, 210, 61, 0.4);
 }
 .playbill__movies img {
     width: 283px;
     height: 283px;
-
 }
 
 .playbill__title {
@@ -529,9 +581,11 @@
     line-height: 1.31;
     color: #FFFFFF;
     opacity: 0;
-    transition: 0.2s;
+    transition: all 0.2s ease;
     width: 283px;
     height: 283px;
+    z-index: 3;
+
 }
 
 .playbill__subtitle {
@@ -546,8 +600,21 @@
     line-height: 1.27;
     color: #FFFFFF;
     opacity: 0;
-    transition: 0.2s;
+    transition: all 0.2s ease;
+    z-index: 3;
+
 }
+.playbill__green {
+    height: 100%;
+    width: 100%;
+    background: rgba(22, 22, 22, 0.8);
+    position: absolute;
+    transition: all 0.2s ease;
+}
+.playbill__green:hover {
+    background: none;
+}
+
 /* покупки ===============================================*/
 
 .shopping {
@@ -579,7 +646,21 @@
     padding: 0 28px;
     float: left;    
     box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
+/*.shopping__green::after {
+    content: "";
+    border-top: 3.5rem solid transparent;
+    border-right: 12.25rem solid rgba(163, 204, 64, 0.8);
+}*/
+.shopping__link:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .shopping__part {
     float: left;    
     
@@ -642,7 +723,7 @@
     width: 850px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 100px;
+   /* margin-top: 100px;*/
 }
 .reviews__block {
     width: 850px;
@@ -660,8 +741,8 @@
     line-height: 1.27;
     color: #FFFFFF;
 }
-.reviews__part_first,
-.reviews__part_third {
+.reviews__first,
+.reviews__third {
     width: 210px;
     height: 284px;
     position: absolute;
@@ -670,15 +751,15 @@
     margin-top: 22px;
 
 }
-.reviews__part_first img,
-.reviews__part_third img {
+.reviews__first img,
+.reviews__third img {
     width: 210px;
     height: 152px;
     position: absolute; 
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px; 
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px; 
 }
-.reviews__part_second {    
+.reviews__second {    
     width: 245px;
     height: 332px;
     position: absolute;
@@ -686,7 +767,7 @@
     border-radius: 10px;
     margin-left: 302px; 
 }
-.reviews__part_second img {
+.reviews__second img {
     width: 245px;
     height: 178px;
     position: absolute;
@@ -694,11 +775,11 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.reviews__part_first {
+.reviews__first {
     margin-left: 0;    
 }
 
-.reviews__part_third {
+.reviews__third {
     margin-left: 640px;
 }
 .reviews__svg_left,
@@ -713,21 +794,21 @@
 .reviews__svg_right {
     margin-left: 578px;
 }
-.reviews__part_third b,
-.reviews__part_third q,
-.reviews__part_third p,
-.reviews__part_second b,
-.reviews__part_second q,
-.reviews__part_second p,
-.reviews__part_first b,
-.reviews__part_first q,
-.reviews__part_first p {
+.reviews__third b,
+.reviews__third q,
+.reviews__third p,
+.reviews__second b,
+.reviews__second q,
+.reviews__second p,
+.reviews__first b,
+.reviews__first q,
+.reviews__first p {
     position: absolute;
     color: #FFFFFF;
     z-index: 2;
 }
-.reviews__part_third b,
-.reviews__part_first b {
+.reviews__third b,
+.reviews__first b {
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -735,8 +816,8 @@
     margin-top: 175px;
     margin-left: 20px;
 }
-.reviews__part_third q,
-.reviews__part_first q {
+.reviews__third q,
+.reviews__first q {
     width: 171px;
     height: 52px;
     font-style: normal;
@@ -747,8 +828,8 @@
     margin-top: 200px;
     margin-left: 20px;
 }
-.reviews__part_third p,
-.reviews__part_first p {
+.reviews__third p,
+.reviews__first p {
     font-style: normal;
     font-weight: 300;
     font-size: 8px;
@@ -756,7 +837,7 @@
     margin-top: 265px;
     margin-left: 158px;
 }
-.reviews__part_second b {
+.reviews__second b {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -765,7 +846,7 @@
     margin-left: 20px;
 }
 
-.reviews__part_second q {
+.reviews__second q {
     width: 220px;
     height: 42px;
     font-style: normal;
@@ -777,7 +858,7 @@
     margin-left: 20px;
 }
 
-.reviews__part_second p {
+.reviews__second p {
     font-style: normal;
     font-weight: 300;
     font-size: 9px;
@@ -813,7 +894,7 @@
     color: #A3CC40;
 }
 .feedback__name,
-.feedback__place_number,
+.feedback__place-number,
 .feedback__opinion {
     font-style: normal;
     font-weight: normal;
@@ -852,7 +933,7 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
 }
-.feedback__fake_checkbox {                   /*check__box*/ 
+.feedback__fake-checkbox {                   /*check__box*/ 
     position: absolute;
     margin-left: -2.5em;
     width: 18px;
@@ -862,7 +943,7 @@
     background-color: #FFFFFF;
 }
 
-.feedback__input:checked + .feedback__fake_checkbox{
+.feedback__input:checked + .feedback__fake-checkbox{
     background-color: #4C4D4F;
     background-image: url("data:image/svg+xml,%3Csvg width='0.9375em' height='0.813em' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z' fill='white'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
@@ -882,7 +963,18 @@
     width: 344px;
     Height: 57px;
     margin-top: 46px;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
+.feedback__button:hover {
+    color: #A3CC40;
+    background: #FFFFFF;
+    border: 1px solid rgba(163, 204, 64, 0.62);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 9px rgba(144, 210, 61, 0.3);
+    border-radius: 6px;
+}
+
+
 
 /* карта =================================================================*/
 .map {
@@ -929,8 +1021,8 @@
     margin-bottom: 30px;
 
 }
-.footer_menu,
-.footer_contact {
+.footer__menu,
+.footer__contact {
     margin-top: 30px;
     position: absolute;
     font-style: normal;
@@ -939,24 +1031,59 @@
     height: 170px;
     line-height: 1.33;
 }
-.footer_menu {
+.footer__menu {
     margin-left: 530px;
     float: left;
-    max-width: 160px;
-}
-.footer_contact {
-    margin-left: 738px;
-    float: left;
-    max-width: 190px;
- 
+    max-width: 170px;
 
 }
-.footer_contact a {
+.footer__menu a {
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.footer__contact {
+    margin-left: 738px;
+    max-width: 195px;
+}
+.footer__contact a {
     margin-top: 20px;
+    margin-bottom: 15px;
+
 }
 .footer__brand {
-    margin-top: 225px;
+    width: 947px;
+    margin-top: 90px;
     float: left;
-    position: absolute;
-
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.27;
+ 
 }
+.footer__social-media {
+    
+    display: inline-block;
+    position: absolute;
+    margin-left: -269px;
+    margin-top: 176px;
+}
+.footer__link {
+    display: grid;
+    place-items: center;
+    width: 31px;
+    height: 31px;
+    float: left;
+    background: #BEE956;
+    border-radius: 100%;
+    margin-right: 30px;
+    transition: all 0.2s ease;
+}
+.footer__link:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background: #4C4D4F;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+
