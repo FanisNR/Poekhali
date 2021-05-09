@@ -1167,7 +1167,6 @@ html {
 }
 .footer__block {
     width: 17.5rem;
-
 }
 .footer__block p {
  	justify-content: left;
@@ -1182,60 +1181,42 @@ html {
     font-style: normal;
     font-weight: bold;
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: 1.33;
     color: #FFFFFF;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    
 
 }
 .footer__menu,
 .footer__contact {
-    margin-top: 1.5rem;
     font-style: normal;
     font-weight: 500;
     font-size: 0.6rem; 
-    height: 8.5rem;
-    line-height: 1.33;
 }
 .footer__menu {
-    float: left;
-    max-width: 8.5rem;
+    max-width: 10rem;
+    margin-left: -1.95rem;
+}
+.footer__menu ul {
+    margin-top: 2rem;
+}
+
+.footer__menu a {
+    text-decoration: none;
+    line-height: 0.8rem;
+    padding: 0.5rem;
+    margin-left: -0.7rem;
 }
 .footer__menu a:hover {
     background: #DCDCDC;
-    border: none;
 }
-.footer__menu a {
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-}
-.footer__menu:hover a {
-    color: #FFFFFF;
-    border: none;
-}
-.footer__contact {
-    max-width: 9.75rem;
-}
-.footer__contact p,
 .footer__contact a,
 .footer__contact span,
 .footer__contact address {
-    /*margin-top: 0.5rem;
-    
-    display: block;*/
-    margin-bottom: 0.5rem;
     text-decoration: none;
     color: #FFFFFF;
+    line-height: 0.8rem;
 
-}
-.footer__contact:hover a,
-.footer__contact:hover span,
-.footer__contact:hover address {
-    color: #FFFFFF;
-}
-.footer__contact a:hover,
-.footer__contact span:hover,
-.footer__contact address:hover {
-    background: #DCDCDC;
 }
 .footer__social-media {
 	display: flex;
@@ -1286,17 +1267,26 @@ html {
 }
 .footer__text {
     color: #FFFFFF;
-	font-size: 12px;
+	font-size: 0.75rem;
 	letter-spacing: 0.3px; 
 }
 .footer__block2 {
-	flex: 0 1 50%;
+	flex: 0 1 30%;
 	display: flex;
+    margin-left: 4rem;
 }
 
-.vertical__subtitle {
+.vertical__subtitle,
+.footer__part {
     text-transform:uppercase;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
 }
-.footer__menu ul li{
-    float: none;
+.footer__tel,
+.cinema__nav {
+    margin-bottom: 1rem;
+}
+.footer__cart {
+    height: 6rem;
 }
