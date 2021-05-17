@@ -42,7 +42,7 @@
 }
 /** Общие стили ========================================================*/
 html {
-    font-size: 1.5vw;
+    font-size: 1.71vw;
 }
 .cinema{
     font-family: 'IBM Plex Sans', sans-serif;
@@ -54,7 +54,9 @@ html {
     font-size: 2.4rem;
     line-height: 1.29;
     color: #A3CC40;
-
+}
+.comma {
+    margin-left: -0.15rem;
 }
 /** Сетка макета */
 /** Компоненты */
@@ -64,18 +66,18 @@ html {
 /* Шапка ========================================================*/
 
 .header {      
-    max-width: 47.35rem    ;  
+    max-width: 53rem    ;  
     margin-left: auto;
     margin-right: auto; 
-    margin-top: 2rem; 
+    margin-top: 2.25rem; 
     /*margin-bottom: 7rem; */
 }
 
 .header__link{    
     float: left;
-    padding-right: 2.25rem;   
+    padding-right: 2.2rem;   
 }
-.header__contact { 
+.header__contact {
     float: left;
     font-size: 0.6rem;
     font-weight: 500;
@@ -83,6 +85,7 @@ html {
     color:#FFFFFF;
     transition: 0.2s;
     margin-bottom: 0.5rem;
+    margin-top: -0.09rem;
 }
 .header__contact:hover {
     color: #a3cc40;
@@ -94,7 +97,7 @@ html {
     border-bottom: 0.05rem solid;
     padding-bottom: 0;
     display: inline;
-    margin-right: 2.5rem;
+    margin-right: 2.55rem;
     transition: 0.2s;
 }
 .cinema__mail:hover {
@@ -107,8 +110,14 @@ html {
     line-height: 1.33;
     color:#FFFFFF;
     text-decoration: none;
-    margin-right: 2.55rem;
     transition: 0.2s;
+}
+.cinema__tel {
+    margin-right: 2.65rem;
+}
+.cinema__addres {
+    margin-right: 3.5rem;
+
 }
 .cinema__tel:hover,
 .cinema__addres:hover {
@@ -139,7 +148,7 @@ html {
     line-height: 1.33;
     text-align: center;
     color: #333333;
-    margin-right: 5.4rem; 
+    margin-right: 6rem; 
     transition: all 0.2s ease;
        
 }
@@ -228,12 +237,13 @@ html {
 .header__menu  ul li a{
     color:#fff;
     display:block;
-    margin-right: 3.65rem;
+    margin-right: 3.9rem;
     text-transform:uppercase;
     text-decoration:none;
     font-size: 0.6rem;
     line-height: 1.33;
     height: 0.6rem;
+    cursor: pointer; 
 }  
 .header__menu  ul li a:hover{
     color: #a3cc40;
@@ -268,7 +278,7 @@ html {
  
     width: 100%;
     /*max-width: 42.5rem;*/
-    margin: 5rem auto 0;
+    margin: 7.08rem auto 0;
     text-align: center;
     margin-bottom: 0.05rem;
 }
@@ -282,6 +292,7 @@ html {
     line-height: 1.29;
     text-align: center;
     color: #FFFFFF;
+    margin-bottom: 1.5rem;
 }
 
 .intro__subtitle {
@@ -291,7 +302,8 @@ html {
     line-height: 1.29;
     text-align: center;
     color: #FFFFFF;
-    
+    margin-bottom: 0.1rem;   
+    padding-bottom: 0.1rem; 
 }
 .welcome__footer {
     position: absolute;
@@ -300,10 +312,10 @@ html {
     border-radius: 0.5rem;
     width: 21.3rem;
     height: 11.05rem;
-    margin-top: -8.75rem;
     margin-left: 50%;
     padding-bottom: 0.25rem;
-    z-index: 1000;
+    margin-top: -8rem;
+    
 }
 .welcome__footer-point {
     padding-top: 1.5rem;
@@ -335,6 +347,8 @@ html {
     width: 42.5rem;
     margin: 0 auto;
     position: relative;
+    margin-bottom: 7.2rem;
+
 }
 
 
@@ -372,7 +386,7 @@ html {
     font-size: 1rem;
     line-height: 1.3;
     text-align: center;
-    padding-top: 2.25rem;
+    padding-top: 2rem;
 }
 .about-us__subtitle { 
     width: 12.25rem;
@@ -388,7 +402,7 @@ html {
 /* расписание  ========================================================*/
 
 
-.schedule h2 {
+.schedule {
     width: 42.5rem;
     margin: 0 auto;
 }
@@ -397,14 +411,12 @@ html {
 }
 .schedule__table {
     border-collapse: collapse;
-    width: 42.5rem;
-    margin: 0 auto;
     border-radius: 0.5rem;
     overflow: hidden;
 }
 .schedule__table th {
     background: #A3CC40;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
     text-align: left;  
     
 }
@@ -423,12 +435,12 @@ html {
     height: 2.25rem;
 }
 .schedule__table td {
-    padding: 0.75rem 1rem 0.5rem;
+    /*padding: 0.75rem 0rem 0.5rem 0rem;*/
     text-align: left;  
     color: #ffff;
     font-size: 0.7rem;
     line-height: 1.3;
-    
+    padding-top: 0.75rem;    
 }
 
 .schedule__checkbox {                   /*check*/           
@@ -443,23 +455,45 @@ html {
     height: 0.05rem;
     overflow: hidden;
     clip: rect(0 0 0 0);
+}
+.schedule__time {
+    width: 4rem;
+}
+.schedule__start {
+    width: 11.9rem;
+}
+.schedule__name {
+    width: 11.9rem;
+}
 
+.schedule__genre {
+    width: 14.65rem;
+}
+.schedule__name svg {
+    margin-left: 0.4rem;
 }
 .schedule__fake-checkbox { 
-    display: grid;
+    cursor: pointer;
+    display: inline-block;
     place-items: center;
-    margin-top: 0.3rem;
+    /*
     margin-left: 0.2rem;
-    /*padding-left: 1.25rem;
+    /*
     position: absolute;*/
-    width: 0.5rem;
-    height: 0.4rem;
-    background: url('../images/whiteCheckMark.svg') no-repeat  35% 35% / cover;
+    width: 3.5rem;
+    height: 1.5rem;
+    background: url('../images/whiteCheckMark.svg') no-repeat  40% 40% / cover;
+    background-size: 0.5rem 0.4rem;
+    /*margin: -0.6rem -0.1rem -0.6rem 0.2rem;*/
+    margin-bottom: -0.6rem;
+    margin-top: -0.6rem;
 }
 
 .schedule__input:checked + .schedule__fake-checkbox {
-    background: url('../images/greencheckMark.svg') no-repeat  35% 35% / cover;
+    background: url('../images/greencheckMark.svg') no-repeat  40% 40% / cover;
     background-repeat: no-repeat;
+    background-size: 0.5rem 0.4rem;
+
 }
 
 .schedule__table td {
@@ -478,7 +512,7 @@ html {
     font-style: normal;
     font-weight: normal;
     font-size: 0.55rem;
-    line-height: 0.0635rem;
+    line-height: 0.8rem;
     text-align: center;
 }
 
@@ -487,16 +521,15 @@ html {
 
 .present {
     margin: 0 auto;
-    max-width: 100%;
     text-align: right;
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
-    min-height: 34.75rem;
     background: url('../images/Filmstock.jpg') no-repeat center / cover, pink;
-    overflow: hidden;
-    margin-top: 1.5rem;
+    margin-top: 5rem;
+    padding-bottom: 7rem;
+    padding-top: 1rem;
 }
 .present::before{
     position: absolute;
@@ -504,10 +537,10 @@ html {
     right: 0;
     content: '';
     display: block;
-    border-bottom: 5rem solid transparent;
+    border-bottom: 6.25rem solid transparent;
     border-left: 100vw solid #FFFFFF;
 }
-.present::after{
+/*.present::after{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -515,10 +548,24 @@ html {
     display: block;
     border-top: 5rem solid transparent;
     border-right: 100vw solid #FFFFFF;
+}*/
+.present::after {
+position: absolute;
+bottom: 0;
+left: 0;
+content: '';
+display: block;
+border-top: 6.25rem solid transparent;
+border-right: 100vw solid #FFFFFF;
+
 }
-.present__block {
+.present__container {
+    padding-top: 5rem;
     width: 42.5rem;
     margin: 0 auto;
+}
+.present__container h2 {
+    color: #FFFFFF;
 }
 .presnt__block {
     padding-top: 2.5rem;
@@ -569,7 +616,7 @@ html {
     border-radius: 0.3rem;
 }
 
-.present__gift {
+/*.present__gift {
     display: grid;
     place-items: center;
     max-width: 13.8rem;
@@ -577,15 +624,31 @@ html {
     position: absolute;
     border-radius: 100%;
     overflow: hidden;
-    margin-top: -11.5rem;
+    margin-top: -12.5rem;
+    margin-left: 7.5rem;
+    left: 0;
+    z-index: 10;
+
 }
 .present__img {    
     max-width: 13.8rem;
     max-height: 13.8rem;
     
+}*/
+.present__gift {
+    position: absolute;
+    border-radius: 100%;
+    max-width: 13.8rem;
+    max-height: 13.8rem;
+    margin-top: -10rem;
+
 }
-.present__block h2 {
-    color: #FFFFFF;
+.present__gift img {
+    max-width: 13.8rem;
+    max-height: 13.8rem;
+    position: absolute;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 /* Фильмы ==================================================*/
@@ -599,7 +662,7 @@ html {
 
 }
 .playbill_suptitle {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 27.4rem;
     font-style: normal;
     font-weight: normal;
@@ -684,11 +747,11 @@ html {
     width: 42.5rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 .shopping__suptitle {
-    margin-top: 2.2rem;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2.1rem;
     width: 27.4rem;
     font-style: normal;
     font-weight: normal;
@@ -709,46 +772,93 @@ html {
     padding: 0 1.4rem;
     float: left;    
     box-sizing: border-box;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    cursor: pointer;
 }
 
-/*.shopping__green::after {
-    content: "";
-    border-top: 3.5rem solid transparent;
-    border-right: 12.25rem solid rgba(163, 204, 64, 0.8);
+/*.shopping__green {
+    background: rgba(163, 204, 64, 0.8);
+    height: 4.4rem;
 }*/
 .shopping__link:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+.shopping__link:hover .shopping__green {
+    height: 4.46rem;
+}
 
 .shopping__part {
-    float: left;    
-    
+    float: left;
     color: #333333;
+    filter: drop-shadow(0 0.2rem 0.2rem rgba(0, 0, 0, 0.25));
+    border-radius: 0.5rem;
+    overflow: hidden;
+
 }
-.shopping__part img {
+.shopping__present_one {
+    background: url(../images/present1.jpg) no-repeat center / cover;
+    min-width: 12.25rem;
+    height: 16.55rem;
+}
+.shopping__present_two {
+    background: url(../images/present2.jpg) no-repeat center / cover;
+    min-width: 12.25rem;
+    height: 16.55rem;
+}
+.shopping__present_three {
+    background: url(../images/present3.jpg) no-repeat center / cover;
+    min-width: 12.25rem;
+    height: 16.55rem;
+}
+/*.shopping__part img {
     max-width: 12.25rem;
     height: 16.55rem;
-
-}
+    padding-top: 0.1rem;
+}*/
 .shopping__title {
-
     position: absolute;
-    text-align:center;
-    margin-top: 72%;
-    margin-left: 14%;
-    margin-right: 14%;
-    width: 8.85rem;
-    height: 7.65rem;
+    width: 12.25rem;
     text-decoration: none;
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.3;
     color: #FFFFFF;
+    margin-top: 13.5rem;
+}
+.shopping__gift {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 8.85rem;
+    height: 4.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+ 
+}
+
+.shopping__green {
+    background: rgba(163, 204, 64, 0.8);
+    position: absolute;
+    margin-top: 12.25rem;
+    width: 12.25rem;
+    height: 4.4rem;
+}
+.shopping__green::before {
+    position: absolute;
+    top: -3.25rem;
+    content: "";
+    border-top: 3.25rem solid transparent;
+    border-right: 12.25rem solid rgba(163, 204, 64, 0.8);
 }
 /* отзывы ==============================================*/
 
@@ -758,7 +868,7 @@ html {
     margin-top: 2.5rem;
     max-width: 100%;
     position: relative; 
-    height: 39.6rem;
+    min-height: 30rem;
     background: url('../images/Clapperboard.jpg') no-repeat center / cover, pink;
     overflow: hidden;
     margin-top: 1.5rem;
@@ -786,7 +896,7 @@ html {
     width: 42.5rem;
     margin-right: auto;
     margin-left: auto;
-   /* margin-top: 5rem;*/
+   margin-top: -1rem;
 }
 .reviews__block {
     width: 42.5rem;
@@ -796,7 +906,7 @@ html {
     position: relative;
 }
 .reviews__suptitle {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 27.4rem;
     font-style: normal;
     font-weight: normal;
@@ -810,13 +920,13 @@ html {
     height: 14.2rem;
     position: absolute;
     background: #97B13C;
-    border-radius: 0.3rem;
+    border-radius: 0.45rem;
     margin-top: 1.1rem;
 
 }
 .reviews__first img,
 .reviews__third img {
-    max-width: 10.5rem;
+    width: 10.5rem;
     height: 7.6rem;
     position: absolute; 
     border-top-left-radius: 0.45rem;
@@ -831,7 +941,7 @@ html {
     margin-left: 15.1rem; 
 }
 .reviews__second img {
-    max-width: 12.25rem;
+    width: 12.25rem;
     height: 8.9rem;
     position: absolute;
     background: #97B13C;
@@ -934,12 +1044,10 @@ html {
 
 .feedback {
     width: 38.35rem;
-    height: 26.35rem;
     margin-right: auto;
     margin-left: auto;
     margin-top: 2.2rem;
     background: url('../images/spectators.jpg') 0 0/auto 100% no-repeat;    
- 
     overflow: hidden;
     box-shadow: 0.4rem 0.45rem 1.95rem rgba(185, 185, 185, 0.37);
     border-radius: 1rem;
@@ -947,62 +1055,71 @@ html {
 
 .feedback__block {
     float: left;
-    width: 50%;
-    margin-left: 19.15rem;
+    width: 17.2rem;
+    margin-left: 19rem;    
 }
 .feedback__form {
-    margin-top: 2.2rem;
+    margin-top: 1.7rem;
     margin-bottom: 1.35rem;
-    margin-left: 3.5rem;
+    margin-left: 3.1rem;
     font-style: normal;
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.28;
     color: #A3CC40;
+
 }
 .feedback__name label {
-    width: 17.2rem;
+    
 }
 .feedback__block input,
 .feedback__place-number select,
 .feedback__opinion textarea {
-    width: 17.2rem;
     background: #DEDEDE;
     border-radius: 0.25rem;
     color: #A1A1A1;
     font-size: 0.75rem;
     line-height: 1.27;
     padding-left: 0.8rem;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
+    padding-top: 0.6rem;
     border: none;
+    width: 17.2rem;
+    box-sizing: border-box;
+    height: 2rem;
+
 }
 .feedback__name,
 .feedback__place-number {
     margin-bottom: 1.5rem;
-    height: 2rem !important;
-    width: 17.2rem;
+ }
+.feedback__name input,
+.feedback__seat option,
+.feedback__opinion textarea {
+    font-family: 'IBM Plex Sans', sans-serif;
 
 }
 .feedback__opinion {
     margin-bottom: 1.5rem;
-    height: 6rem !important;
-    
+    font-family: 'IBM Plex Sans', sans-serif;
+
 }
 .feedback__opinion textarea {
-    height: 6rem !important;
     resize: none;
-    width: 17.2rem;
+    min-height: 6rem;
 }
-.feedback__checkbox {  
-    padding-top: 1rem;                        
+
+
+.feedback__checkbox {    /*check*/   
+    display: block;
     font-style: normal;
     font-weight: normal;
     font-size: 0.5rem;
     line-height: 1.3;
     color: #333333;
     margin-bottom: 1.5rem;
- 
+    font-style: normal;
+    font-weight: normal;
+    cursor: pointer; 
 }
 .feedback__seat {
     -webkit-appearance: none;
@@ -1018,12 +1135,11 @@ html {
 }
 .feedback__place-number {
     position: relative;
-    width: 17.2rem;
-}
+ }
 .feedback__place-number::before {
     content: "";
     position: absolute;
-    margin-top: 1.3rem;
+    margin-top: 1.1rem;
     right: 0.9rem;
     /*transform: translateY(-50%);*/
     /*display: block;*/
@@ -1035,63 +1151,24 @@ html {
     transition: all 0.2s ease;
 
 }
-/*.feedback__seat:hover .feedback__place-number::before  {
-    transform: rotate(180deg); 
-}*/
-/*.feedback__checkbox:hover {
-    color: #A3CC40;
-}
-.feedback__checkbox:hover span{
-    box-shadow: 0 0 0 0.1rem #4C4D4F;
-}
-.feedback__input {                      
+.feedback__input { 
+    display: inline;
     position: absolute;
-    width: 0.05rem;
+    width: 1px;
     height: 0.05rem;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-}
-.feedback__fake-checkbox {                 
-    position: absolute;
-    margin-left: -2.5rem;
-    width: 0.9rem;
-    height: 0.85rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 0 0.1rem #A3CC40;
-    background-color: #FFFFFF;
-}
-
-.feedback__input:checked + .feedback__fake-checkbox{
-    width: 0.9rem;
-    height: 0.85rem;
-    background-color: #4C4D4F;
-    background-image: url("../images/greencheckMark.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}*/
-
-.feedback__checkbox {                   /*check*/           
-    font-style: normal;
-    font-weight: normal;
-    width: 4rem;
-    height: 2.25rem;
+    clip: rect(0px, 0px, 0px, 0px);
+    overflow:hidden;
+    overflow-y:hidden;  /*для вертикального*/
+    overflow-x:hidden;  /*для горизонтального*/  
 
 }
-.feedback__input {                   /*check__input*/   
-    position: absolute;
-    width: 0.05rem;
-    height: 0.05rem;
-    overflow: hidden;
-    clip: rect(0px, 0px, 0px, 0px);  
-
-}
-.feedback__fake-checkbox { 
+.feedback__fake-checkbox {     
     float: left;
     display: grid;
     place-items: center;
     margin-left: 0.2rem;
     margin-right: 0.6rem;
-    margin-top: 0.2rem;
+    margin-top: -0.1rem;
     /*
     padding-left: 1.25rem;
     position: absolute;*/
@@ -1108,10 +1185,9 @@ html {
     background-size: 0.5rem 0.4rem;
 }
 .feedback__bth {
-    margin: 0 !important; 
-    padding: 0 !important;
-    width: 0.05rem;
-    height: 0.05rem;
+    /*width: 0.05rem;
+    height: 0.05rem;*/
+    margin-bottom: 1.65rem;
 }
 .feedback__button {
     font-style: normal;
@@ -1125,7 +1201,6 @@ html {
     border-radius: 0.3rem;
     width: 17.2rem;
     Height: 2.85rem;
-    margin-top: 1.3rem;
     font-family: 'IBM Plex Sans', sans-serif;
     border: none;
     
@@ -1143,19 +1218,22 @@ html {
     width: 48.65rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 3.35rem;
+    margin-top: 3rem;
+    height: 19.2rem;
     overflow: hidden;
 }
 .map img {
     max-width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
 /* подвал ====================================================*/
 
 .footer {
     background: #A3CC40;
-    height: 17rem;
     overflow: hidden;
+    margin-top: 0rem;
 }
 .footer__container {
     width: 47.35rem;
@@ -1174,8 +1252,10 @@ html {
     width: 13.45rem;
     font-size: 0.7rem;
     line-height: 1.29;
-    margin-top: 1.5rem;
-}
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: normal;
+ }
 .footer__part {
     text-decoration: none;
     font-style: normal;
@@ -1198,17 +1278,31 @@ html {
     margin-left: -1.95rem;
 }
 .footer__menu ul {
-    margin-top: 2rem;
+    margin-top: 2.1rem;
 }
-
+.footer__menu li {
+    margin-bottom: 0.4rem;
+}
 .footer__menu a {
+    font-size: 0.6rem;
+    line-height: 1.33;
+    font-style: normal;
+    font-weight: 500;
     text-decoration: none;
     line-height: 0.8rem;
     padding: 0.5rem;
     margin-left: -0.7rem;
+    color: #FFFFFF;
+    cursor: pointer; 
+
 }
 .footer__menu a:hover {
     background: #DCDCDC;
+    text-decoration: underline;
+}
+.footer__contact {
+    width: 10rem;
+
 }
 .footer__contact a,
 .footer__contact span,
@@ -1216,7 +1310,9 @@ html {
     text-decoration: none;
     color: #FFFFFF;
     line-height: 0.8rem;
-
+}
+.footer__contact a {
+cursor: pointer; 
 }
 .footer__social-media {
 	display: flex;
@@ -1225,7 +1321,7 @@ html {
     width: 47.35rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 .footer__social-media svg {
     fill: #FFFFFF;
@@ -1254,7 +1350,8 @@ html {
     fill: #BEE956;
 }
 .foot {
-    margin-top: 1.5rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1.5rem;
 }
 .footer__row {
 	display: flex;
@@ -1271,9 +1368,10 @@ html {
 	letter-spacing: 0.3px; 
 }
 .footer__block2 {
-	flex: 0 1 30%;
+	flex: 0 1 20%;
 	display: flex;
-    margin-left: 4rem;
+    margin-left: 3.5rem;
+    margin-top: 0.1rem;
 }
 
 .vertical__subtitle,
@@ -1283,10 +1381,15 @@ html {
     font-style: normal;
     font-weight: bold;
 }
+
 .footer__tel,
 .cinema__nav {
     margin-bottom: 1rem;
 }
-.footer__cart {
-    height: 6rem;
+.footer__cart li {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.footer__contact address {
+    display: inline;
 }
