@@ -555,6 +555,9 @@ border-right: 100vw solid #FFFFFF;
 .present__container h2 {
     color: #FFFFFF;
 }
+.present__container h2 {
+    color: #FFFFFF;
+}
 .presnt__block {
     padding-top: 2rem;
     width: 27rem;
@@ -618,6 +621,14 @@ border-right: 100vw solid #FFFFFF;
     top: 0;
     left: 0;
     
+}*/
+.present__gift {
+    position: absolute;
+    border-radius: 100%;
+    max-width: 13.8rem;
+    max-height: 13.8rem;
+    margin-top: -10rem;
+
 }
 .present__gift img {
     width: 13.8rem;
@@ -1036,9 +1047,7 @@ border-right: 100vw solid #FFFFFF;
     color: #A3CC40;
 
 }
-.feedback__name label {
-    
-}
+
 .feedback__block input,
 .feedback__place-number select,
 .feedback__opinion textarea {
