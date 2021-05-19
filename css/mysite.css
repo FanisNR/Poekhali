@@ -70,14 +70,15 @@ html {
 /* Шапка ========================================================*/
 
 .header {      
-    max-width: 47.35rem    ;  
+    max-width: 48rem    ;  
     margin-left: auto;
     margin-right: auto; 
     margin-top: 2.5rem; 
+    padding-bottom: 0.05rem;
 }
 .header__body {
     display: flex;
-
+    flex-wrap: nowrap;
 }
 .header__link{    
     padding-right: 2.2rem; 
@@ -121,7 +122,7 @@ html {
     margin-right: 2.55rem;
 }
 .cinema__addres {
-    margin-right: 2.55rem;
+    margin-right: 2.6rem;
 
 }
 .cinema__tel:hover,
@@ -138,12 +139,13 @@ html {
     padding: 0.4rem 0.19rem 0rem 0.4rem;
 }
 .cinema__call {
-    width: 6.5rem;
+    max-width: 6.5rem;
     height: 1.05rem;
     background: #FFFFFF;
     border: 0.05rem solid #EDEDED;
     box-sizing: border-box;
     border-radius: 0.3rem;
+    margin-right: 5.95rem;
 }
 .phone{    
     padding: 0.15rem 0 0.05rem 0.01rem;
@@ -154,8 +156,8 @@ html {
     line-height: 1.33;
     text-align: center;
     color: #333333;
-    margin-right: 5.9rem; 
     transition: all 0.2s ease;
+    
        
 }
 .phone:hover {
@@ -166,42 +168,45 @@ html {
 .phone:hover svg{
     fill: #FFFFFF;
 }
-.header__lang{     
-    float: right;
-    width: 1.35rem;
+.header__lang{   
+    display: inline;
+    width: 1.3rem;
+    height: 0.5rem;
     font-size: 0.6rem;
     line-height: 1.33;
-    text-align: left;
     position: relative;
 	color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
-    text-transform:uppercase
+    text-transform:uppercase;
+    
 }
 .header__down-arrow{
     fill: #FFFFFF;
-    vertical-align: middle;  
+    vertical-align: bottom;
 }
-.header__lang ul {
-    margin: -0.05rem;
-    padding: 0;
+.header__lang-subtitle {
+    width: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header__lang-subtitle ul {
     display: none;
     background-color: #fff;
     border: 0.05rem solid #f8f8f8;
     position: absolute;
-    top: 0.75rem;
-    width: 1rem;
+    top: 0.75rem;    
     border-radius: 0.25rem;
     box-shadow: 0 1px 10px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
 }
 .header__lang:hover ul {
     display: block;
-    padding-top: 0.25rem;    
+    padding: 0 0.1rem 0 0.1rem;
 }
 .header__lang ul li {
     list-style: none;
-    text-align: left;
 }
 .header__lang ul li a{
     text-decoration: none;
@@ -213,14 +218,21 @@ html {
     color: #A3CC40;
 }
 
-.header__block{
-    position: relative;
+.header__block {
+    width: 1.3rem;
+
+    display: inline-flex;
     box-sizing: border-box;
     transition: all 0.2s ease;
-}
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
 .header__lang:hover svg {
     transform: rotate(180deg); 
     fill: #A3CC40;
+    
 }
 .header__lang:hover span {
     color: #A3CC40;
@@ -246,8 +258,6 @@ html {
     height: 0.8rem;
     display: inline-flex;
 }  
-.header__menu  ul li{
-}  
 .header__menu  ul li a{
     color:#fff;
     display:block;
@@ -261,8 +271,7 @@ html {
 .header__menu  ul li a:hover{
     color: #a3cc40;
     border-bottom: 0.05rem solid;
-    margin-bottom: -0.05rem;
-
+    padding-bottom: 0.05rem;
 }
 
 /*  Приветствие ========================================================*/
@@ -288,7 +297,7 @@ html {
 }
 .cover {
     flex: 1;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2.65rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -663,17 +672,17 @@ border-right: 100vw solid #FFFFFF;
     color: #333333;
 }
 .playbill__movies {
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 3.25rem;
     background: rgba(22, 22, 22, 0.8); 
 
 }
 .playbill__movies a {
-    display: inline-block; 
-    float: left;
-    position: relative;
+    display: inline-flex; 
     width: 14.15rem;
     height: 14.15rem;
+    position: relative;
 }
 .playbill__movies a:hover span {
     opacity: 1;
@@ -682,13 +691,13 @@ border-right: 100vw solid #FFFFFF;
     background: rgba(144, 210, 61, 0.4);
 }
 .playbill__movies img {
-    max-width: 14.15rem;
+    width: 14.15rem;
     height: 14.15rem;
 }
 
 .playbill__title {
     position: absolute;
-    padding-top: 1.5rem;
+    padding-top: 0.9rem;
     padding-left: 1.25rem;
     text-decoration: none;
     font-style: normal;
@@ -698,33 +707,32 @@ border-right: 100vw solid #FFFFFF;
     color: #FFFFFF;
     opacity: 0;
     transition: all 0.2s ease;
-    width: 14.15rem;
-    height: 14.15rem;
+    width: 11.95rem;
+    height: 0rem;
     z-index: 3;
 
 }
 
 .playbill__subtitle {
     position: absolute;
-    padding-top: 3.5rem;
+    padding-top: 3.45rem;
     padding-left: 1.25rem;
-    Width: 11.85rem;
-    height: 10rem;
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
     font-size: 0.55rem;
-    line-height: 1.27;
+    line-height: 1.2727;
     color: #FFFFFF;
     opacity: 0;
     transition: all 0.2s ease;
+    width: 11.95rem;
+    height: 0rem;
     z-index: 3;
-    overflow: hidden;
 
 }
 .playbill__green {
-    height: 100%;
-    width: 100%;
+    width: 14.15rem;
+    height: 14.15rem;
     background: rgba(22, 22, 22, 0.8);
     position: absolute;
     transition: all 0.2s ease;
