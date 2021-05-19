@@ -70,25 +70,26 @@ html {
 /* Шапка ========================================================*/
 
 .header {      
-    max-width: 53rem    ;  
+    max-width: 47.35rem    ;  
     margin-left: auto;
     margin-right: auto; 
     margin-top: 2.5rem; 
 }
+.header__body {
+    display: flex;
 
+}
 .header__link{    
-    float: left;
     padding-right: 2.2rem; 
-    padding-left: 1.5rem;  
+    flex-basis: 7.8rem;
 }
 .header__contact {
-    float: left;
     font-size: 0.6rem;
     font-weight: 500;
     line-height: 1.33;
     color:#FFFFFF;
     transition: 0.2s;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.8rem;
     margin-top: -0.09rem;
 }
 .header__contact:hover {
@@ -101,7 +102,7 @@ html {
     border-bottom: 0.05rem solid;
     padding-bottom: 0;
     display: inline;
-    margin-right: 2.55rem;
+    margin-right: 2.4rem;
     transition: 0.2s;
 }
 .cinema__mail:hover {
@@ -117,10 +118,10 @@ html {
     transition: 0.2s;
 }
 .cinema__tel {
-    margin-right: 2.65rem;
+    margin-right: 2.55rem;
 }
 .cinema__addres {
-    margin-right: 3.5rem;
+    margin-right: 2.55rem;
 
 }
 .cinema__tel:hover,
@@ -134,7 +135,7 @@ html {
     vertical-align: middle;  */
 }
 .phone  span {
-    padding: 0.4rem 0.4rem 0.3rem 0.4rem;
+    padding: 0.4rem 0.19rem 0rem 0.4rem;
 }
 .cinema__call {
     width: 6.5rem;
@@ -145,6 +146,7 @@ html {
     border-radius: 0.3rem;
 }
 .phone{    
+    padding: 0.15rem 0 0.05rem 0.01rem;
     text-decoration: none;    
     font-style: normal;
     font-weight: 500;
@@ -152,7 +154,7 @@ html {
     line-height: 1.33;
     text-align: center;
     color: #333333;
-    margin-right: 6rem; 
+    margin-right: 5.9rem; 
     transition: all 0.2s ease;
        
 }
@@ -166,7 +168,7 @@ html {
 }
 .header__lang{     
     float: right;
-    width: 1.5rem;
+    width: 1.35rem;
     font-size: 0.6rem;
     line-height: 1.33;
     text-align: left;
@@ -178,7 +180,6 @@ html {
 }
 .header__down-arrow{
     fill: #FFFFFF;
-    /*margin-left: -0.15rem;*/
     vertical-align: middle;  
 }
 .header__lang ul {
@@ -226,22 +227,30 @@ html {
 }
 
 .header__menu  {
-
     font-style: normal;
     font-weight: 500;
     font-size: 0.6rem;
 }  
+.header__event,
+.header__past {
+    margin-right: 3.65rem;
+}
+.header__speakers {
+    margin-right: 3.5rem;
+}
+.header__sponsors {
+    margin-right: 3.9rem;
+}
 .header__menu  ul{
     list-style:none;
     height: 0.8rem;
+    display: inline-flex;
 }  
 .header__menu  ul li{
-    float:left;
 }  
 .header__menu  ul li a{
     color:#fff;
     display:block;
-    margin-right: 3.9rem;
     text-transform:uppercase;
     text-decoration:none;
     font-size: 0.6rem;
@@ -940,7 +949,7 @@ border-right: 100vw solid #FFFFFF;
     z-index: 3;
 }
 .reviews__svg_left {
-    margin-left: 12ю99rem;
+    margin-left: 12.90rem;
 }
 .reviews__svg_right {
     margin-left: 29.1rem;
@@ -1099,6 +1108,7 @@ border-right: 100vw solid #FFFFFF;
     font-style: normal;
     font-weight: normal;
     cursor: pointer; 
+    padding-top: 0.05rem;
 }
 .feedback__seat {
     -webkit-appearance: none;
@@ -1145,8 +1155,8 @@ border-right: 100vw solid #FFFFFF;
     float: left;
     display: grid;
     place-items: center;
-    margin-left: -0.1rem;
-    margin-right: 0.2rem;
+    margin-left: -0.15rem;
+    margin-right: 0.25rem;
     margin-top: -0.1rem;
     width: 0.9rem;
     height: 0.85rem;
