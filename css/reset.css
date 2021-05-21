@@ -134,6 +134,13 @@ a:focus {
     outline: thin dotted;
 }
 
+a { 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+a:hover { 
+    text-decoration: none; /* Убираем подчеркивание у ссылок 
+                                   при наведении курсора мыши на ссылку */
+}
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */

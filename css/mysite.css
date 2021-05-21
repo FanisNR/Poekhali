@@ -101,7 +101,6 @@ html {
     text-decoration: none;
     color:#FFFFFF;
     border-bottom: 0.05rem solid;
-    padding-bottom: 0;
     display: inline;
     margin-right: 2.4rem;
     transition: 0.2s;
@@ -558,13 +557,13 @@ html {
     border-left: 100vw solid #FFFFFF;
 }
 .present::after {
-position: absolute;
-bottom: 0;
-left: 0;
-content: '';
-display: block;
-border-top: 4.75rem solid transparent;
-border-right: 100vw solid #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    border-top: 4.75rem solid transparent;
+    border-right: 100vw solid #FFFFFF;
 
 }
 .present__container {
@@ -639,13 +638,12 @@ border-right: 100vw solid #FFFFFF;
     top: 0;
     left: 0;
     
-}*/
+}
 .present__gift {
     position: absolute;
     border-radius: 100%;
     max-width: 13.8rem;
     max-height: 13.8rem;
-    margin-top: -10rem;
 
 }
 .present__gift img {
@@ -660,7 +658,6 @@ border-right: 100vw solid #FFFFFF;
 .playbill {
     border-collapse: collapse;
     margin-top: 3rem;
-
 }
 .playbill_suptitle {
     margin-top: 1.4rem;
@@ -671,74 +668,109 @@ border-right: 100vw solid #FFFFFF;
     line-height: 1.27;
     color: #333333;
 }
-.playbill__movies {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 3.25rem;
-    background: rgba(22, 22, 22, 0.8); 
+.playbill__block {    
+    margin-top: 3.2rem; 
+    width: 42.5rem;
+    height: 42.5rem;
 
 }
-.playbill__movies a {
-    display: inline-flex; 
+.playbill__movies {    
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 42.5rem;
+    height: 42.5rem;
+    background: rgba(22, 22, 22, 0.8); 
+    grid-template-areas: 
+        "film-1 film-2 film-3"
+        "film-4 film-5 film-6"
+        "film-7 film-8 film-9";
+    grid-auto-flow: dense;
+}
+.playbill__movies a { 
     width: 14.15rem;
     height: 14.15rem;
-    position: relative;
+}
+.playbill__green {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.5rem 11.65rem;
+    width: 14.15rem;
+    height: 14.15rem;
+}
+
+.film-1 {         
+    background: url(../images/film1.jpg)  no-repeat center / cover;
+    grid-area: film-1;
+}
+.film-2 {         
+    background: url(../images/film2.jpg)  no-repeat center / cover;
+    grid-area: film-2;
+}
+.film-3 {         
+    background: url(../images/film3.jpg)  no-repeat center / cover;
+    grid-area: film-3;
+}
+.film-4 {         
+    background: url(../images/film4.jpg)  no-repeat center / cover;
+    grid-area: film-4;
+}
+.film-5 {         
+    background: url(../images/film5.jpg)  no-repeat center / cover;
+    grid-area: film-5;
+}
+.film-6 {         
+    background: url(../images/film6.jpg)  no-repeat center / cover;
+    grid-area: film-6;
+}
+.film-7 {         
+    background: url(../images/film7.jpg)  no-repeat center / cover;
+    grid-area: film-7;
+}
+.film-8 {         
+    background: url(../images/film8.jpg)  no-repeat center / cover;
+    grid-area: film-8;
+}
+.film-9 {         
+    background: url(../images/film9.jpg)  no-repeat center / cover;
+    grid-area: film-9;
+}
+.playbill__green {
+    background: rgba(22, 22, 22, 0.8);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.playbill__title {
+    padding-top: 0.9rem;
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.1rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.45rem;
+    line-height: 1.31;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.playbill__subtitle {
+    padding-top: 0.95rem;
+    padding-right: 1rem;
+    padding-left: 1.2rem;
+    padding-bottom: 0.1rem;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.55rem;
+    line-height: 1.273;
+    opacity: 0;
+    transition: all 0.2s ease;
 }
 .playbill__movies a:hover span {
     opacity: 1;
 }
 .playbill__movies a:hover .playbill__green {
     background: rgba(144, 210, 61, 0.4);
-}
-.playbill__movies img {
-    width: 14.15rem;
-    height: 14.15rem;
-}
-
-.playbill__title {
-    position: absolute;
-    padding-top: 0.9rem;
-    padding-left: 1.25rem;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.45rem;
-    line-height: 1.31;
-    color: #FFFFFF;
-    opacity: 0;
-    transition: all 0.2s ease;
-    width: 11.95rem;
-    height: 0rem;
-    z-index: 3;
-
-}
-
-.playbill__subtitle {
-    position: absolute;
-    padding-top: 3.45rem;
-    padding-left: 1.25rem;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.55rem;
-    line-height: 1.2727;
-    color: #FFFFFF;
-    opacity: 0;
-    transition: all 0.2s ease;
-    width: 11.95rem;
-    height: 0rem;
-    z-index: 3;
-
-}
-.playbill__green {
-    width: 14.15rem;
-    height: 14.15rem;
-    background: rgba(22, 22, 22, 0.8);
-    position: absolute;
-    transition: all 0.2s ease;
-}
-.playbill__green:hover {
-    background: none;
 }
 
 /* покупки ===============================================*/
