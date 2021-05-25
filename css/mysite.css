@@ -680,7 +680,6 @@ html {
     grid-template-rows: repeat(3, 1fr);
     width: 42.5rem;
     height: 42.5rem;
-    background: rgba(22, 22, 22, 0.8); 
     grid-template-areas: 
         "film-1 film-2 film-3"
         "film-4 film-5 film-6"
@@ -688,17 +687,31 @@ html {
     grid-auto-flow: dense;
 }
 .playbill__movies a { 
-    width: 14.15rem;
-    height: 14.15rem;
+    width: 14.166rem;
+    height: 14.166rem;
+    overflow: hidden;
+    
+    box-sizing: border-box;
+
 }
 .playbill__green {
-    display: inline-grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2.5rem 11.65rem;
-    width: 14.15rem;
-    height: 14.15rem;
+    padding: 0.9rem 1.2rem 0.5rem 1.15rem; 
+    width: 14.166rem;
+    height: 14.166rem;
+    transform: translateY(100%);
+    transition: all 0.2s ease;
+    color: #FFFFFF;
+    display: flex; 
+    flex-direction:column;
+    flex-wrap:wrap;
+    box-sizing: border-box;
 }
-
+.playbill__gray {
+    background: rgba(22, 22, 22, 0.8);
+    transition: all 0.2s ease;
+    width: 14.166rem;
+    height: 14.166rem;    
+}
 .film-1 {         
     background: url(../images/film1.jpg)  no-repeat center / cover;
     grid-area: film-1;
@@ -735,42 +748,28 @@ html {
     background: url(../images/film9.jpg)  no-repeat center / cover;
     grid-area: film-9;
 }
-.playbill__green {
-    background: rgba(22, 22, 22, 0.8);
-    transition: all 0.2s ease;
-    text-decoration: none;
-    color: #FFFFFF;
-}
 .playbill__title {
-    padding-top: 0.9rem;
-    padding-left: 1.2rem;
-    padding-right: 1rem;
-    padding-bottom: 0.1rem;
     font-style: normal;
     font-weight: 600;
     font-size: 1.45rem;
     line-height: 1.31;
-    opacity: 0;
-    transition: all 0.2s ease;
+    padding-bottom: 0.55rem;
+
 }
 .playbill__subtitle {
-    padding-top: 0.95rem;
-    padding-right: 1rem;
-    padding-left: 1.2rem;
-    padding-bottom: 0.1rem;
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
     font-size: 0.55rem;
     line-height: 1.273;
-    opacity: 0;
-    transition: all 0.2s ease;
+
 }
-.playbill__movies a:hover span {
-    opacity: 1;
+.playbill__movies a:hover .playbill__gray {
+    background: rgba(144, 210, 61, 0.4);
 }
 .playbill__movies a:hover .playbill__green {
-    background: rgba(144, 210, 61, 0.4);
+    transform: translateY(0);
+
 }
 
 /* покупки ===============================================*/
