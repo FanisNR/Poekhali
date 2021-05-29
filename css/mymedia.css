@@ -1,0 +1,1145 @@
+@media screen and (max-width: 991px) {
+    
+    html {
+        font-size: 2.018vw;
+    }
+    .container {
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .header__body {
+        justify-content:space-between;
+        width: 90vw;
+    }
+    /*.wrapper {
+        flex-direction:column;
+        position: fixed;
+        background: #FFFFFF;
+        padding: 1rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 15;
+        transform: translateX(100%);
+        transition: all 0.2s ease;
+        width: 17.25rem;
+
+    }*/
+    .wrapper {
+        flex-direction:column;
+        position: fixed;
+        background: #FFFFFF;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        z-index: 15;
+        transform: translateX(100%);
+        transition: all 0.2s ease;
+        width: 20rem;
+        padding: 3rem;
+        padding-left: 3.5rem;
+        padding-top: 2rem;
+        box-sizing: unset;
+    }
+    /*.menu__toggle:hover + .wrapper,
+    .wrapper_opened {
+        transform: translateX(0);
+    }*/
+    .header__contact {
+        margin: 0;
+        order:3;
+    }
+    .header__language {
+        display: table;
+        margin: 0;
+        order:1;
+        height: 2.4rem;
+        padding-bottom: 1rem;
+    }
+    .header__menu {
+        order:2;
+    }
+    .header__menu  ul {
+        height: 12rem;
+        display: flex;
+        justify-content:space-between;
+
+    }
+    .cinema__tel,
+    .cinema__mail,
+    .cinema__addres,
+    .phone {
+        color: #9B9B9B;
+        display: table;
+        margin-right: 0;
+    }
+    .header__contact a{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    .cinema__call {
+        width: 10rem;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 0.25 #A3CC40;
+        border: 0.05rem solid #A3CC40;
+    }
+    .header__block {
+        width: 1.7rem;
+    }
+    .header__lang,
+    .header__lang-subtitle ul{
+        color: #A3CC40;
+        font-size: 0.8rem;
+    }
+    .header__lang {
+        margin-bottom: 0.1rem;
+    }
+
+    .header__block svg {
+        margin-left: 0rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        fill: #A3CC40;
+    }
+
+    .header__down-arrow {
+        fill: #A3CC40;
+    }
+    .header__lang-subtitle {
+        margin-top: 0.1rem;
+    }
+
+    .phone {
+        padding-top: 0;
+        color: #A3CC40;
+    }
+    .phone svg{
+        fill: #A3CC40;
+    }
+    .header__menu  ul{
+        flex-direction:column;
+    }  
+    .header__menu  ul li a {
+        color: #4C4D4F;
+        font-size: 1.44rem;
+        flex-grow:1;
+        line-height: 2rem;
+        padding-bottom: 0.5rem;
+        padding: 0;
+    }
+    .header__menu  ul li a:hover{
+        border-bottom: none;
+        margin-top: -0.05rem;
+        padding-bottom: 0.05rem;
+    }
+    .header__menu:last-child {
+        margin-bottom: 6.05rem;
+    }
+    .welcome__footer {
+        margin-top: -10rem;
+         
+    }
+    .menu__btn {
+        display: flex; 
+        align-items: center;  
+        position: fixed;
+        width: 2.35rem;
+        height: 1.3rem;
+        clip: auto;
+        overflow:hidden;
+        overflow-y:hidden;  /*для вертикального*/
+        overflow-x:hidden;  /*для горизонтального*/
+    }
+    .one {         
+        order: 4;
+    }
+    .two {         
+        order: 5;
+    }
+    .three {         
+        order: 6;
+    }
+    .four {         
+        order: 3;
+    }
+    .five {         
+        order: 2;
+    }
+    .six {         
+        order: 1;
+    }
+    .playbill_suptitle {    
+        margin-bottom: 1rem;
+    }
+    .playbill__green {
+        transform: translateY(0);
+    }
+    .film-1 {         
+        order: 9;
+    }
+    .film-2 {         
+        order: 8;
+    }
+    .film-3 {         
+        order: 7;
+    }
+    .film-4 {         
+        order: 6;
+    }
+    .film-5 {         
+        order: 5;
+    }
+    .film-6 {         
+        order: 4;
+    }
+    .film-7 {         
+        order: 3;
+    }
+    .film-8 {         
+        order: 2;
+    }
+    .film-9 {         
+        order: 1;
+    }
+    .menu__btn {
+        z-index: 20;
+        margin-left: -2.2rem;
+
+    }
+    #menu__toggle:checked ~ .menu__btn  {
+        height: 2.35rem;
+        transform: translateY(-25%);
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+        background-color: #A3CC40;
+        box-shadow: none
+
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+        background-color: #A3CC40;
+        box-shadow: none
+
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        background-color: #A3CC40;
+        box-shadow: none
+
+    }
+    #menu__toggle:checked ~ .wrapper {
+        transform: translateX(0);
+    }
+    .about-us__block {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        margin: 0;
+        overflow: visible;
+
+    }
+    .about-us__part {
+        padding: 1rem 0 0 0;
+        width: 12.25rem;
+    }
+    .schedule__time {
+        width: 6rem;
+    }
+    .schedule__start {
+        width: 13.9rem;
+    }
+    .schedule__name {
+        width: 13.9rem;
+    }
+    
+    .schedule__genre {
+        width: 13.6rem;
+    }
+    .playbill__movies {
+        height: 47.4rem;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        
+    }
+    .playbill__movies a { 
+        width: 33.333%;
+        height: 33.333%;
+    }
+    .shopping  p {
+        margin: 0;
+    }
+    .shopping__block {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between; 
+        overflow: visible;
+        margin: 0;
+    }
+    .shopping__link {
+        padding: 0;
+        width: 12.25rem;
+        margin: 0.9rem 0;
+    }
+    .reviews__block {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content:space-between; 
+        align-items:center;
+
+
+    }
+    .reviews__first,
+    .reviews__third,
+    .reviews__second,
+    .reviews__svg_left,
+    .reviews__svg_right {
+        position: static;
+        margin: 0;
+    }
+    .reviews__svg_left,
+    .reviews__svg_right {
+        height: 16.6rem;
+        cursor: pointer;
+        margin-top: 0;
+    }
+    .reviews__svg_left svg,
+    .reviews__svg_right svg {
+        margin-top: 2.75rem;
+    }
+    .feedback {
+        width: 80vw; 
+    }
+
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 1.8vw;
+    }
+    .container {
+        width: 47.4rem;
+        margin: 0 auto;
+    }
+    .wrapper {
+        width: 19rem;
+        padding: 3rem;
+        padding-top: 3.7rem;
+        box-sizing: unset;
+    }
+    .header {
+        margin-top: 2.6rem;
+    }
+    .header__body {
+        width: 90vw;
+    }
+    .menu__btn {
+        width: 3.3rem;
+        height: 1.9rem;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -0.7rem;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 0.7rem;
+      }
+      #menu__toggle:checked ~ .menu__btn  {
+        height: 2rem;
+        transform: translateY(0%);
+    }
+    .header__language {
+        margin-left: 0.25rem;
+    }
+    .cinema__tel,
+    .cinema__mail,
+    .cinema__addres,
+    .phone {
+        color: #9B9B9B;
+        display: table;
+        margin-right: 0;
+    }
+    
+    .header__contact {
+        margin-left: 0.25rem;
+    }
+    .header__contact a{
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 1.3rem;
+    }
+    .header__contact a:last-child {
+        margin-bottom: 0rem;
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-top: 3.7rem;
+    }
+    .cinema__call {
+        width: 14rem;
+    }
+    .cinema__call svg {
+        width: 0.75rem;
+        height: 0.75rem;
+        margin-left: -1.4rem;
+        margin-right: 0.7rem;
+    }
+    .header__block {
+        width: 1.7rem;
+    }
+    .header__block svg {
+        margin-left: 0rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        fill: #A3CC40;
+    }
+    .mobile__menu {
+        width: 0.05rem;
+        height: 0.05rem;
+        margin-right: 2.5rem;
+        margin-top: 0.5rem;        
+    }
+    .phone {
+        color: #A3CC40;
+    }
+
+    .header__menu  ul {
+        height: 18rem;
+    }
+    .header__event,
+    .header__past,
+    .header__speakers,
+    .header__sponsors,
+    .header__contact {
+        min-height: 2rem;
+        margin-left: 0.25rem;
+    }
+    .header__menu:last-child {
+        margin-bottom: 6.05rem;
+    }
+
+    .intro {
+        min-height: 74.5vh;
+        margin-bottom: 5.4rem; 
+    }
+    .cover {
+        padding-bottom: 1.5rem;
+    }
+    .welcome__footer {
+        position: absolute;
+        width: 21.3rem;
+        height: 18.05rem;
+        margin-left: 30.05%;
+        padding-bottom: 0.25rem;
+        margin-top: -14rem;
+        width: 27.5rem;
+        height: 11.5rem;  
+         
+    }
+    .welcome__footer-point {
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 1.3rem;
+        font-size: 1.8rem;
+        line-height: 2.15rem;
+    }
+    .welcome__footer-item {
+        font-size: 0.65rem;
+        line-height: 0.75rem;
+        color: #333333;
+        text-align: left;
+        padding-left: 2.35rem;
+        padding-right: 1.2rem;
+    
+    }
+    .welcome__footer-item:last-child {
+        padding-top: 1.5rem;
+    }
+    .about-us {
+        margin-top:0rem;
+    }
+    .schedule__block {
+    }
+    .feedback {
+        width: 47.4rem; 
+    }
+    .feedback__block {
+        width: 60%;
+        margin-left: 0;
+        float: right;
+    }
+    .feedback__name,
+    .feedback__name_input,
+    .feedback__checkbox,
+    /*.feedback__block input,*/
+    .feedback__place-number select,
+    .feedback__opinion textarea,
+    .feedback__button {
+        width: 28rem;
+    }
+    .feedback__input {
+        width: 0.05rem;
+        height: 0.05rem;
+    }
+    .map {
+        width: 90vw;
+        height: 14rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    html {
+        font-size:  1.85vw;    
+    }
+    .container {
+        width: 84.5vw;
+        margin: 0 auto;
+    }
+    .part {
+        font-size: 3.2rem;
+
+    }
+    .intro {
+        margin-bottom: 7.3rem; 
+        min-height: 32rem;
+
+    }
+
+    .welcome__footer {
+        position: absolute;
+        width: 26.5rem;
+        height: 18.05rem;
+        margin-left: 30.05%;
+        padding-bottom: 0.25rem;
+        margin-top: -15.5rem;
+        height: 13rem;  
+         
+    }
+
+    .welcome__footer-point {
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 1.95rem;
+        line-height: 1.15rem;
+    }
+    .welcome__footer-item {
+        font-size: 0.95rem;
+        line-height: 1rem;
+        color: #333333;
+        text-align: left;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    
+    }
+    .welcome__footer-item:last-child {
+        padding-top: 1.1rem;
+    }
+    .about-us__block {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        margin: 0;
+        overflow: visible;
+
+    }
+    .about-us__part {
+        padding: 1rem 0 0 0;
+        width: 48%;
+    }
+    .about-h2 {
+        margin: 0.5rem 0 0 0;
+    }
+    .about-us__part img {
+        width: 100%;
+        height: 14rem;
+
+    }
+    .about-us__title,
+    .about-us__subtitle {
+        width: 100%;
+        padding: 0;
+    }
+    .about-us__title {
+        font-size: 1.3rem;
+        margin: 0.3rem 0 0.3rem 0;
+    }
+    .about-us__subtitle {
+        font-size: 0.7rem;
+        margin: 0 0 0.3rem 0;
+    }
+
+    .schedule__block {
+        overflow: auto;
+        margin: 0.5rem 0 0 0;
+        width: 100%;
+    }
+    .schedule__time {
+        width: 8rem;
+    }
+    .schedule__start {
+        width: 15.9rem;
+        font-size: 2.7rem;
+    }
+    .schedule__name {
+        width: 15.9rem;
+    }
+    .schedule__link {
+        font-size: 1.5rem;
+        width: 100%;
+        white-space: nowrap;
+        padding: 0 0.5rem;
+    }
+    .schedule__table td {
+        font-size: 1rem;
+        width: 100%;
+        white-space: nowrap;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .schedule__table tr {
+        height: 3rem;
+    }
+    .schedule__fake-checkbox { 
+        background-size: 0.9rem 0.8rem;
+    }
+    .schedule__input:checked + .schedule__fake-checkbox {
+        background-size: 0.9rem 0.8rem;
+    
+    }
+    .present__gift img {
+        width: 11rem;
+        height: 11rem;
+    }
+    .presnt__block {
+        width: 45rem;        
+    }
+    .present__title {
+        font-size: 1rem;
+    }
+    .present__btn {
+        width: 16rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+    }
+    .playbill_suptitle,
+    .shopping__suptitle,
+    .reviews__suptitle {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .playbill_suptitle br {
+        display: none;
+    }
+    .playbill__movies {
+        height: auto;
+    }
+
+    .playbill__movies a {
+        width: 50%;
+        height: 22.838rem;
+        box-sizing: border-box;
+    }
+    .playbill__green {
+        flex-wrap:nowrap;
+    }
+    .playbill__subtitle {
+        font-size: 1.3rem;
+    }
+    .feedback {
+        width: 84.5vw;
+        margin: 0.5rem auto;
+    }
+    .feedback__container{
+        width: 27.5rem; 
+    }
+    .shopping__link {
+        width: 30rem;
+        
+    }
+
+    .shopping__gift {
+        font-size: 1.5rem;        
+        margin: 0;
+    }
+    .shopping__title {
+        position: static;
+        margin: 0;
+    }
+    .shopping__block {
+        justify-content:center;
+    }
+    
+    .shopping__part {
+        width: 30rem;
+        height: 40.53rem;
+        border-radius: 1.5rem;
+        justify-content: center;
+    }
+    .shopping__title {
+   
+        position: relative;
+        grid-area: food;
+        width: 30rem;
+        height: 100%;
+        z-index: 1;
+    }
+    .shopping__title::before {
+        position: absolute;
+        top: -8.965rem;
+        content: "";
+        border-top: 9rem solid transparent;
+        border-right: 30.5rem solid rgba(163, 204, 64, 0.8);
+        z-index: -1;
+    
+    }
+    .shopping__gift {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1.3;
+
+    
+        display:block;
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+     
+    }
+    
+    .shopping__green {
+        background: rgba(163, 204, 64, 0.8);
+        position: absolute;
+        margin-top: 12.25rem;
+        width: 12.25rem;
+        height: 4.4rem;
+    }
+    .present__one {
+        margin-top: 2.5rem;
+    }
+    .present__three {
+        margin-top: 0.5rem;
+    }
+    .present__two {
+        margin-top: -1.8rem;
+    }
+    
+    
+    .reviews__box {
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+    .reviews__first {
+        transform: translateX(-200%)
+    }
+    .reviews__third{
+        transform: translateX(200%)
+    }
+    .reviews__second {
+        width: 20.25rem;
+        height: 24.6rem;
+        display: flex;
+        flex-direction:column;
+        
+    }
+    .reviews__second img {
+        width: 18.55rem;
+        height: 12.3rem;
+        
+    }
+    .reviews__second b,
+    .reviews__second p,
+    .reviews__second q {
+        margin: 0;
+        position: static;
+        padding: 1rem;
+    }
+    .reviews__second b{
+        font-size: 1.5rem;
+        padding-top: 13rem;
+        padding-bottom: 0;
+    }
+    .reviews__second q {
+        font-size: 0.9rem;
+        width: 16.5rem;
+        height: auto;
+    }
+    .reviews__second p {
+        align-self:flex-end;
+        font-size: 0.7rem;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .reviews__svg_left,
+    .reviews__svg_right {
+        display: flex;
+        height: 24.6rem;
+        padding: 0 1rem;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .reviews__svg_left svg,
+    .reviews__svg_right svg {
+        width: 2rem;
+        height: 3.1rem;
+        margin-top: 0;
+        
+    }
+    .feedback {
+        width: 47.2rem;
+    }
+    .feedback__container {
+        display:flex; 
+        justify-content:flex-end;
+        width: 47.2rem;
+        padding: 0.9rem 0;
+    }
+    .feedback__fake-checkbox {
+        margin-left: 0;
+    }
+    .feedback__mobile {
+        display:flex; 
+        flex-direction:column;
+        justify-content:space-between;
+        height: 20rem;
+    }
+    .feedback__name,
+    .feedback__place-number,
+    .feedback__opinion,
+    .feedback__checkbox,
+    .feedback__bth {
+        margin: 0;
+    }
+    .feedback__checkbox {
+        font-size: 0.9rem;
+    }
+    .map {
+        width: 95vw;
+        height: 20rem;
+    }
+    .footer__block {
+        width: 20rem;
+    }
+    .footer__block p {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .footer__social-media {
+        width: 100%;
+        height: 3.5rem;
+    }
+    .footer__link {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .footer__link svg {
+        width: 50%;
+        height: 50%;
+    }
+    .footer__block2 {
+        display:flex; 
+        flex-direction:column;
+        margin-left: 3.5rem;
+        margin-top: 0;
+    }
+    .vertical__subtitle {
+        font-size: 1.5rem;
+    }
+    .footer__menu {
+        
+        line-height: ;
+        margin-left: 0;
+    }
+    .footer__menu ul {
+        margin-top: 0.9rem;
+    }
+    .footer__menu li {
+        margin-bottom: 0;
+    }
+    .footer__menu a {
+        margin-left: -0.6rem;
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+    .footer__contact {
+        display:flex; 
+        flex-direction:column;
+    }
+    .footer__part {
+        font-size: 1.5rem;
+        line-height: 1.25rem;
+        margin-bottom: 1.6rem;
+    }
+    .footer__tel,
+    .footer__mail,
+    .footer__addres,
+    .cinema__nav,
+    .cinema__all-contact {
+        font-size: 0.9rem;
+    }
+    .footer__contact a,
+     .footer__contact span, 
+     .footer__contact address {
+        line-height: 1rem;
+     }
+}     
+@media screen and (max-width: 479px) {
+    html {
+        font-size:  2.175vw;    
+    }
+    .container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .welcome__footer {
+        position: absolute;
+        width: 30rem;
+        height: 18.05rem;
+        margin-left: 30.05%;
+        padding-bottom: 0.25rem;
+        margin-top: -14rem;
+        height: 11.5rem;  
+         
+    }
+
+    .welcome__footer-point {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+        line-height: 1.15rem;
+    }
+    .welcome__footer-item {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #333333;
+        text-align: left;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    
+    }
+    .welcome__footer-item:last-child {
+        padding-top: 0.5rem;
+    }
+
+    .about-us__part {
+        flex-grow:1;
+    }
+    .about-us__block {
+        display: flex;
+    }
+    .about-us__part {
+        padding: 1.3rem 0 0 0;
+        width: 80%;
+    }
+    .about-h2 {
+        margin: 0.5rem 0 0 0;
+    }
+    .about-us__part img {
+        width: 100%;
+        height: 23rem;
+
+    }
+    .about-us__title {
+        font-size: 2.3rem;
+    }
+    .about-us__subtitle {
+        font-size: 1.5rem;
+    }
+    .presnt__block {
+        width: 41rem;        
+    }
+    .present__title {
+        font-size: 1rem;
+    }
+    .present__btn {
+        width: 16rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+    }
+    .playbill__movies {
+        height: auto;
+    }
+
+    .playbill__movies a {
+        width: 100%;
+        height: 41.38rem;
+        box-sizing: border-box;
+        justify-content:center;
+        flex-direction:column;
+    }
+    .playbill__green {
+        flex-wrap:nowrap;
+    }
+    .playbill__title{
+        font-size: 3.3rem;
+    }
+    .playbill__subtitle {
+        font-size: 2.3rem;
+    }
+    .reviews {
+        padding-top: 3.6rem;
+        margin-top: 0;
+    }
+    .reviews__second {
+        width: 40.25rem;
+        height: 27.6rem;
+        display: flex;
+        flex-direction:column;
+        
+    }
+    .reviews__second img {
+        width: 21.95rem;
+        height: 15.3rem;
+        
+    }
+    .reviews__second b,
+    .reviews__second p,
+    .reviews__second q {
+        margin: 0;
+        position: static;
+        padding: 1rem;
+    }
+    .reviews__second b{
+        font-size: 1.5rem;
+        padding-top: 16rem;
+        padding-bottom: 0;
+    }
+    .reviews__second q {
+        font-size: 1rem;
+        width: 20rem;
+        height: auto;
+        flex-grow:1;
+        padding-bottom: 0;
+    }
+    .reviews__second p {
+        align-self:flex-end;
+        font-size: 0.7rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.3rem;
+    }
+    .reviews__svg_left,
+    .reviews__svg_right {
+        display: flex;
+        height: 24.6rem;
+        padding: 0 1rem;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .reviews__svg_left svg,
+    .reviews__svg_right svg {
+        width: 2rem;
+        height: 3.1rem;
+        margin-top: 0;        
+    }
+    .reviews__first {
+        transform: translateX(-300%)
+    }
+    .reviews__third{
+        transform: translateX(300%)
+    }
+    .feedback {
+        width: 44rem;
+    }
+    .feedback__container {
+        display:flex; 
+        justify-content:flex-end;
+        width: 43rem;
+        padding: 0.9rem 0;
+    }
+    .feedback__fake-checkbox {
+        margin-left: 0;
+    }
+    .feedback__mobile {
+        display:flex; 
+        flex-direction:column;
+        justify-content:space-between;
+        height: 20rem;
+    }
+    .feedback__name,
+    .feedback__name_input,
+    .feedback__checkbox,
+    /*.feedback__block input,*/
+    .feedback__place-number select,
+    .feedback__opinion textarea,
+    .feedback__button {
+        width: 26rem;
+    }
+    .feedback__checkbox {
+        line-height: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+
+    .map {
+        width: 95vw;
+        height: 17rem;
+    }
+    .footer__container {
+        width: 42.35rem;
+    }
+
+} 
+@media screen and (max-width: 320px) {
+    html {
+        font-size:  2.2vw;    
+    }
+    .container {
+        width: 95vw;
+        margin: 0 auto;
+    }
+    .playbill__movies a {
+        height: 43.183rem;
+    }
+    .reviews__second img {
+        width: 23rem;
+    }
+    .feedback {
+        width: 42rem;
+    }
+    .feedback__container {
+        display:flex; 
+        justify-content:flex-end;
+        width: 41rem;
+        padding: 0.9rem 0;
+    }
+    .feedback__fake-checkbox {
+        margin-left: 0;
+    }
+    .feedback__mobile {
+        display:flex; 
+        flex-direction:column;
+        justify-content:space-between;
+        height: 20rem;
+    }
+    .feedback__name,
+    .feedback__name_input,
+    .feedback__checkbox,
+    /*.feedback__block input,*/
+    .feedback__place-number select,
+    .feedback__opinion textarea,
+    .feedback__button {
+        width: 24.5rem;
+    }
+    .feedback__checkbox {
+        line-height: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .map {
+        width: 95vw;
+        height: 16.5rem;
+    }
+
+} 
+
+

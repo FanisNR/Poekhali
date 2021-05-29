@@ -70,7 +70,7 @@ html {
 /* Шапка ========================================================*/
 
 .header {      
-    max-width: 48rem    ;  
+    max-width: 47.5rem    ;  
     margin-left: auto;
     margin-right: auto; 
     margin-top: 2.5rem; 
@@ -81,8 +81,20 @@ html {
     flex-wrap: nowrap;
 }
 .header__link{    
-    padding-right: 2.2rem; 
+    padding-right: 2.25rem; 
     flex-basis: 7.8rem;
+}
+.header__logo {
+    width: 7.8rem;
+    height: 2rem;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 37.5rem;
+}
+.mobile__svg {
+    z-index: 1000;
 }
 .header__contact {
     font-size: 0.6rem;
@@ -138,7 +150,7 @@ html {
     padding: 0.4rem 0.19rem 0rem 0.4rem;
 }
 .cinema__call {
-    max-width: 6.5rem;
+    width: 6.5rem;
     height: 1.05rem;
     background: #FFFFFF;
     border: 0.05rem solid #EDEDED;
@@ -166,6 +178,11 @@ html {
 }
 .phone:hover svg{
     fill: #FFFFFF;
+}
+.header__language {
+    display: inline-flex;
+    margin-bottom: 0.8rem;
+    margin-top: -0.2rem;
 }
 .header__lang{   
     display: inline;
@@ -400,7 +417,7 @@ html {
     transform: scale(1.07);
 }
 .about-us__part img {
-    max-width: 12.25rem;
+    width: 12.25rem;
     height: 8.45rem;
 }
 .about-us__title {    
@@ -656,12 +673,10 @@ html {
 /* Фильмы ==================================================*/
 
 .playbill {
-    border-collapse: collapse;
     margin-top: 3rem;
 }
 .playbill_suptitle {
     margin-top: 1.4rem;
-    width: 27.4rem;
     font-style: normal;
     font-weight: normal;
     font-size: 0.55rem;
@@ -670,34 +685,27 @@ html {
 }
 .playbill__block {    
     margin-top: 3.2rem; 
-    width: 42.5rem;
-    height: 42.5rem;
-
 }
 .playbill__movies {    
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 42.5rem;
-    height: 42.5rem;
-    grid-template-areas: 
+    display: grid;
+    justify-content: center;
+    /*grid-template-areas: 
         "film-1 film-2 film-3"
         "film-4 film-5 film-6"
-        "film-7 film-8 film-9";
-    grid-auto-flow: dense;
+        "film-7 film-8 film-9";*/
+    grid-template-rows: repeat(auto-fill, 14.166rem);
+    grid-template-columns:repeat(auto-fill, 14.166rem);
 }
 .playbill__movies a { 
+    overflow: hidden;   
+    box-sizing: border-box;
     width: 14.166rem;
     height: 14.166rem;
-    overflow: hidden;
-    
-    box-sizing: border-box;
-
 }
 .playbill__green {
     padding: 0.9rem 1.2rem 0.5rem 1.15rem; 
-    width: 14.166rem;
-    height: 14.166rem;
+    width: 100%;
+    height: 100%;  
     transform: translateY(100%);
     transition: all 0.2s ease;
     color: #FFFFFF;
@@ -709,44 +717,44 @@ html {
 .playbill__gray {
     background: rgba(22, 22, 22, 0.8);
     transition: all 0.2s ease;
-    width: 14.166rem;
-    height: 14.166rem;    
+    width: 100%;
+    height: 100%;    
 }
 .film-1 {         
     background: url(../images/film1.jpg)  no-repeat center / cover;
-    grid-area: film-1;
+    /*grid-area: film-1;*/
 }
 .film-2 {         
     background: url(../images/film2.jpg)  no-repeat center / cover;
-    grid-area: film-2;
+    /*grid-area: film-2;*/
 }
 .film-3 {         
     background: url(../images/film3.jpg)  no-repeat center / cover;
-    grid-area: film-3;
+    /*grid-area: film-3;*/
 }
 .film-4 {         
     background: url(../images/film4.jpg)  no-repeat center / cover;
-    grid-area: film-4;
+    /*grid-area: film-4;*/
 }
 .film-5 {         
     background: url(../images/film5.jpg)  no-repeat center / cover;
-    grid-area: film-5;
+    /*grid-area: film-5;*/
 }
 .film-6 {         
     background: url(../images/film6.jpg)  no-repeat center / cover;
-    grid-area: film-6;
+    /*grid-area: film-6;*/
 }
 .film-7 {         
     background: url(../images/film7.jpg)  no-repeat center / cover;
-    grid-area: film-7;
+    /*grid-area: film-7;*/
 }
 .film-8 {         
     background: url(../images/film8.jpg)  no-repeat center / cover;
-    grid-area: film-8;
+    /*grid-area: film-8;*/
 }
 .film-9 {         
     background: url(../images/film9.jpg)  no-repeat center / cover;
-    grid-area: film-9;
+    /*grid-area: film-9;*/
 }
 .playbill__title {
     font-style: normal;
@@ -819,27 +827,28 @@ html {
 }
 
 .shopping__part {
-    float: left;
     color: #333333;
     filter: drop-shadow(0 0.2rem 0.2rem rgba(0, 0, 0, 0.25));
     border-radius: 0.5rem;
     overflow: hidden;
+    height: 16.55rem;
+    min-width: 12.25rem;
 
+    display: grid;
+    grid-template-rows: 2fr 1fr 1.1fr;
+    grid-template-areas: 
+    "head"
+    "body"
+    "food";
 }
 .shopping__present_one {
-    background: url(../images/present1.jpg) no-repeat center / cover;
-    min-width: 12.25rem;
-    height: 16.55rem;
+    background: url(../images/present1.jpg) no-repeat center / cover;  
 }
 .shopping__present_two {
     background: url(../images/present2.jpg) no-repeat center / cover;
-    min-width: 12.25rem;
-    height: 16.55rem;
 }
 .shopping__present_three {
     background: url(../images/present3.jpg) no-repeat center / cover;
-    min-width: 12.25rem;
-    height: 16.55rem;
 }
 /*.shopping__part img {
     max-width: 12.25rem;
@@ -847,31 +856,41 @@ html {
     padding-top: 0.1rem;
 }*/
 .shopping__title {
-    position: absolute;
-    width: 12.25rem;
     text-decoration: none;
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.3;
     color: #FFFFFF;
-    margin-top: 13.5rem;
+
+    grid-area: food;
+    width: 12.28rem;
+    height: 100%;
+    background: rgba(163, 204, 64, 0.8);
+    position: relative;
+    grid-area: food;
+    width: 12.28rem;
+    height: 100%;
+    z-index: 1;
+}
+.shopping__title::before {
+    position: absolute;
+    top: -3.25rem;
+    content: "";
+    border-top: 3.25rem solid transparent;
+    border-right: 12.28rem solid rgba(163, 204, 64, 0.8);
+    z-index: -1;
+
 }
 .shopping__gift {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 8.85rem;
-    height: 4.3rem;
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
- 
+
+    display:block;
+    width: auto;
+    height: 100%;
+    margin: 0 auto; 
 }
 
 .shopping__green {
@@ -881,12 +900,14 @@ html {
     width: 12.25rem;
     height: 4.4rem;
 }
-.shopping__green::before {
-    position: absolute;
-    top: -3.25rem;
-    content: "";
-    border-top: 3.25rem solid transparent;
-    border-right: 12.25rem solid rgba(163, 204, 64, 0.8);
+.present__one {
+    margin-top: 1rem;
+}
+.present__three {
+    margin-top: 0.5rem;
+}
+.present__two {
+    margin-top: -0.5rem;
 }
 /* отзывы ==============================================*/
 
@@ -1096,7 +1117,8 @@ html {
 
 }
 
-.feedback__block input,
+.feedback__name_input,
+
 .feedback__place-number select,
 .feedback__opinion textarea {
     background: #DEDEDE;
@@ -1182,7 +1204,7 @@ html {
 .feedback__input { 
     display: inline;
     position: absolute;
-    width: 1px;
+    width: 0.05rem;
     height: 0.05rem;
     clip: rect(0px, 0px, 0px, 0px);
     overflow:hidden;
@@ -1418,3 +1440,46 @@ cursor: pointer;
 .footer__contact address {
     display: inline;
 }
+
+#menu__toggle {
+    display: inline;
+    position: absolute;
+    width: 0.05rem;
+    height: 0.05rem;
+    clip: rect(0px, 0px, 0px, 0px);
+    overflow:hidden;
+    overflow-y:hidden;  /*для вертикального*/
+    overflow-x:hidden;  /*для горизонтального*/
+  }
+
+  .menu__btn {
+    display: flex; 
+    align-items: center;  
+    position: absolute;
+    width: 0.05rem;
+    height: 0.05rem;
+    clip: rect(0px, 0px, 0px, 0px);
+    overflow:hidden;
+    overflow-y:hidden;  /*для вертикального*/
+    overflow-x:hidden;  /*для горизонтального*/
+    
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.15rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0.09rem rgba(0,0,0,0.5); /* Параметры тени */
+
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -0.5rem;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 0.5rem;
+  }

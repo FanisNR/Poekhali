@@ -14,6 +14,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/reset.css"> 
     <link rel="stylesheet" type="text/css" href="css/mysite.css">
+    <link rel="stylesheet" type="text/css" href="css/mymedia.css">
+
 </head>
 <body class="cinema">
     <main>           
@@ -22,51 +24,58 @@
                 <div class="header__body">
                     <div class="header__link">
                         <a href="http://university.innopolis.ru" target="_blank">  
-                            <svg width="7.8rem" height="2rem">
+                            <svg class="header__logo" >
                                 <use xlink:href="#link_logo"/>
                             </svg>
                         </a>
-                    </div>
-                    <div>
-                        <div class="header__contact">
-                            <a class="cinema__tel" href="tel:+78003551256">+7 (800) 355 12-56</a>
-                            <a class="cinema__mail" href="mailto:kino@innopolis.ru">kino@innopolis.ru</a> 
-                            <a class="cinema__addres" href="#">ул.Спортивная д.1</a> 
-                            <a class="cinema__call phone" href="#" target="_blank">  
-                                <svg width="0.5rem" height="0.5rem" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z"/>
-                                </svg>                        
-                                <span>Заказать звонок</span>
-                            </a>
-                            <div class="header__lang">
-                                <div class="header__block">
-                                    <span>ru</span>
-                                    <svg class="header__down-arrow" width="0.4rem" height="0.2rem" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"/>
-                                    </svg>
-                                </div> 
-                                <div class="header__lang-subtitle">   
-                                    <ul>
-                                        <li>
-                                            <a href="">ru</a>
-                                        </li>
-                                        <li>
-                                            <a href="">en</a>
-                                        </li>
-                                    </ul>						
-                                </div>
-                            </div>        
+                    </div>                    
+                    <div class="mobile__menu">
+                        <input id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                            <span></span>
+                        </label>  
+                        <div class="wrapper">
+                            <div class="header__contact">
+                                <a class="cinema__tel" href="tel:+78003551256">+7 (800) 355 12-56</a>
+                                <a class="cinema__mail" href="mailto:kino@innopolis.ru">kino@innopolis.ru</a> 
+                                <a class="cinema__addres" href="#">ул.Спортивная д.1</a> 
+                                <a class="cinema__call phone" href="#" target="_blank">  
+                                    <svg width="0.5rem" height="0.5rem" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z"/>
+                                    </svg>                        
+                                    <span class="phone__span">Заказать звонок</span>
+                                </a>
+                            </div> 
+                            <div class="header__language">   
+                                <div class="header__lang">
+                                    <div class="header__block">
+                                        <span>ru</span>
+                                        <svg class="header__down-arrow" width="0.4rem" height="0.2rem" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"/>
+                                        </svg>
+                                    </div> 
+                                    <div class="header__lang-subtitle">   
+                                        <ul>
+                                            <li>
+                                                <a href="">ru</a>
+                                            </li>
+                                            <li>
+                                                <a href="">en</a>
+                                            </li>
+                                        </ul>						
+                                    </div>
+                                </div>        
+                            </div>                        
+                            <nav class="header__menu">
+                                <ul>
+                                    <li><a href="#about-us" class="header__event">event details</a></li>
+                                    <li><a href="#schedule" class="header__speakers">speakers</a></li>
+                                    <li><a href="#sponsors" class="header__sponsors">sponsors</a></li>
+                                    <li><a href="#shopping" class="header__past">past events</a></li>
+                                    <li><a href="#contact" class="header__contact">contact</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        
-                        <nav class="header__menu">
-                            <ul>
-                                <li><a href="#about-us" class="header__event">event details</a></li>
-                                <li><a href="#schedule" class="header__speakers">speakers</a></li>
-                                <li><a href="#sponsors" class="header__sponsors">sponsors</a></li>
-                                <li><a href="#shopping" class="header__past">past events</a></li>
-                                <li><a href="#contact" class="header__contact">contact</a></li>
-                            </ul>
-                        </nav>
                     </div>    
                 </div>
             </header>
@@ -76,7 +85,7 @@
                     <h2 class="intro__subtitle">Всем покупателям подарок!</h2>
                 </div>
             </div> 
-        </section>
+        </section> 
         <section class="welcome__footer">      
             <div>
                 <div class="cover">
@@ -97,8 +106,8 @@
         <section id="about-us" class="about-us container">
             <h2 class="part about-h2">Почему мы?</h2>
             <div class="about-us__container"> 
-                <div class="about-us__block">   
-                    <div class="about-us__part">
+                <div class="about-us__block  container">   
+                    <div class="about-us__part one">
                         <figure>
                             <img src="images/hall.jpg"  alt="Почему мы? Большие экраны" title="наши плюсы">
                             <figcaption></figcaption>
@@ -108,7 +117,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
                         </p>
                     </div>
-                    <div class="about-us__part">
+                    <div class="about-us__part two">
                         <figure> 
                             <img src="images/obemniy_zvuk.jpg"  alt="Почему мы? Объёмный звук" title="наши плюсы">
                             <figcaption></figcaption>
@@ -118,7 +127,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
                         </p>
                     </div>
-                    <div class="about-us__part">
+                    <div class="about-us__part three">
                         <figure>
                             <img src="images/sound.jpg"  alt="Почему мы? Удобные кресла" title="наши плюсы">
                             <figcaption></figcaption>
@@ -128,7 +137,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
                         </p>
                     </div>
-                    <div class="about-us__part">
+                    <div class="about-us__part four">
                         <figure>
                             <img src="images/lounge.jpg"  alt="Почему мы? Уютная атмосфера" title="наши плюсы">
                             <figcaption></figcaption>
@@ -138,7 +147,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
                         </p>
                     </div>
-                    <div class="about-us__part">
+                    <div class="about-us__part five">
                         <figure>
                             <img src="images/feelings.jpg"  alt="Почему мы? Полное погружение" title="наши плюсы">
                             <figcaption></figcaption>
@@ -148,7 +157,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
                         </p>
                     </div>
-                    <div class="about-us__part">
+                    <div class="about-us__part six">
                         <figure>
                             <img src="images/kisses.jpg"  alt="Почему мы? Поцелуи на заднем ряду" title="наши плюсы">
                             <figcaption></figcaption>
@@ -160,7 +169,7 @@
                     </div>
                 </div>
             </div>   
-        </section>      
+        </section>   
         <section id="schedule" class="container">
             <h2 class="part">Выберите фильм</h2>
                 <div class="schedule__block">
@@ -238,7 +247,7 @@
             <p class="schedule__subtitle">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <br> magna aliqua. Ut enim ad minim veniam. 
             </p> 
-        </section> 
+        </section>
         <section class="present__round">
             <div class="present__inner container">
                 <div class="present__gift">
@@ -272,8 +281,8 @@
         
         <section class="playbill container">
             <h2 class="part">Фильмы</h2>
-            <p class="playbill_suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.</p>
-            <div class="playbill__block">            
+            <p class="playbill_suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <br>magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.</p>
+            <div class="playbill__block container">            
                 <div class="playbill__movies">                
                     <a class="film-1" href="https://www.kinopoisk.ru/film/522941/" target="_blank">
                         <div class="playbill__gray">
@@ -307,14 +316,14 @@
                             </div>
                         </div>    
                     </a>                                    
-                    <!--<a class="film-5" href="https://www.kinopoisk.ru/film/522941/" target="_blank">
+                    <a class="film-5" href="https://www.kinopoisk.ru/film/522941/" target="_blank">
                         <div class="playbill__gray">
                             <div class="playbill__green">
                                 <span class="playbill__title">Фильм 5</span>
                                 <span class="playbill__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam maecenas.</span> 
                             </div>
                         </div>
-                    </a> -->                                      
+                    </a>                                     
                     <a class="film-6" href="https://www.kinopoisk.ru/film/522941/" target="_blank">
                         <div class="playbill__gray">
                             <div class="playbill__green">
@@ -349,51 +358,36 @@
                     </a>                    
                 </div>
             </div>
-        </section>        
+        </section>   
         <section id="shopping" class="shopping container">
             <h2 class="part">Товары</h2>
             <p class="shopping__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.</p>
             <div class="shopping__container"> 
                 <div class="shopping__block">
                     <div class="shopping__link">   
-                        <a href="#" class="shopping__part shopping__present_one" target="_blank">
-                            <span class="shopping__green"></span>
+                        <a href="" class="shopping__part shopping__present_one" target="_blank">
                             <div class="shopping__title">
-                                <span class="shopping__gift">Coca-cola</span>                                    
+                                <span class="shopping__gift present__one">Coca-cola</span>                                    
                             </div>
-                            <!--<figure> 
-                                <img src="images/present1.jpg"  alt="сувениры" title="Coca-cola">
-                                <figcaption></figcaption>
-                            </figure>-->
                         </a>
                     </div>
                     <div class="shopping__link"> 
-                        <a href="#" class="shopping__part shopping__present_two" target="_blank">
-                            <span class="shopping__green"></span>
+                        <a href="" class="shopping__part shopping__present_two" target="_blank">
                             <div class="shopping__title">
-                                <span class="shopping__gift">Брелок “Железный человек”</span>
+                                <span class="shopping__gift present__two">Брелок<br> “Железный<br> человек”</span>
                             </div>
-                            <!--<figure>
-                                <img src="images/present2.jpg"  alt="сувениры" title="Брелок">
-                                <figcaption></figcaption>
-                            </figure>-->
                         </a>
                     </div>
                     <div class="shopping__link"> 
-                        <a href="#" class="shopping__part shopping__present_three" target="_blank">
-                            <span class="shopping__green"></span>
+                        <a href="" class="shopping__part shopping__present_three" target="_blank">
                             <div class="shopping__title">
-                                <span class="shopping__gift">Постер “Мстители”</span>
+                                <span class="shopping__gift present__three">Постер<br> “Мстители”</span>
                             </div>
-                            <!--<figure> 
-                                <img src="images/present3.jpg"  alt="сувениры" title="Постер">
-                                <figcaption></figcaption>
-                            </figure>-->
                         </a>
                     </div>
                 </div>
             </div>   
-        </section>        
+        </section>      
 
         <section class="reviews">
             <div class="reviews__container container">
@@ -412,11 +406,11 @@
                             <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
                             <p>13.12.2020</p>
                         </div>
-                        <div class="reviews__svg_left">
+                        <a  href=""  target="_blank" class="reviews__svg_left">
                             <svg width="0.7rem" height="1.1rem" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.781067 11.0384L11.3807 0.438721L13.2663 2.32434L4.5523 11.0384L13.2663 19.7524L11.3807 21.638L0.781067 11.0384Z" fill="#97B13C"/>
                             </svg>                    
-                        </div>
+                        </a>
                         <div class="reviews__second">
                             <figure> 
                                 <img src="images/review2.jpg" alt="Отзывы">
@@ -426,11 +420,11 @@
                             <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
                             <p>13.12.2020</p>
                         </div>
-                        <div class="reviews__svg_right">
+                        <a href=""  target="_blank" class="reviews__svg_right">
                             <svg width="0.7rem" height="1.1rem" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2191 11.0376L2.61946 0.437988L0.733838 2.32361L9.44788 11.0376L0.733838 19.7517L2.61946 21.6373L13.2191 11.0376Z" fill="#97B13C"/>
                             </svg>                    
-                        </div>
+                        </a>
                         <div class="reviews__third">
                             <figure> 
                                 <img src="images/review3.jpg" alt="Отзывы">
@@ -443,16 +437,15 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  
         <section class="feedback">
             <div class="feedback__container">
-                <!--<div><img  class="container8" src="/images/spectators.jpg" ait="123"></div>-->
                 <div class="feedback__block">
-                    <h2 class="feedback__form">Обратная связь</h2>
-                    <form action="/order">
+                    <h2 class="feedback__form">Обратная связь</h2> 
+                    <form action="/order" class="feedback__mobile">
                         <div class="feedback__name">
                             <label>
-                                <input type="text" name="Username" placeholder="Полное имя" required>
+                                <input  class="feedback__name_input" type="text" name="Username" placeholder="Полное имя" required>
                                 
                             </label>
                         </div>
@@ -482,9 +475,9 @@
                             <button class="feedback__button">послать</button>
                         </div>
                     </form>
-                </div>
+                </div> 
             </div>
-        </section>
+        </section> 
         <section class="map">
             <div class="map__block">
                 <figure>
