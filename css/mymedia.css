@@ -64,7 +64,6 @@
         height: 12rem;
         display: flex;
         justify-content:space-between;
-
     }
     .cinema__tel,
     .cinema__mail,
@@ -110,7 +109,6 @@
     .header__lang-subtitle {
         margin-top: 0.1rem;
     }
-
     .phone {
         padding-top: 0;
         color: #A3CC40;
@@ -142,11 +140,13 @@
          
     }
     .menu__btn {
-        display: flex; 
+        position:relative;     /* для скролла*/
+
+        display: flex;        /* для скролла*/
         align-items: center;  
-        position: fixed;
-        width: 2.35rem;
-        height: 1.3rem;
+        /*position: fixed;    /* для скролла*/
+        width: 2.35rem;       /* для скролла*/
+        height: 1.3rem;       /* для скролла*/
         clip: auto;
         overflow:hidden;
         overflow-y:hidden;  /*для вертикального*/
@@ -211,12 +211,14 @@
     #menu__toggle:checked ~ .menu__btn  {
         height: 2.35rem;
         transform: translateY(-25%);
+        display: flex;       /* для скролла*/
+        align-items: center;  /* для скролла*/
+        position: fixed;     /* для скролла*/
     }
     #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
         background-color: #A3CC40;
         box-shadow: none
-
     }
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
@@ -302,16 +304,7 @@
         position: static;
         margin: 0;
     }
-    .reviews__svg_left,
-    .reviews__svg_right {
-        height: 16.6rem;
-        cursor: pointer;
-        margin-top: 0;
-    }
-    .reviews__svg_left svg,
-    .reviews__svg_right svg {
-        margin-top: 2.75rem;
-    }
+
     .feedback {
         width: 80vw; 
     }
@@ -333,6 +326,11 @@
     }
     .header {
         margin-top: 2.6rem;
+    }
+    .header__logo{
+        width:9.8rem;
+        height: 3rem;
+        margin-bottom: -1rem;
     }
     .header__body {
         width: 90vw;
@@ -423,7 +421,7 @@
     }
 
     .intro {
-        min-height: 74.5vh;
+        min-height: 61vh;
         margin-bottom: 5.4rem; 
     }
     .cover {
@@ -490,6 +488,20 @@
         height: 14rem;
     }
 }
+@media screen and (max-height: 550px) {
+    .wrapper {
+        flex-wrap:nowrap;
+        overflow: auto;        
+    }
+
+}
+@media screen and (max-height: 550px) {
+    .welcome__footer {
+        margin-top: -20;
+    }
+   
+}
+
 @media screen and (max-width: 550px) {
     html {
         font-size:  1.85vw;    
@@ -507,7 +519,7 @@
         min-height: 32rem;
 
     }
-
+  
     .welcome__footer {
         position: absolute;
         width: 26.5rem;
@@ -736,7 +748,7 @@
         margin-top: 0;
         margin-bottom: 3rem;
     }
-    .reviews__first {
+    /*.reviews__first {
         transform: translateX(-200%)
     }
     .reviews__third{
@@ -791,7 +803,7 @@
         height: 3.1rem;
         margin-top: 0;
         
-    }
+    }*/
     .feedback {
         width: 47.2rem;
     }
@@ -986,6 +998,10 @@
     .playbill__subtitle {
         font-size: 2.3rem;
     }
+    .shopping {
+        margin-bottom: 1.2rem;
+        
+    }
     .reviews {
         padding-top: 3.6rem;
         margin-top: 0;
@@ -1141,5 +1157,10 @@
     }
 
 } 
-
+@media screen and (max-height: 330px) {
+    .welcome__footer {
+        margin-top: -30;
+    }
+   
+}
 
