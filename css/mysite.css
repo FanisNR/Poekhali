@@ -344,7 +344,7 @@ html {
     line-height: 1.29;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 .welcome__footer {
     position: absolute;
@@ -1096,7 +1096,6 @@ html {
 }
 
 .feedback__name_input,
-
 .feedback__place-number select,
 .feedback__opinion textarea {
     background: #DEDEDE;
@@ -1419,45 +1418,56 @@ cursor: pointer;
     display: inline;
 }
 
-#menu__toggle {
+/*#menu__toggle {
     display: inline;
     position: absolute;
     width: 0.05rem;
     height: 0.05rem;
     clip: rect(0px, 0px, 0px, 0px);
     overflow:hidden;
-    overflow-y:hidden;  /*для вертикального*/
-    overflow-x:hidden;  /*для горизонтального*/
+    overflow-y:hidden;  
+    overflow-x:hidden;  
   }
-
+*/
   .menu__btn {
     display: flex; 
     align-items: center;  
-    position: absolute;
+    position: relative;
     width: 0.05rem;
     height: 0.05rem;
     clip: rect(0px, 0px, 0px, 0px);
     overflow:hidden;
     overflow-y:hidden;  /*для вертикального*/
     overflow-x:hidden;  /*для горизонтального*/
+    cursor: pointer;
     
   }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
+  .menu__btn span,
+  .menu__btn::before,
+  .menu__btn::after {
     display: block;
     position: absolute;
-    width: 100%;
     height: 0.15rem;
-    background-color: #FFFFFF;
     box-shadow: 0 0 0.09rem rgba(0,0,0,0.5); /* Параметры тени */
+    background-color: #FFFFFF;
+    height: 0.15rem;
 
   }
-  .menu__btn > span::before {
+  .menu__btn::before {
     content: '';
-    top: -0.5rem;
+    top: 0;
+    transition: all 0.2s ease;
+    width: 100%;
   }
-  .menu__btn > span::after {
+  .menu__btn::after {
     content: '';
-    top: 0.5rem;
+    bottom: 0;
+    transition: all 0.2s ease;
+    width: 100%;
+
+  }
+  .menu__btn span {
+      left: 0;
+      width: 100%;
+      margin: auto 0;
   }

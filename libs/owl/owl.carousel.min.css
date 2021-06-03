@@ -106,19 +106,20 @@
     grid-template-columns: 1fr 1fr;
 }
 .owl-carousel .owl-nav button.owl-prev {
-    left: 11.8rem;
+    left: 11rem;
     margin-top: 2rem;
 }
 .owl-carousel .owl-nav button.owl-next {
-    right: 15.5rem;
+    right: 15rem;
     margin-top: 2rem;
 }
-.owl-prev span{
-
-}
-.owl-next span{
-
-    
+@media screen and (max-width: 991px) {
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 8rem;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: 8.2rem;
+    }
 }
 .owl-carousel.owl-loading {
     opacity: 0;
@@ -254,9 +255,9 @@
 .owl-stage {
 
 }
-.owl-stage .owl-item.center.active .reviews__item {
+.owl-stage .owl-item.center.active {
     transform: scale(1.17) !important;
     transition: all 0.4s ease;
-    align-content: center;
-    
+    align-content: center;  
+    z-index: 10;  
   }
