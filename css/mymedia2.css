@@ -38,6 +38,7 @@
         padding-top: 3.7rem;
         box-sizing: unset;
         overflow: auto;
+        flex-direction: column;
 
     }
     .wrapper.active {
@@ -1330,6 +1331,9 @@
     }
     .schedule__subtitle {
         font-size: 0.7rem;
+    }
+    .playbill__movies a {
+        height: 19.6rem;
     }
     .shopping__part {
         height: 27.53rem;
