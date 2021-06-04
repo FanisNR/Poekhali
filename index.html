@@ -13,15 +13,17 @@
     <title>Закажите билет в кино</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/reset.css"> 
-    <link rel="stylesheet" type="text/css" href="css/mysite.css">
-    <link rel="stylesheet" type="text/css" href="css/mymedia2.css">
 
     <link rel="stylesheet" href="libs/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="libs/owl/owl.theme.default.css">
+
+    <link rel="stylesheet" type="text/css" href="css/mysite.css">
+    <link rel="stylesheet" type="text/css" href="css/mymedia2.css">
     
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="libs/owl/owl.carousel.min.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/films-table.js"></script>
 
 </head>
 <body class="cinema">
@@ -180,74 +182,78 @@
             <h2 class="part">Выберите фильм</h2>
                 <div class="schedule__block">
                     <table class="schedule__table">
-                    <tr>
-                        <th class="schedule__time"></th>
-                        <th class="schedule__start">
-                            <a href="#" class="schedule__link">
-                                Начало сеанса
-                                <svg width="0.45rem" height="0.25rem" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" fill="white"/>
-                                </svg>                                
-                            </a>
-                        </th>
-                        <th class="schedule__name">
-                            <a href="" class="schedule__link">
-                                Название фильма
-                                <svg width="0.4rem" height="0.25rem" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4.5L8 0H0L4 4.5Z" fill="white"/>
-                                </svg>                                                                
-                            </a>
-                        </th>
-                        <th class="schedule__genre">
-                            <a href="" class="schedule__link">
-                                Жанр                                                                                        
-                            </a>
-                        </th>
-                    </tr>
-                    <tr class="schedule__dark-ground">
-                        <td>
-                            <label class="schedule__checkbox">
-                                <input type="checkbox" class="schedule__input">
-                                <span class="schedule__fake-checkbox"></span>
-                            </label>
-                        </td>
-                        <td>10:00</td>
-                        <td>Человек-паук</td>
-                        <td>Фантастика, боевик, приключения</td>
-                    </tr>
-                    <tr class="schedule__gray-ground">
-                        <td>
-                            <label class="schedule__checkbox">
-                                <input type="checkbox" class="schedule__input">
-                                <span class="schedule__fake-checkbox"></span>
-                            </label>                                                       
-                        </td>
-                        <td>12:00</td>
-                        <td>Собачья жизнь 2</td>
-                        <td>Фэнтэзи, драма, комедия</td>
-                    </tr>
-                    <tr class="schedule__dark-ground">
-                        <td>
-                            <label class="schedule__checkbox">
-                                <input type="checkbox" class="schedule__input">
-                                <span class="schedule__fake-checkbox"></span>
-                            </label>                           
-                        </td>
-                        <td>14:00</td>
-                        <td>История игрушек 4</td>
-                        <td>Мультфильм, фэнтэзи, комедия</td>
-                    </tr>
-                    <tr class="schedule__gray-ground">
-                        <td>
-                            <label class="schedule__checkbox">
-                                <input type="checkbox" class="schedule__input">
-                                <span class="schedule__fake-checkbox"></span>
-                            </label>                           
-                        </td>
-                        <td>16:00</td>
-                        <td>Люди в чёрном: Интэрнэшнл</td>
-                        <td>Фантастика, боевик, комедия</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="schedule__time"></th>
+                            <th class="schedule__start">
+                                <a href="#" class="schedule__link">
+                                    Начало сеанса
+                                    <svg width="0.45rem" height="0.25rem" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" fill="white"/>
+                                    </svg>                                
+                                </a>
+                            </th>
+                            <th class="schedule__name">
+                                <a href="" class="schedule__link">
+                                    Название фильма
+                                    <svg width="0.4rem" height="0.25rem" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 4.5L8 0H0L4 4.5Z" fill="white"/>
+                                    </svg>                                                                
+                                </a>
+                            </th>
+                            <th class="schedule__genre">
+                                <a href="" class="schedule__link">
+                                    Жанр                                                                                        
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule_table_body">
+                        <tr class="schedule__dark-ground">
+                            <td>
+                                <label class="schedule__checkbox">
+                                    <input type="checkbox" class="schedule__input">
+                                    <span class="schedule__fake-checkbox"></span>
+                                </label>
+                            </td>
+                            <td>10:00</td>
+                            <td>Человек-паук</td>
+                            <td>Фантастика, боевик, приключения</td>
+                        </tr>
+                        <tr class="schedule__gray-ground">
+                            <td>
+                                <label class="schedule__checkbox">
+                                    <input type="checkbox" class="schedule__input">
+                                    <span class="schedule__fake-checkbox"></span>
+                                </label>                                                       
+                            </td>
+                            <td>12:00</td>
+                            <td>Собачья жизнь 2</td>
+                            <td>Фэнтэзи, драма, комедия</td>
+                        </tr>
+                        <tr class="schedule__dark-ground">
+                            <td>
+                                <label class="schedule__checkbox">
+                                    <input type="checkbox" class="schedule__input">
+                                    <span class="schedule__fake-checkbox"></span>
+                                </label>                           
+                            </td>
+                            <td>14:00</td>
+                            <td>История игрушек 4</td>
+                            <td>Мультфильм, фэнтэзи, комедия</td>
+                        </tr>
+                        <tr class="schedule__gray-ground">
+                            <td>
+                                <label class="schedule__checkbox">
+                                    <input type="checkbox" class="schedule__input">
+                                    <span class="schedule__fake-checkbox"></span>
+                                </label>                           
+                            </td>
+                            <td>16:00</td>
+                            <td>Люди в чёрном: Интэрнэшнл</td>
+                            <td>Фантастика, боевик, комедия</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>    
             <p class="schedule__subtitle">
@@ -408,45 +414,55 @@
                                 <img src="images/review1.jpg" alt="Отзывы">
                                 <figcaption></figcaption>
                             </figure>
-                            <b>Елена Еленова</b>
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
-                            <p>13.12.2020</p>
+                            <div class="revieos__block"> 
+                                <b>Елена Еленова</b>
+                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
+                                <p>13.12.2020</p>
+                            </div>   
                         </div>
-                        <div class="reviews__second reviews__item">
+                        <div class="reviews__second reviews__item">                           
                             <figure> 
                                 <img src="images/review2.jpg" alt="Отзывы">
                                 <figcaption></figcaption>
                             </figure>
-                            <b>Борис Борисов</b>
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
-                            <p>13.12.2020</p>
+                            <div class="revieos__block"> 
+                                <b>Борис Борисов</b>
+                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
+                                <p>13.12.2020</p>
+                            </div>   
                         </div>
                         <div class="reviews__third reviews__item">
                             <figure> 
                                 <img src="images/review3.jpg" alt="Отзывы">
                                 <figcaption></figcaption>
                             </figure>
-                            <b>Леонардо Леонардов</b>
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
-                            <p>13.12.2020</p>
+                            <div class="revieos__block">     
+                                <b>Леонардо Леонардов</b>
+                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
+                                <p>13.12.2020</p>
+                            </div>   
                         </div>
                         <div class="reviews__third reviews__item">
                             <figure> 
                                 <img src="images/review3.jpg" alt="Отзывы">
                                 <figcaption></figcaption>
                             </figure>
-                            <b>Леонардо Леонардов</b>
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
-                            <p>13.12.2020</p>
+                            <div class="revieos__block">     
+                                <b>Леонардо Леонардов</b>
+                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
+                                <p>13.12.2020</p>
+                            </div>   
                         </div>
                         <div class="reviews__third reviews__item">
                             <figure> 
                                 <img src="images/review3.jpg" alt="Отзывы">
                                 <figcaption></figcaption>
                             </figure>
-                            <b>Леонардо Леонардов</b>
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
-                            <p>13.12.2020</p>
+                            <div class="revieos__block">     
+                                <b>Леонардо Леонардов</b>
+                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </q>
+                                <p>13.12.2020</p>
+                            </div>   
                         </div>
                     </div>
                 </div>

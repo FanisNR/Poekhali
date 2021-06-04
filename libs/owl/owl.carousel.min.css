@@ -56,7 +56,7 @@
 
 .owl-carousel .owl-item img {
     display: block;
-    width: auto                             /* ширина 100% */
+    width: 100%
 }
 
 .owl-carousel .owl-dots.disabled,
@@ -119,6 +119,18 @@
     }
     .owl-carousel .owl-nav button.owl-next {
         right: 8.2rem;
+    }
+    .reviews__item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 550) {
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 0rem;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: 0rem;
     }
 }
 .owl-carousel.owl-loading {
@@ -256,7 +268,7 @@
 
 }
 .owl-stage .owl-item.center.active {
-    transform: scale(1.17) !important;
+    transform: scale(1.17) ;
     transition: all 0.4s ease;
     align-content: center;  
     z-index: 10;  
