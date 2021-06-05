@@ -417,8 +417,12 @@ html {
     transform: scale(1.07);
 }
 .about-us__part img {
-    width: 12.25rem;
+    width: 100%;
     height: 8.45rem;
+}
+.about-us__part {
+    display: flex;
+    flex-direction: column;
 }
 .about-us__title {    
     width: 12.25rem;

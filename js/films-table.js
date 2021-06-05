@@ -1,7 +1,15 @@
 const films = [
     {
+        id: 1,
+        start: "01:00",
+        title: "XXX",
+        adult: true,
+        genres: []
+    },{
+        id: 2,
         start: "10:00",
         title: "Человек-паук",
+        adult: false,
         genres: [
             {
                 name: "Фантастика",
@@ -14,6 +22,7 @@ const films = [
             },
         ]
     },{
+        id: 3,
         start: "12:00",
         title: "Собачья жизнь 2",
         genres: [
@@ -28,6 +37,7 @@ const films = [
             },
         ]
     },{
+        id: 4,
         start: "14:00",
         title: "История игрушек 4",
         genres: [
@@ -42,6 +52,7 @@ const films = [
             },
         ]
     },{
+        id: 5,
         start: "16:00",
         title: "Люди в чёрном: Интэрнэшнл",
         genres: [
@@ -57,22 +68,26 @@ const films = [
         ]
     }
 ] ;
- const tableBody = document.getElementById("schedule_table_body");
- tableBody.innerHTML = "";
+function renderFilmTableItem(film) {
+    return `
+    <tr>
+        <td>
+            <label class="schedule__checkbox">
+                <input id="${film.id}" type="checkbox" class="schedule__input">
+                <span class="schedule__fake-checkbox"></span>
+            </label>
+        </td>
+        <td>${film.start}</td>
+        <td>${film.title}</td>
+        <td>${film.genres.map(g => g.name)}</td>
+    </tr>
+`
+}
 
- for (let index = 0; index < films.length; index++) {
-    tableBody.innerHTML += `
+const tableBody = document.getElementById("schedule_table_body");
+tableBody.innerHTML = "";
 
- <tr>
-    <td>
-        <label class="schedule__checkbox">
-            <input type="checkbox" class="schedule__input">
-            <span class="schedule__fake-checkbox"></span>
-        </label>
-    </td>
-    <td>${films[index].start}</td>
-    <td>${films[index].title}</td>
-    <td>${films[index].genres.map(g => g.name)}</td>
-</tr>
-`;
+for (let index = 0; index < films.length; index++) {
+    if (!films[index].adult) {
+        tableBody.innerHTML += renderFilmTableItem(films[index]);
 }
