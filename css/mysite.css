@@ -1436,3 +1436,103 @@ cursor: pointer;
       width: 100%;
       margin: auto 0;
   }
+
+  /* pop-up============================================================= */
+  .hidden {
+    display: none;
+}
+
+.pop-up {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(51, 51, 51, 0.24);
+    z-index: 1000;
+}
+
+.close {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.form_wrap {
+    position: relative;
+    background-color: #fff;
+    max-width: 600px;
+    height: 400px;
+    margin: 120px auto;
+    border-radius: 40px;
+}
+
+.form_prize {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.btn_wrapper_prize {
+    display: flex;
+    justify-content: center;
+}
+
+.button_form_prize {
+    width: 11.2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1.2rem;
+}
+
+.feedback__title__prize {
+    padding-left: 7.7rem;
+}
+
+
+/*  кнопка закрыть+++===========    =================================*/
+
+
+.cl-btn-7 {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    float: right;
+    
+}
+.cl-btn-7:before {
+    content: '+';    
+    position: absolute;
+    z-index: 2;
+    transform: rotate(45deg);
+    font-size: 2rem;
+    line-height: 1;
+    top: -0.18rem;
+    left: 0.385rem;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    color: #FFFFFF;
+
+}
+.cl-btn-7:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #A3CC40;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transform: scale(1);
+}
+.cl-btn-7:hover:after {
+    transform: scale(0.01);
+}
+.cl-btn-7:hover:before {
+    transform: scale(1.5) rotate(45deg);
+    color: #A3CC40;
+}
