@@ -843,9 +843,10 @@ html {
     overflow: hidden;
     height: 16.55rem;
     min-width: 12.25rem;
+    overflow: hidden;
 
     display: grid;
-    grid-template-rows: 2fr 1fr 1.1fr;
+    grid-template-rows: 2fr 0.95fr 1.15fr;
     grid-template-areas: 
     "head"
     "body"
@@ -873,14 +874,10 @@ html {
     line-height: 1.3;
     color: #FFFFFF;
 
-    grid-area: food;
-    width: 12.28rem;
-    height: 100%;
     background: rgba(163, 204, 64, 0.8);
     position: relative;
     grid-area: food;
-    width: 12.28rem;
-    height: 100%;
+    width: 100%;
     z-index: 1;
 }
 .shopping__title::before {
@@ -888,7 +885,7 @@ html {
     top: -3.25rem;
     content: "";
     border-top: 3.25rem solid transparent;
-    border-right: 12.28rem solid rgba(163, 204, 64, 0.8);
+    border-right: 12.3rem solid rgba(163, 204, 64, 0.8);
     z-index: -1;
 
 }
@@ -1158,7 +1155,6 @@ html {
     float: left;
     display: grid;
     place-items: center;
-    margin-left: -0.15rem;
     margin-right: 0.25rem;
     margin-top: -0.1rem;
     width: 0.9rem;
@@ -1452,43 +1448,137 @@ cursor: pointer;
     z-index: 1000;
 }
 
-.close {
-    position: absolute;
-    right: 22px;
-    top: 22px;
-    border: none;
-    background-color: #FFFFFF;
-}
 
 .form_wrap {
     position: relative;
     background-color: #fff;
-    max-width: 600px;
-    height: 400px;
-    margin: 120px auto;
-    border-radius: 40px;
+    width: 30rem;
+    margin: 6rem auto;
+    border-radius: 2rem;
+    box-sizing: border-box;
 }
 
-.form_prize {
-    padding: 30px;
-    margin: 0 auto;
+.form__prize {
+    padding: 1.5rem;    
 }
 
 .btn_wrapper_prize {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .button_form_prize {
-    width: 11.2rem;
+    width: 100%;
     padding: 0.5rem 1rem;
-    margin-top: 1.2rem;
 }
 
 .feedback__title__prize {
-    padding-left: 7.7rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    color: #A3CC40;
+    margin-bottom: 1.1rem;
+    margin-left: 7.7rem;
 }
 
+.input_lable {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.7rem;
+    font-size: 0.75rem;
+    color: #A1A1A1;
+}
+.input__filled .input_lable {
+    top: -0.5rem;
+    left: 0.3rem;
+    background: #fff;
+    padding: 0 0.4rem;
+}
+.input__input {
+    font-size: 0.75rem;
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+    background-color: #DEDEDE;
+    border: 0.05rem solid #DEDEDE;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    margin: 0 0 0.7rem;
+}
+.input__filled .input__input {
+    background: #fff;
+    border: 0.05rem solid #c4c4c4;
+    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+}
+.input__input:hover {
+    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+}
+
+.input__error .input__input,
+select.input__error
+{
+    box-shadow: 0 0 0 0.25rem rgba(243, 77, 77, 0.52);
+}
+
+.input_block {
+    position: relative;
+    border-radius: 0.25rem;
+
+}
+.feedback-form__place {
+    margin: 0 0 1.5rem;
+    cursor: pointer;
+}
+.feedback-select {
+    color: #A1A1A1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #DEDEDE url(../svg/arrow_down.svg) no-repeat center right 0.6rem;
+    border: none;
+}
+
+.feedPriz::before {
+    content: "";
+    position: absolute;
+    margin: 0.8rem 0;
+    right: 2rem;
+    width: 0.8rem;
+    height: 0.5rem;
+    background: url('../images/VectorArrow.svg') no-repeat  center / cover;
+    background-size: 0.7rem 0.4rem;
+    pointer-events: none;
+}
+.form-field {
+    width: 100%;
+    padding: 0.6rem 0.8rem 0.55rem;
+    background-color: #DEDEDE;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+}
+.form-field::placeholder {
+    color: #A1A1A1;
+}
+.input__error_mmsg{
+    position: absolute;
+    color: red;
+    font-size: .5rem;
+    top: 1.46rem;
+    left: 0.8rem;
+}
+
+.feedback__prize {    /*check*/   
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.5rem;
+    line-height: 1.3;
+    color: #333333;
+    margin-bottom: 2.5rem;
+    font-style: normal;
+    font-weight: normal;
+    cursor: pointer; 
+    padding-top: 0.05rem;
+}
 
 /*  кнопка закрыть+++===========    =================================*/
 
@@ -1501,6 +1591,8 @@ cursor: pointer;
     z-index: 1;
     cursor: pointer;
     float: right;
+    margin-right: 1rem;
+    margin-top: 1.1rem;
     
 }
 .cl-btn-7:before {
@@ -1509,10 +1601,10 @@ cursor: pointer;
     z-index: 2;
     transform: rotate(45deg);
     font-size: 2rem;
-    line-height: 1;
-    top: -0.18rem;
+    line-height: 0.7;
+    top: 0.1rem;
     left: 0.385rem;
-    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transition: all 0.3s cubic-bezier(0.85, 0, 0.2, 0.85);
     color: #FFFFFF;
 
 }

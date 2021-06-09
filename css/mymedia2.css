@@ -1282,9 +1282,12 @@
    }
    .feedback__checkbox {
     font-size: 0.9rem;
+   }
+   .form_wrap {
+       width: 99%;
+   }
 }
 
-} 
 @media screen and (max-width: 320px) {
     html {
         font-size: 5vw;    
