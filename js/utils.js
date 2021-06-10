@@ -6,6 +6,7 @@ function toHour(num) {
     return `${num}`.padStart(2, "0")
 }
 
+
 /*
 function toMinutes(num) {
     return `${num}`.padEnd(2, "0")

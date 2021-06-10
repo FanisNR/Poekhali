@@ -1,4 +1,3 @@
-  
 const openBtn = document.getElementById('btn_prize_open');
 const popUp = document.getElementById('prize_pop-up');
 const closeBtn = document.getElementById('prize_pop-up__close');

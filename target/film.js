@@ -9,9 +9,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /*
 function FilmProto(filmData) {
     this.data = filmData;
-    this.start = `${toHour(getRandomToMax(14) +9)}:${toMinutes(getRandomToMax(6))}`;
-    this.start = `${toHour(getRandomToMax(14) +9)}:${toMinutes(Math.floor(Math.random() * 6))}`;
-    this.start = `${toHour(getRandomToMax(14) +9)}:${Math.floor(Math.random() * 6) + "0"}`;
+    this.start = `${toHour(getRandomToMax(14) +8)}:${toMinutes(getRandomToMax(6))}`;
+    this.start = `${toHour(getRandomToMax(14) +8)}:${toMinutes(Math.floor(Math.random() * 6))}`;
+    this.start = `${toHour(getRandomToMax(14) +8)}:${Math.floor(Math.random() * 6) + "0"}`;
 }
 
 FilmProto.prototype.isNotForAdult = function() {
@@ -57,7 +57,7 @@ var Film = /*#__PURE__*/function () {
     _classCallCheck(this, Film);
 
     this.data = filmData;
-    this.start = "".concat(toHour(getRandomToMax(14) + 9), ":").concat(Math.floor(Math.random() * 6) + "0");
+    this.start = "".concat(toHour(getRandomToMax(13) + 9), ":").concat(Math.floor(Math.random() * 6) + "0");
     /*this.id = filmData.id || filmData.title.replaceALL(" ", "-");*/
 
     this.id = filmData.id || filmData.data.title.replaceALL(" ", "-");

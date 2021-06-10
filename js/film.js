@@ -46,10 +46,12 @@ FilmProto.prototype.renderFilmTableItem = function() {
     `
 }
 */
+
+
 class Film {
     constructor(filmData) {
         this.data = filmData;
-        this.start = `${toHour(getRandomToMax(14) +8)}:${Math.floor(Math.random() * 6) + "0"}`;
+        this.start = `${toHour(getRandomToMax(13) +9)}:${Math.floor(Math.random() * 6) + "0"}`;
         /*this.id = filmData.id || filmData.title.replaceALL(" ", "-");*/
         this.id = filmData.id || filmData.data.title.replaceALL(" ", "-");
     }
