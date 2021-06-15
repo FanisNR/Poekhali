@@ -97,8 +97,9 @@ console.log(highPrice);
 const result = arr.filter(item => item.rating.slice(0, -1) <= 90);
 console.log(result)
 
-const add = (a = 0, b = 0) => parseInt(a) + parseInt(b);
 
+
+const add = (a, b) =>isNaN(a, b) ? 0 : +a + +b;
 
 console.log(add(1, 2) === 3);
 console.log(add(1, '2') === 3);

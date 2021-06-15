@@ -721,7 +721,7 @@ html {
     color: #FFFFFF;
     display: flex; 
     flex-direction:column;
-    flex-wrap:wrap;
+    flex-wrap: nowrap;
     box-sizing: border-box;
 }
 .playbill__gray {
@@ -731,8 +731,8 @@ html {
     height: 100%;    
 }
 .film-1 {         
-    background: url(../images/film1.jpg)  no-repeat center / cover;
-    /*grid-area: film-1;*/
+    /*background: url(../images/film1.jpg)  no-repeat center / cover;
+    grid-area: film-1;*/
 }
 .film-2 {         
     background: url(../images/film2.jpg)  no-repeat center / cover;
@@ -1564,7 +1564,7 @@ cursor: pointer;
     width: 94%;
 }
 .input__filled .input__input {
-    background: #fff;
+    background-color: #FFFFFF;
     border: 0.05rem solid #c4c4c4;
     box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
 }
@@ -1588,6 +1588,7 @@ select.input__error {
     margin: 0 0 1.5rem;
     cursor: pointer;
 }
+
 .feedback-select {
     color: #A1A1A1;
     -webkit-appearance: none;
@@ -1595,6 +1596,7 @@ select.input__error {
     background: #DEDEDE url(../images/arrow_down.svg) no-repeat center right 0.6rem;
     border: none;
 }
+
 .form-field {
     width: 100%;
     padding: 0.6rem 0.8rem 0.55rem;
@@ -1602,6 +1604,31 @@ select.input__error {
     font-size: 0.75rem;
     border-radius: 0.25rem;
 }
+.input_select_selected {
+    border-color: #FFFFFF;
+    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    background-color: #FFFFFF;
+}
+.feedback-form__button {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #FFFFFF;
+    width: 17.2rem;
+    background: #A3CC40;
+    border-radius: 0.3rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border: 0;
+    transition: .2s;
+}
+.feedback-form__button:active {
+    background: #FFFFFF;
+    color: #A3CC40;
+    border: 0.05rem solid rgba(163, 204, 64, 0.62);
+    box-shadow: 0 0.1rem 0.45rem rgba(144, 210, 61, 0.3);
+}
+
 /*  кнопка закрыть+++===========    =================================*/
 
 

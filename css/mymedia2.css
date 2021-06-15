@@ -183,12 +183,16 @@
     }
     .playbill_suptitle {    
         margin-bottom: 1rem;
+        flex-grow:0;
     }
     .playbill__green {
         transform: translateY(0);
+        overflow: auto;
     }
     .film-1 {         
         order: 9;
+        flex-grow: 0;
+        overflow: hidden;
     }
     .film-2 {         
         order: 8;
@@ -251,6 +255,8 @@
     .playbill__movies a { 
         width: 33.333%;
         height: 33.333%;
+        flex-grow:0;
+        overflow: hidden;
     }
     .shopping  p {
         margin: 0;
