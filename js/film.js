@@ -51,7 +51,7 @@ FilmProto.prototype.renderFilmTableItem = function() {
 class Film {
     constructor(filmData) {
         this.data = filmData;
-        this.start = `${toHour(getRandomToMax(13) +9)}:${Math.floor(Math.random() * 6) + "0"}`;
+        this.start = `${toHour(randomInteger(9, 22))}:${Math.floor(Math.random() * 6) + "0"}`;
         /*this.id = filmData.id || filmData.title.replaceALL(" ", "-");*/
         this.id = filmData.id || filmData.data.title.replaceALL(" ", "-");
     }
@@ -59,19 +59,19 @@ class Film {
     isNotForAdult() {
         return !this.data.adult;
     }
-    getId() {
+    #getId() {
         return this.data.id;
     }
 
-    getStart() {
+    #getStart() {
         return this.start;
     }
 
-    getTitle() {
+    #getTitle() {
         return this.data.title;
     }
 
-    getGenres() {
+    #getGenres() {
         return this.data.genres 
                 .map(g => g.name)
                 .join(", ");
@@ -82,13 +82,13 @@ class Film {
         <tr>
             <td>
                 <label class="schedule__checkbox">
-                    <input id="${this.getId()}" type="checkbox" class="schedule__input">
+                    <input id="${this.#getId()}" type="checkbox" class="schedule__input">
                     <span class="schedule__fake-checkbox"></span>
                 </label>
             </td>
-            <td>${this.getStart()}</td>
-            <td>${this.getTitle()}</td>
-            <td>${this.getGenres()}</td>
+            <td>${this.#getStart()}</td>
+            <td>${this.#getTitle()}</td>
+            <td>${this.#getGenres()}</td>
         </tr>
         `
     }

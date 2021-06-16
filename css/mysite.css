@@ -1547,11 +1547,12 @@ cursor: pointer;
     top: 0.7rem;
     font-size: 0.75rem;
     color: #A1A1A1;
+    pointer-events: none;
 }
 .input__filled .input_lable {
     top: -0.5rem;
     left: 0.3rem;
-    /*background: #fff;*/
+    background: #FFFFFF;
     padding: 0 0.4rem;
 }
 .input__input {
@@ -1560,6 +1561,7 @@ cursor: pointer;
     background-color: #DEDEDE;
     border: 0.05rem solid #DEDEDE;
     border-radius: 0.25rem;
+
  
     width: 94%;
 }
@@ -1580,6 +1582,7 @@ select.input__error {
     font-size: .5rem;
     top: 1.46rem;
     left: 0.8rem;
+    pointer-events: none;
 }
 .feedback-form__name {
     margin: 0 0 .65rem;

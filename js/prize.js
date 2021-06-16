@@ -6,6 +6,9 @@ const emailField = document.querySelector('#prize_pop-up input[name="email"]').p
 const form = document.getElementById('form_prize__id');
 const selectPrize = document.getElementById('feedback_select_prize');
 
+const selectBox = document.getElementById('feedback_checkbox_prize');
+const selectSpan = document.getElementById('feedback_checkbox_span');
+
 function popUpToggle() {
     popUp.classList.toggle('hidden');
 };
@@ -95,15 +98,27 @@ function handleSubmit(event) {
         emailFieldUtiles.addError('Укажите email');
         return;
     }
+
+    if (!/^[\w-]{2,16}@[\w]{3,16}\.[a-z]{2,3}$/i.test(emailValue)) {
+        emailFieldUtiles.addError('Укажите корректный email');
+        return;
+    }
+
     if (selectPrize.value === "none") {
         selectPrize.classList.add(ERROR_CLASS_NAME);
         return;
     }
+    /*
+    if (!selectBox.checked) {
+        selectSpan.add(ERROR_CLASS_NAME);
+        return;
+    }*/
 
     const data = {
         name: nameValue,
         email: emailValue,
         prize: selectPrize.value,
+        check: selectBox.value,
     };
 
     const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
