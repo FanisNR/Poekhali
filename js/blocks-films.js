@@ -33,10 +33,12 @@ function renderFilmblock(posterUrl, title) {
     const playbillSubtitle = document.createElement('span');
     playbillSubtitle.classList.add('playbill__subtitle');
     //playbillSubtitle.textContent = '...Ждите';
-                    
+    wrapper.href = `/single/`;
     wrapper.append(playbillGray);
     playbillGray.append(playbillGreen);
     playbillGreen.append(playbillTitle, playbillSubtitle);  
+    
+
 
     return [wrapper, playbillSubtitle];  
 }
