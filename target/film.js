@@ -113,3 +113,4 @@ function _getGenres2() {
     return g.name;
   }).join(", ");
 }
+//# sourceMappingURL=film.js.map

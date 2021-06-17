@@ -1678,3 +1678,194 @@ select.input__error {
     transform: scale(1.5) rotate(45deg);
     color: #A3CC40;
 }
+
+
+
+/* фильмы по отдельности ============================*/
+
+.singleBlock {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 100%;
+    /*min-height: 100vh;*/
+    background: url('../images/single.jpg') no-repeat center / cover, pink;
+    overflow: hidden;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.block__wrap_all {
+    grid-area: col2 / col2 / col2 / col2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    padding: 25px 23px 0px;
+}
+.block__wrap_img {
+    display: flex;
+    background: rgba(229, 229, 229, 0.25);
+}
+.block_img {
+    box-sizing: content-box;
+    width: 50%;
+    padding: 40px;
+}
+.block_img img {
+    width: 100%;
+    height: 100%;
+    padding-right: 40px;
+    border-right: 1px solid rgba(0, 0, 0, 0.13);
+}
+.block_desc {
+    padding-left: 40px;
+    margin-top: 10px;
+    width: 50%;
+    padding-right: 15px;
+}
+.header_film {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+    color: rgb(51, 51, 51);
+}
+.rating {
+    margin-top: 45px;
+}
+.appraisal {
+    display: flex;
+}
+.rating_stars_wrap {
+    display: flex;
+    margin-right: 10px;
+}
+.rating_stars {
+    color: rgb(104, 114, 80);
+    cursor: pointer;
+    display: flex;
+}
+#stars {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+}
+.star-selected {
+    color: rgb(163, 204, 64);
+}
+
+.rt-star:hover {
+    color: #A3CC40;
+}
+
+.rt-star:hover~.rt-star {
+    color: #687250;
+}
+
+.stars {
+    font-size: 13px;
+    line-height: 17px;
+    color: rgb(161, 161, 161);
+    margin-left: 10px;
+}
+.rating_wrap {
+    display: flex;
+    align-items: baseline;
+}
+.rating_from {
+    font-size: 13px;
+    line-height: 1.2;
+    color: rgb(161, 161, 161);
+}
+.film_info {
+    display: flex;
+    margin-top: 30px;
+}
+.film_info__blocks {
+    margin-right: 38px;
+}
+.text_decor {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.2;
+    color: rgb(76, 77, 79);
+}
+.film_desc__block {
+    font-size: 12px;
+    line-height: 1.2;
+    color: rgb(161, 161, 161);
+    margin-top: 35px;
+}
+.table_fiml__info {
+    margin-top: 30px;
+}
+.head_info {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.2;
+    color: rgb(163, 204, 64);
+    padding: 8px;
+}
+.head_desc__bold {
+    font-weight: 600;
+    color: rgb(47, 46, 46);
+}
+.head_desc {
+    font-size: 11px;
+    line-height: 1.2;
+    color: rgb(105, 105, 105);
+}
+.head__other_film__wrapper {
+    margin: 50px auto;
+}
+.head__other_film {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    color: rgb(161, 161, 161);
+    width: 42.5rem;
+    margin: 0px auto;
+}
+.block__other_films {
+    width: 42.5rem;
+    margin: 25px auto;
+}
+.head__genre_film {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    color: rgb(51, 51, 51);
+    display: inline;
+
+    
+}
+.head__other_list {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+    color: #A3CC40;
+    display: inline-block;
+
+}
+.head__genre_box {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+.wrap_block_carousel__img {
+    width: 128px;
+    height: 145px;
+}
+.name_block_film {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(163, 204, 64);
+    margin-top: 10px;
+    display: block;
+}
+.author_year_block_film {
+    font-weight: 300;
+    font-size: 7px;
+    line-height: 9px;
+    color: rgb(51, 51, 51);
+    margin-top: 5px;
+    display: block;
+}

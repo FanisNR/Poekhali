@@ -57,3 +57,4 @@ for (var index = 0; index < filmData.length; index++) {
     tableBody.innerHTML += film.renderFilmTableItem();
   }
 }
+//# sourceMappingURL=films-table.js.map

@@ -1,4 +1,3 @@
-
 const blockFilmsWrapper = document.getElementById('film-1__films__wrapper');
 blockFilmsWrapper.innerHTML = '';
 
@@ -19,55 +18,72 @@ const filmsDetailsRequest = (id) => {
     return kinopoiskapiunofficialRequest(`https://kinopoiskapiunofficial.tech/api/v2.1/films/${id}`)
 }
 
+function renderFilmblock(posterUrl, title) {
+    const wrapper = document.createElement('a');
+    wrapper.classList.add('film-1');
+    wrapper.style.backgroundImage = posterUrl;
+    wrapper.style.backgroundSize = "100% auto";
+    const playbillGray = document.createElement('div');
+    playbillGray.classList.add('playbill__gray');
+    const playbillGreen = document.createElement('div');
+    playbillGreen.classList.add('playbill__green');
+    const playbillTitle = document.createElement('span');
+    playbillTitle.classList.add('playbill__title');
+    playbillTitle.textContent = title;
+    const playbillSubtitle = document.createElement('span');
+    playbillSubtitle.classList.add('playbill__subtitle');
+    //playbillSubtitle.textContent = '...Ждите';
+                    
+    wrapper.append(playbillGray);
+    playbillGray.append(playbillGreen);
+    playbillGreen.append(playbillTitle, playbillSubtitle);  
+
+    return [wrapper, playbillSubtitle];  
+}
+
 const fetchBlockFilms = async () => {
     const result = await topFilmsRequest()
     //.then(data => data.json())
     const data = await result.json();
 
+    const request = [];
+    const filmblocksMap = new Map();
+
     data.films.forEach(async (film) => {
-        const id = `blocks-films-desk-${film.filmId}`;
-        const wrapper = document.createElement('a');
-        wrapper.classList.add('film-1');
-        wrapper.style.backgroundImage = `url(${film.posterUrlPreview})`;
-        wrapper.style.backgroundSize = "100% auto";
-        const playbillGray = document.createElement('div');
-        playbillGray.classList.add('playbill__gray');
-        const playbillGreen = document.createElement('div');
-        playbillGreen.classList.add('playbill__green');
-        const playbillTitle = document.createElement('span');
-        playbillTitle.classList.add('playbill__title');
-        playbillTitle.textContent = film.nameRu;
-        const playbillSubtitle = document.createElement('span');
-        playbillSubtitle.classList.add('playbill__subtitle');
-        //playbillSubtitle.textContent = '...Ждите';
-                
-        blockFilmsWrapper.append(wrapper);
-        wrapper.append(playbillGray);
-        playbillGray.append(playbillGreen);
-        playbillGreen.append(playbillTitle, playbillSubtitle);
+        const [filmblock, playbillSubtitle] = renderFilmblock(`url(${film.posterUrlPreview})`, film.nameRu)
+        
+        filmblocksMap.set(film.filmId, filmblock)
 
-        const detailResult = await filmsDetailsRequest(film.filmId);
-        const detailsData = await detailResult.json();
+        request.push(new Promise(async(resolve, reject) => {
+            const detailResult = await filmsDetailsRequest(film.filmId);
+            const detailsData = await detailResult.json();
 
-        const description = detailsData.data.description;
-        playbillSubtitle.textContent = description;
-
-        if(!description) {
-            wrapper.remove();
-        }
-
-        /*blockFilmsWrapper.innerHTML += `
-            <a class="film-1" style="background-image:url(${film.posterUrlPreview}); background-size: 100% auto;" href="" onclick="return false;"  target="_blank">
-                <div class="playbill__gray">
-                    <div class="playbill__green">
-                        <span class="playbill__title">${film.nameRu}<br></span>
-                        <span id="${id}" class="playbill__subtitle"> ...Ждите</span> 
-                    </div>
-                </div>    
-            </a>
-        `
-        */
+            const description = detailsData.data.description;
+            
+         
+            if(!description) {
+                filmblocksMap.delete(film.filmId);
+            } else {
+                playbillSubtitle.textContent = description;
+            }
+            resolve();
+        })); 
+        
     })
+    await Promise.all(request);
+    //blockFilmsWrapper.append(filmblock);
+    /*let i = 0;
+    for (const [id, element] of filmblocksMap) {
+        blockFilmsWrapper.append(element)
+        i++;
+
+        if (i >= 9){
+            break;
+        }
+    }*/
+    const elements = [...filmblocksMap.values()].slice(0, 9);
+
+    blockFilmsWrapper.append(...elements);
 }
 
 fetchBlockFilms();
@@ -91,7 +107,6 @@ fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FIL
                 </div>    
             </a>
             `
-
             fetch(`https://kinopoiskapiunofficial.tech/api/v2.1/films/${film.filmId}`, {
                     headers: {
                         ...apiHeaders
