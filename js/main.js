@@ -19,11 +19,12 @@
    /*  карусель++++++++++++++========================*/
    
    $(".owl-carousel").owlCarousel({
-        loop: true,
         nav: true,
         dots: false,
         center:true, 
         responsiveClass:true,
+        loop: false,
+        rewind: true
         responsive:{
             0:{
                 items:1,

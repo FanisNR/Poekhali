@@ -27,25 +27,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var blockFilmsWrapper = document.getElementById('film-1__films__wrapper');
 blockFilmsWrapper.innerHTML = '';
 
-var kinopoiskapiunofficialRequest = function kinopoiskapiunofficialRequest(url) {
-  return fetch(url, {
-    headers: {
-      'accept': 'application/json',
-      'X-API-KEY': '1eb612fe-4b9a-4151-94c8-1e24e42c687b'
-    },
-    cors: 'no-cors'
-  });
-};
-
-var topFilmsRequest = function topFilmsRequest() {
-  return kinopoiskapiunofficialRequest('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1');
-};
-
-var filmsDetailsRequest = function filmsDetailsRequest(id) {
-  return kinopoiskapiunofficialRequest("https://kinopoiskapiunofficial.tech/api/v2.1/films/".concat(id));
-};
-
-function renderFilmblock(posterUrl, title) {
+function renderFilmblock(posterUrl, title, id) {
   var wrapper = document.createElement('a');
   wrapper.classList.add('film-1');
   wrapper.style.backgroundImage = posterUrl;
@@ -60,7 +42,7 @@ function renderFilmblock(posterUrl, title) {
   var playbillSubtitle = document.createElement('span');
   playbillSubtitle.classList.add('playbill__subtitle'); //playbillSubtitle.textContent = '...Ждите';
 
-  wrapper.href = "/single/";
+  wrapper.href = "/single/?id=".concat(id);
   wrapper.append(playbillGray);
   playbillGray.append(playbillGreen);
   playbillGreen.append(playbillTitle, playbillSubtitle);
@@ -94,7 +76,7 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                   while (1) {
                     switch (_context2.prev = _context2.next) {
                       case 0:
-                        _renderFilmblock = renderFilmblock("url(".concat(film.posterUrlPreview, ")"), film.nameRu), _renderFilmblock2 = _slicedToArray(_renderFilmblock, 2), filmblock = _renderFilmblock2[0], playbillSubtitle = _renderFilmblock2[1];
+                        _renderFilmblock = renderFilmblock("url(".concat(film.posterUrlPreview, ")"), film.nameRu, film.filmId), _renderFilmblock2 = _slicedToArray(_renderFilmblock, 2), filmblock = _renderFilmblock2[0], playbillSubtitle = _renderFilmblock2[1];
                         filmblocksMap.set(film.filmId, filmblock);
                         request.push(new Promise( /*#__PURE__*/function () {
                           var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {

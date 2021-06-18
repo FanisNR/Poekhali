@@ -1331,7 +1331,7 @@ cursor: pointer;
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     background: #4C4D4F;
-    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    box-shadow: 0.1rem 0.1rem 0.1rem rgb(255, 255, 255);
 
 }
 .footer__link:hover svg {
@@ -1353,7 +1353,7 @@ cursor: pointer;
 .footer__text {
     color: #FFFFFF;
 	font-size: 0.75rem;
-	letter-spacing: 0.3px; 
+	letter-spacing: 0.015rem; 
 }
 .footer__block2 {
 	flex: 0 1 20%;
@@ -1454,12 +1454,12 @@ cursor: pointer;
 
 .close {
     position: absolute;
-    right: 22px;
-    top: 22px;
+    right: 1.1rem;
+    top: 1.1rem;
     border: none;
     background-color: transparent;
-    width: 35px;
-    height: 35px;
+    width: 1.75rem;
+    height: 1.75rem;
 }
  
 .form_wrap {
@@ -1501,7 +1501,7 @@ cursor: pointer;
     position: absolute;
     width: 0.05rem;
     height: 0.05rem;
-    clip: rect(0px, 0px, 0px, 0px);
+    clip: rect(0, 0, 0, 0);
     overflow:hidden;
     overflow-y:hidden;  /*для вертикального*/
     overflow-x:hidden;  /*для горизонтального*/  
@@ -1697,8 +1697,8 @@ select.input__error {
 
 .block__wrap_all {
     grid-area: col2 / col2 / col2 / col2;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
-    padding: 25px 23px 0px;
+    border-bottom: 0.05rem solid rgba(0, 0, 0, 0.13);
+    padding: 1.25rem 1.15rem 0;
 }
 .block__wrap_img {
     display: flex;
@@ -1707,35 +1707,35 @@ select.input__error {
 .block_img {
     box-sizing: content-box;
     width: 50%;
-    padding: 40px;
+    padding: 2rem;
 }
 .block_img img {
     width: 100%;
     height: 100%;
-    padding-right: 40px;
-    border-right: 1px solid rgba(0, 0, 0, 0.13);
+    padding-right: 2rem;
+    border-right: 0.05rem solid rgba(0, 0, 0, 0.13);
 }
 .block_desc {
-    padding-left: 40px;
-    margin-top: 10px;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
     width: 50%;
-    padding-right: 15px;
+    padding-right: 0.75rem;
 }
 .header_film {
     font-weight: 600;
-    font-size: 60px;
+    font-size: 3rem;
     line-height: 1.2;
     color: rgb(51, 51, 51);
 }
 .rating {
-    margin-top: 45px;
+    margin-top: 2.25rem;
 }
 .appraisal {
     display: flex;
 }
 .rating_stars_wrap {
     display: flex;
-    margin-right: 10px;
+    margin-right: 0.5rem;
 }
 .rating_stars {
     color: rgb(104, 114, 80);
@@ -1743,93 +1743,112 @@ select.input__error {
     display: flex;
 }
 #stars {
-    width: 16px;
-    height: 16px;
-    margin-right: 3px;
+    width: 0.8rem;
+    height: 0.8rem;
+    padding-right: 0.15rem;
 }
 .star-selected {
     color: rgb(163, 204, 64);
 }
 
-.rt-star:hover {
+.rating_stars {
+    color: #687250;
+}
+.rating_stars:hover {
     color: #A3CC40;
 }
 
-.rt-star:hover~.rt-star {
+.rt-star:hover ~ .rt-star {
     color: #687250;
+}
+.like-icon {
+    color: #687250;;
+    cursor: pointer;
+    margin-bottom: -0.2rem;
+}
+
+.svg-helper {
+    margin-bottom: -0.2rem;
+}
+.like-icon:hover {
+    color: #A3CC40;
+}
+.text_decor {
+    font-weight: 600;
+    font-size: 0.55rem;
+    line-height: 1.2;
+    color: rgb(76, 77, 79);
+}
+.like-icon--liked {
+    color: #A3CC40;
 }
 
 .stars {
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 0.65rem;
+    line-height: 0.85rem;
     color: rgb(161, 161, 161);
-    margin-left: 10px;
+    margin-left: 0.5rem;
 }
 .rating_wrap {
     display: flex;
     align-items: baseline;
 }
 .rating_from {
-    font-size: 13px;
+    font-size: 0.65rem;
     line-height: 1.2;
     color: rgb(161, 161, 161);
 }
 .film_info {
     display: flex;
-    margin-top: 30px;
+    margin-top: 1.5rem;
 }
 .film_info__blocks {
-    margin-right: 38px;
+    margin-right: 1.9rem;
 }
-.text_decor {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.2;
-    color: rgb(76, 77, 79);
-}
+
 .film_desc__block {
-    font-size: 12px;
+    font-size: 0.6rem;
     line-height: 1.2;
     color: rgb(161, 161, 161);
-    margin-top: 35px;
+    margin-top: 1.75rem;
 }
 .table_fiml__info {
-    margin-top: 30px;
+    margin-top: 1.5rem;
 }
 .head_info {
     font-weight: 600;
-    font-size: 11px;
+    font-size: 0.55rem;
     line-height: 1.2;
     color: rgb(163, 204, 64);
-    padding: 8px;
+    padding: 0.4rem;
 }
 .head_desc__bold {
     font-weight: 600;
     color: rgb(47, 46, 46);
 }
 .head_desc {
-    font-size: 11px;
+    font-size: 0.55rem;
     line-height: 1.2;
     color: rgb(105, 105, 105);
 }
 .head__other_film__wrapper {
-    margin: 50px auto;
+    margin: 2.5rem auto;
 }
 .head__other_film {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.75rem;
     line-height: 1.2;
     color: rgb(161, 161, 161);
     width: 42.5rem;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 .block__other_films {
     width: 42.5rem;
-    margin: 25px auto;
+    margin: 1.25rem auto;
 }
 .head__genre_film {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.75rem;
     line-height: 1.2;
     color: rgb(51, 51, 51);
     display: inline;
@@ -1839,8 +1858,8 @@ select.input__error {
 .head__other_list {
     font-style: normal;
     font-weight: 500;
-    font-size: 10px;
-    line-height: 13px;
+    font-size: 0.5rem;
+    line-height: 0.65rem;
     color: #A3CC40;
     display: inline-block;
 
@@ -1851,21 +1870,24 @@ select.input__error {
     justify-content: space-between;
 }
 .wrap_block_carousel__img {
-    width: 128px;
-    height: 145px;
+    width: 6.4rem;
+    height: 7.25rem;
 }
 .name_block_film {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
     color: rgb(163, 204, 64);
-    margin-top: 10px;
+    margin-top: 0.5rem;
     display: block;
 }
 .author_year_block_film {
     font-weight: 300;
-    font-size: 7px;
-    line-height: 9px;
+    font-size: 0.35rem;
+    line-height: 0.45rem;
     color: rgb(51, 51, 51);
-    margin-top: 5px;
+    margin-top: 0.25rem;
     display: block;
+}
+.film_block_carousel {
+    width: 6.5rem;
 }

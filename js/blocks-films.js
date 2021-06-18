@@ -1,24 +1,8 @@
 const blockFilmsWrapper = document.getElementById('film-1__films__wrapper');
 blockFilmsWrapper.innerHTML = '';
 
-const kinopoiskapiunofficialRequest = (url) => {
-    return fetch(url, {
-        headers: {
-            'accept': 'application/json',
-            'X-API-KEY': '1eb612fe-4b9a-4151-94c8-1e24e42c687b',
-        },
-        cors: 'no-cors'
-    });
-}
 
-const topFilmsRequest = () => {
-    return kinopoiskapiunofficialRequest('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1')
-}
-const filmsDetailsRequest = (id) => {
-    return kinopoiskapiunofficialRequest(`https://kinopoiskapiunofficial.tech/api/v2.1/films/${id}`)
-}
-
-function renderFilmblock(posterUrl, title) {
+function renderFilmblock(posterUrl, title, id) {
     const wrapper = document.createElement('a');
     wrapper.classList.add('film-1');
     wrapper.style.backgroundImage = posterUrl;
@@ -33,7 +17,7 @@ function renderFilmblock(posterUrl, title) {
     const playbillSubtitle = document.createElement('span');
     playbillSubtitle.classList.add('playbill__subtitle');
     //playbillSubtitle.textContent = '...Ждите';
-    wrapper.href = `/single/`;
+    wrapper.href = `/single/?id=${id}`;
     wrapper.append(playbillGray);
     playbillGray.append(playbillGreen);
     playbillGreen.append(playbillTitle, playbillSubtitle);  
@@ -52,7 +36,7 @@ const fetchBlockFilms = async () => {
     const filmblocksMap = new Map();
 
     data.films.forEach(async (film) => {
-        const [filmblock, playbillSubtitle] = renderFilmblock(`url(${film.posterUrlPreview})`, film.nameRu)
+        const [filmblock, playbillSubtitle] = renderFilmblock(`url(${film.posterUrlPreview})`, film.nameRu, film.filmId)
         
         filmblocksMap.set(film.filmId, filmblock)
 
