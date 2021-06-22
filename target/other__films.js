@@ -24,34 +24,36 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var blockFilmsWrapper = document.getElementById('film-1__films__wrapper');
-blockFilmsWrapper.innerHTML = '';
+var blockFilmsWrapperOther = document.getElementById('other__films__wrapperOther');
+blockFilmsWrapperOther.innerHTML = '';
 
-function renderFilmblock(posterUrl, title, id) {
-  var wrapper = document.createElement('a');
-  wrapper.classList.add('film-1');
-  wrapper.style.backgroundImage = posterUrl;
-  wrapper.style.backgroundSize = "100% auto";
-  var playbillGray = document.createElement('div');
-  playbillGray.classList.add('playbill__gray');
-  var playbillGreen = document.createElement('div');
-  playbillGreen.classList.add('playbill__green');
-  var playbillTitle = document.createElement('span');
-  playbillTitle.classList.add('playbill__title');
-  playbillTitle.textContent = title;
-  var playbillSubtitle = document.createElement('span');
-  playbillSubtitle.classList.add('playbill__subtitle'); //playbillSubtitle.textContent = '...Ждите';
-
-  wrapper.href = "/single/?id=".concat(id);
-  wrapper.append(playbillGray);
-  playbillGray.append(playbillGreen);
-  playbillGreen.append(playbillTitle, playbillSubtitle);
-  return [wrapper, playbillSubtitle];
+function renderFilmblock(posterUrl, nameRu, id, year, distributors) {
+  var wrapperOther = document.createElement('div');
+  wrapperOther.classList.add('film_block_carousel');
+  var wrap_block_carousel__img = document.createElement('div');
+  wrap_block_carousel__img.classList.add('wrap_block_carousel__img');
+  var imgTag = document.createElement('img');
+  imgTag.src = posterUrl;
+  var film_block_wrap_other_films = document.createElement('div');
+  film_block_wrap_other_films.classList.add('film_block_wrap_other_films');
+  var name_block_film = document.createElement('span');
+  name_block_film.classList.add('name_block_film');
+  var author_year_block_film = document.createElement('span');
+  author_year_block_film.classList.add('author_year_block_film');
+  name_block_film.textContent = nameRu;
+  author_year_block_film.textContent = year, distributors;
+  wrapperOther.href = "/single/?id=".concat(id);
+  wrapperOther.append(wrap_block_carousel__img);
+  wrapperOther.append(film_block_wrap_other_films);
+  wrap_block_carousel__img.append(imgTag);
+  film_block_wrap_other_films.append(name_block_film);
+  film_block_wrap_other_films.append(author_year_block_film);
+  return [wrapperOther, film_block_wrap_other_films];
 }
 
-var fetchBlockFilms = /*#__PURE__*/function () {
+var fetchBlockFilmsSF = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-    var result, data, request, filmblocksMap, elements;
+    var resultSF, data, requestSF, filmblocksMapSF, elements;
     return regeneratorRuntime.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
@@ -60,14 +62,14 @@ var fetchBlockFilms = /*#__PURE__*/function () {
             return topFilmsRequest();
 
           case 2:
-            result = _context3.sent;
+            resultSF = _context3.sent;
             _context3.next = 5;
-            return result.json();
+            return resultSF.json();
 
           case 5:
             data = _context3.sent;
-            request = [];
-            filmblocksMap = new Map();
+            requestSF = [];
+            filmblocksMapSF = new Map();
             data.films.forEach( /*#__PURE__*/function () {
               var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(film) {
                 var _renderFilmblock, _renderFilmblock2, filmblock, playbillSubtitle;
@@ -77,8 +79,8 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                     switch (_context2.prev = _context2.next) {
                       case 0:
                         _renderFilmblock = renderFilmblock("url(".concat(film.posterUrlPreview, ")"), film.nameRu, film.filmId), _renderFilmblock2 = _slicedToArray(_renderFilmblock, 2), filmblock = _renderFilmblock2[0], playbillSubtitle = _renderFilmblock2[1];
-                        filmblocksMap.set(film.filmId, filmblock);
-                        request.push(new Promise( /*#__PURE__*/function () {
+                        filmblocksMapSF.set(film.filmId, filmblock);
+                        requestSF.push(new Promise( /*#__PURE__*/function () {
                           var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {
                             var detailResult, detailsData, description;
                             return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -98,7 +100,7 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                                     description = detailsData.data.description;
 
                                     if (!description) {
-                                      filmblocksMap["delete"](film.filmId);
+                                      filmblocksMapSF["delete"](film.filmId);
                                     } else {
                                       playbillSubtitle.textContent = description;
                                     }
@@ -131,14 +133,13 @@ var fetchBlockFilms = /*#__PURE__*/function () {
               };
             }());
             _context3.next = 11;
-            return Promise.all(request);
+            return Promise.all(requestSF);
 
           case 11:
-            blockFilmsWrapper.innerHTML = '';
-            elements = _toConsumableArray(filmblocksMap.values()).slice(0, 9);
-            blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements));
+            elements = _toConsumableArray(filmblocksMapSF.values()).slice(0, 9);
+            blockFilmsWrapperOther.append.apply(blockFilmsWrapperOther, _toConsumableArray(elements));
 
-          case 14:
+          case 13:
           case "end":
             return _context3.stop();
         }
@@ -146,10 +147,10 @@ var fetchBlockFilms = /*#__PURE__*/function () {
     }, _callee3);
   }));
 
-  return function fetchBlockFilms() {
+  return function fetchBlockFilmsSF() {
     return _ref.apply(this, arguments);
   };
 }();
 
-fetchBlockFilms();
-//# sourceMappingURL=blocks-films.js.map
+fetchBlockFilmsSF();
+//# sourceMappingURL=other__films.js.map

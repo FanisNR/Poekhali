@@ -75,3 +75,4 @@ for (let index = 0; index < filmData.length; index++) {
         tableBody.innerHTML += film.renderFilmTableItem();
     }
 }
+

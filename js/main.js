@@ -24,7 +24,7 @@
         center:true, 
         responsiveClass:true,
         loop: false,
-        rewind: true
+        rewind: true,
         responsive:{
             0:{
                 items:1,
@@ -38,3 +38,7 @@
    })
 
     
+   /*  TO-TOP++++++++++++++========================*/
+$('.toTop:first').click(function () {
+    $('html').animate({ scrollTop: 0 }, 1000);
+})

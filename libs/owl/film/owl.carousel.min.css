@@ -132,17 +132,19 @@
     grid-template-columns: 1fr 1fr;
 }
 .owl-carousel .owl-nav button.owl-prev {
-    left: -3.5%;
+    left: -4%;
     background-image: url("/images/navarrowleft.svg");
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat; 
+    z-index: 1000;   
 }
 .owl-carousel .owl-nav button.owl-prev:hover {
     background-image: url("/images/navarrwhite.svg");
 }
 .owl-carousel .owl-nav button.owl-next {
-    right: -3.5%;
+    right: -4%;
     background-image: url("/images/navarrow.svg");
     background-repeat: no-repeat;
+    z-index: 1000; 
 }
 .owl-carousel .owl-nav button.owl-next:hover {
     background-image: url("/images/navarrwhiteridht.svg");

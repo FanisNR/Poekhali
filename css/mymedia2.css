@@ -358,6 +358,13 @@
     .footer__container {
         width: 38rem;
     }
+    .block__wrap_img {
+        flex-wrap: wrap;
+    }
+    .block_img,
+    .block_desc {
+        width: 100%;
+    }
 
 
 }

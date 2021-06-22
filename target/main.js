@@ -19,11 +19,12 @@ $(document).ready(function () {
 /*  карусель++++++++++++++========================*/
 
 $(".owl-carousel").owlCarousel({
-  loop: true,
   nav: true,
   dots: false,
   center: true,
   responsiveClass: true,
+  loop: false,
+  rewind: true,
   responsive: {
     0: {
       items: 1,
@@ -34,5 +35,12 @@ $(".owl-carousel").owlCarousel({
       nav: true
     }
   }
+});
+/*  TO-TOP++++++++++++++========================*/
+
+$('.toTop:first').click(function () {
+  $('html').animate({
+    scrollTop: 0
+  }, 1000);
 });
 //# sourceMappingURL=main.js.map

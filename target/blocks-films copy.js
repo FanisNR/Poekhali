@@ -134,11 +134,10 @@ var fetchBlockFilms = /*#__PURE__*/function () {
             return Promise.all(request);
 
           case 11:
-            blockFilmsWrapper.innerHTML = '';
             elements = _toConsumableArray(filmblocksMap.values()).slice(0, 9);
             blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements));
 
-          case 14:
+          case 13:
           case "end":
             return _context3.stop();
         }
@@ -152,4 +151,4 @@ var fetchBlockFilms = /*#__PURE__*/function () {
 }();
 
 fetchBlockFilms();
-//# sourceMappingURL=blocks-films.js.map
+//# sourceMappingURL=blocks-films copy.js.map

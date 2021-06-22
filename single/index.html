@@ -30,6 +30,7 @@
     <script defer src="../target/prize.js"></script>
     <script defer src="../target/blocks-films.js"></script>
     <script defer src="/js/single-film.js"></script>
+    <script defer src="/js/SB-films .js"></script>
 
 </head>
 <body class="cinema">
@@ -172,12 +173,12 @@
                                         mollit anim id est laborum.
         
                                     </div>
-                                    <div class="table_fiml__info">
+                                    <div id="sf-table" class="table_fiml__info">
                                         <table>
                                             <tbody class="table_body">
                                                 <tr>
                                                     <td class="head_info">Страна</td>
-                                                    <td class="head_desc">Дания</td>
+                                                    <td class="head_desc " id="sf-country">Дания</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="head_info">Режиссер</td>
@@ -214,8 +215,7 @@
                             </div>
                         </div>
                     </div>
-        
-        
+
                     <div class="head__other_film__wrapper">
                         <div class="head__other_film">Другие фильмы</div>
                         
@@ -224,7 +224,34 @@
                                 <div class="head__genre_film">Экшн</div>
                                 <div class="head__other_list">1/30</div>
                             </div>
-                            <div class="block__films_genre owl-carousel owl-theme">
+                            <div id="block__films_genre" class="block__films_genre owl-carousel owl-theme">
+                                <div class="film_block_carousel">
+                                    <div class="wrap_block_carousel__img">
+                                        <img src="/images/film2.jpg" alt="">
+                                    </div>
+                                    <div class="film_block_wrap_other_films">
+                                        <span class="name_block_film">Лёд</span>
+                                        <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                                    </div>
+                                </div>
+                                <div class="film_block_carousel">
+                                    <div class="wrap_block_carousel__img">
+                                        <img src="/images/film2.jpg" alt="">
+                                    </div>
+                                    <div class="film_block_wrap_other_films">
+                                        <span class="name_block_film">Лёд</span>
+                                        <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                                    </div>
+                                </div>
+                                <div class="film_block_carousel">
+                                    <div class="wrap_block_carousel__img">
+                                        <img src="/images/film2.jpg" alt="">
+                                    </div>
+                                    <div class="film_block_wrap_other_films">
+                                        <span class="name_block_film">Лёд</span>
+                                        <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                                    </div>
+                                </div>
                                 <div class="film_block_carousel">
                                     <div class="wrap_block_carousel__img">
                                         <img src="/images/film2.jpg" alt="">
@@ -319,35 +346,7 @@
                     </div>
             </main> 
         </section>
-        <section id="" class="">
-             
-        </section>   
-        <section id="" class="">
-             
-        </section>
-        <section class="">
-            
-        </section>
-        <section id="" class="">            
-             
-        </section>
-        
-        <section class="">
-            
-        </section>   
-        <section id="" class="">
-            
-        </section>      
 
-        <section class="">
-            
-        </section>  
-        <section class="">
-          
-        </section> 
-        <section class="">
-   
-        </section>
     </main>
     <footer class="footer">
         <div class="footer__container">
@@ -433,6 +432,13 @@
             </div>  
         </div>   
     </footer>
+    <section>
+        <div class="toTop">
+            <svg class="strelka-top-2" viewBox="0 0 11 16">
+                <path class="svg-strelka" d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z" ></path>
+            </svg>
+        </div>
+    </section>
     <svg style="display: none;">
         <symbol id="rating-star" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

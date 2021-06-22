@@ -17,7 +17,9 @@ const FilmKinopoickData = async () => {
     description.textContent = FilmData.description;
     posterImage.src = FilmData.posterUrl;
     premiere.textContent = FilmData.premiereRu;
-        
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++=*/
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++=*/
 }
 
 const fetchfilmMeta = async () => { 
@@ -32,7 +34,12 @@ const fetchfilmMeta = async () => {
     likes.textContent = `${body.likes} likes`;
     const rating = body.ratings.reduce((a, b) => a + b, 0) / body.ratings.length;
     const intRating = Math.round(rating);
-    ratingNumber.textContent = Math.floor(rating * 10) / 10 ;
+    if (isNaN(intRating)){
+        ratingNumber.textContent = '0.0'
+    } else {
+        ratingNumber.textContent = Math.floor(rating * 10) / 10 ;
+    }
+    
     
     for (let i = 0; i < stars.length; i++) {
         if (i >= intRating) break;
@@ -44,8 +51,14 @@ const fetchfilmMeta = async () => {
 }
 
 const likeIcon = document.getElementById('like-icon');
+const FILM_KEY = `film-${filmId}`;
+const liked = localStorage.getItem(FILM_KEY);
+if(liked !== null) {
+    likeIcon.classList.add('like-icon--liked');
+}
 likeIcon.addEventListener('click', () => {
     if(!likeIcon.classList.contains('like-icon--liked')) {
+        localStorage.setItem(FILM_KEY, true)
         const likeCount = parseInt(likes.textContent, 10) + 1;
 
         likes.innerText = `${likeCount} Likes`;
@@ -63,7 +76,7 @@ likeIcon.addEventListener('click', () => {
         );
     }    
 })
-
+/*
 for (const star of stars) {
     star.addEventListener('click', () => {
         console.log(star.dataset.value);
@@ -78,6 +91,21 @@ for (const star of stars) {
 
     })
 }
+*/
+$('.rating_stars').on('click', '.rt-star', async function () {
+
+    await fetch(`http://inno-ijl.ru/multystub/stc-21-03/film/${filmId}/rating`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            rating: +this.dataset.value
+        })
+    });
+    //fethcFilmMeta();
+})
+
 FilmKinopoickData();
 fetchfilmMeta();
 
