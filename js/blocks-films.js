@@ -1,5 +1,4 @@
 const blockFilmsWrapper = document.getElementById('film-1__films__wrapper');
-blockFilmsWrapper.innerHTML = '';
 
 
 function renderFilmblock(posterUrl, title, id) {

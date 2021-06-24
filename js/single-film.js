@@ -103,7 +103,7 @@ $('.rating_stars').on('click', '.rt-star', async function () {
             rating: +this.dataset.value
         })
     });
-    //fethcFilmMeta();
+    fethcfilmMeta();
 })
 
 FilmKinopoickData();

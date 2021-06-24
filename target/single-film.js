@@ -182,6 +182,9 @@ $('.rating_stars').on('click', '.rt-star', /*#__PURE__*/_asyncToGenerator( /*#__
           });
 
         case 2:
+          fethcfilmMeta();
+
+        case 3:
         case "end":
           return _context3.stop();
       }

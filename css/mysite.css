@@ -842,8 +842,8 @@ html {
     border-radius: 0.5rem;
     overflow: hidden;
     height: 16.55rem;
-    min-width: 12.25rem;
-
+    width: 12.25rem;
+    overflow: hidden;
     display: grid;
     grid-template-rows: 2fr 1fr 1.1fr;
     grid-template-areas: 
@@ -872,14 +872,11 @@ html {
     font-size: 1rem;
     line-height: 1.3;
     color: #FFFFFF;
-
     grid-area: food;
-    width: 12.28rem;
-    height: 100%;
     background: rgba(163, 204, 64, 0.8);
     position: relative;
     grid-area: food;
-    width: 12.28rem;
+    width: 100%;
     height: 100%;
     z-index: 1;
 }
@@ -888,7 +885,7 @@ html {
     top: -3.25rem;
     content: "";
     border-top: 3.25rem solid transparent;
-    border-right: 12.28rem solid rgba(163, 204, 64, 0.8);
+    border-right: 12.3rem solid rgba(163, 204, 64, 0.8);
     z-index: -1;
 
 }
@@ -898,7 +895,7 @@ html {
     text-align: center;
 
     display:block;
-    width: auto;
+    width:max-content;
     height: 100%;
     margin: 0 auto; 
 }
@@ -907,7 +904,7 @@ html {
     background: rgba(163, 204, 64, 0.8);
     position: absolute;
     margin-top: 12.25rem;
-    width: 12.25rem;
+    width: 100%;
     height: 4.4rem;
 }
 .present__one {
@@ -1909,7 +1906,7 @@ select.input__error {
     transform: rotate(270deg) scale(1.1);
 
 }
-.strelka-top-2 path:hover {
+.toTop:hover .strelka-top-2 path {
     fill: #A3CC40;
     transform: scale(1.1);
     bottom: 0.6rem;
