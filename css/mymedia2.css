@@ -97,6 +97,9 @@
         display: table;
         margin-right: 0;
     }
+    .cinema__addres-link{
+        color: #9B9B9B;
+    }
     .header__contact a{
         margin-bottom: 1rem;
         font-size: 1rem;
@@ -365,6 +368,22 @@
     .block_desc {
         width: 100%;
     }
+
+    .block_desc {
+        padding: 0;
+    }
+    .head__other_film{
+        width: 100%;
+    }
+    .block__other_films {
+        width: 100%;
+    }
+    .block__films_genre .owl-carousel .owl-nav button.owl-prev {
+        left: 4%;
+    } 
+    .block__films_genre .owl-carousel .owl-nav button.owl-next {
+        right: 4%;
+    } 
 
 
 }
@@ -1413,6 +1432,10 @@
    }
    .foot {
        height: 100%;
+   }
+   .header_film{
+       font-size: 2rem;
+       line-height: 1.95rem;
    }
 } 
 @media screen and (max-height: 330px) {

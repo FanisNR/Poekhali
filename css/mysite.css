@@ -133,11 +133,32 @@ html {
     margin-right: 2.55rem;
 }
 .cinema__addres {
-    margin-right: 2.6rem;
-
+    
+    display: inline-block;
+    margin-right: 2.11rem;
 }
-.cinema__tel:hover,
-.cinema__addres:hover {
+.cinema__down-arrow{
+    fill: #FFFFFF;
+    vertical-align: middle;
+    
+}
+.cinema__addres-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-right: 0.09rem;
+    cursor: pointer;
+}
+.cinema__addres:hover svg {
+    fill: #A3CC40;
+    transform: rotate(180deg);  
+}
+
+
+.cinema__addres:hover .cinema__addres-link  {
+    color: #a3cc40;
+    
+}
+.cinema__tel:hover {
     color: #a3cc40;
 }
 .phone svg{

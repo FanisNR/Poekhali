@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="libs/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="libs/owl/owl.theme.default.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/mysite.css">
     <link rel="stylesheet" type="text/css" href="css/animations.css">
@@ -24,12 +25,15 @@
     <script defer src="libs/polyfill.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="libs/owl/owl.carousel.min.js"></script>
+    <script defer src="libs/fancybox/jquery.fancybox.min.js"></script>
+    
     <script defer src="target/main.js"></script>
     <script defer src="target/utils.js"></script>
     <script defer src="target/film.js"></script>
     <script defer src="target/films-table.js"></script>    
     <script defer src="target/prize.js"></script>
     <script defer src="target/blocks-films.js"></script>
+    <script defer src="target/city.js"></script>
 
 </head>
 <body class="cinema">
@@ -52,8 +56,13 @@
                             <div class="header__contact">
                                 <a class="cinema__tel" href="tel:+78003551256">+7 (800) 355 12-56</a>
                                 <a class="cinema__mail" href="mailto:kino@innopolis.ru">kino@innopolis.ru</a> 
-                                <a class="cinema__addres" href="#">ул.Спортивная д.1</a> 
-                                <a class="cinema__call phone" href="#" target="_blank">  
+                                <div class="cinema__addres">
+                                    <a class="cinema__addres-link" id="city_link" data-fancybox data-src="#modal1_city" href="#">ул.Спортивная д.1</a>
+                                    <svg class="cinema__down-arrow" width="0.4rem" height="0.2rem" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path id="arrow" fill-rule="evenodd" clip-rule="evenodd" d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"/>
+                                    </svg> 
+                                </div>
+                                <a class="cinema__call phone"  href="#" target="_blank">  
                                     <svg width="0.5rem" height="0.5rem" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z"/>
                                     </svg>                        
@@ -735,6 +744,12 @@
             </svg>
         </div>
     </section>  
+    <section>
+        <div id="modal1_city">
+            <input type="text" id="city_input" >
+            <div id="search_result"></div>
+        </div>
+    </section>
     <div class="pop-up hidden" id="prize_pop-up">
         <div class="form_wrap">
             <!--<button class="close" id="prize_pop-up__close"><svg width="35" height="35" viewBox="0 0 35 35" fill="none"
