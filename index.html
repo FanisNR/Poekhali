@@ -534,7 +534,7 @@
                         <label class="input_lable" id="name_label" for="feedback_name">Полное имя</label>
                         <input class="input__input feedback__width" id="feedback_name" name="name" type="text"
                             aria-labelledby="name_label">
-                        <p class="input__error_mmsg"></p>
+                        <span class="input__error_mmsg"></span>
                     </div>
                     <div class="feedback__place-number ">
                         <label for="feedback_select" id="select_label"></label>
@@ -549,19 +549,20 @@
                             <option value="6">6 место</option>
                             <option value="7">7 место</option>
                         </select>
-                        <p class="input__error_mmsg "></p>
+                        <span class="input__error_mmsg "></span>
                     </div>
                     <div class="input_block input_block1 input__filled input__error feedback-form__name">
                         <label for="feedback_textarea" id="textarea_label"></label>
                         <input type="email" class=" form-field input__input feedback-form__review-field feedback__width" name="email"
                             id="feedback_textarea" rows="5" placeholder="Ваш e-mail"
                             aria-labelledby="textarea_label"></input>
-                        <p class="input__error_mmsg"></p>
+                        <span class="input__error_mmsg"></span>
                     </div>
                     <label class="feedback__checkbox" for="feedback_checkbox">
-                        <input type="checkbox" class="feedback__input" id="feedback_checkbox" name="agree" required>
+                        <input type="checkbox" class="feedback__input" id="feedback_checkbox" name="agree">
                         <span class="feedback__fake-checkbox"></span>
                         Я согласен на обработку своих персональных данных
+                        <span class="input__error_mmsg "></span>
                     </label>
                     <div class="feedback__bth">
                         <button id="btn_form" class="feedback__button" type="submit">Послать</button>
@@ -720,7 +721,7 @@
                     <input class="input__input feedback__width" id="feedback_name" name="feedback_name" type="text"
                         aria-labelledby="name_label" value="name">
                     <p class="input_lable" id="name_label">Введите имя</p>
-                    <p class="input__error_mmsg">Error message</p>
+                    <span class="input__error_mmsg">Error message</span>
                 </div>
 
                 <div class="input_block input__filled input__error feedback-form__name">
@@ -728,7 +729,7 @@
                     <input class="input__input feedback__width" id="feedback_name_prize" name="email" type="text"
                         aria-labelledby="name_label" value="name">
                     <p class="input_lable" id="name_label_prize">Введите email</p>
-                    <p class="input__error_mmsg">Error message</p>
+                    <span class="input__error_mmsg">Error message</span>
                 </div>
 
                 <label for="feedback_select" id="select_label_prize"></label>

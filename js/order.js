@@ -59,8 +59,12 @@ function showErrors(msg) {
                 if (!parent.length)
                     parent = $(this).closest('.feedback__place-number');
                 parent.addClass('input__error')
+                if (!parent.length)
+                    parent = $(this).closest('.feedback__checkbox');
+                document.querySelector('.feedback__fake-checkbox').classList.add("feedback__checkbox-error");
+                document.querySelector('.feedback__checkbox').classList.add("feedback__checkbox-error-text");
                 for (let j in msg.responseJSON.errors[i]) {
-                    parent.append('<p class="input__error_mmsg">' + msg.responseJSON.errors[i][j] + '</p>');
+                    parent.append('<span class="input__error_mmsg">' + msg.responseJSON.errors[i][j] + '</span>');
                 }
             }
         }

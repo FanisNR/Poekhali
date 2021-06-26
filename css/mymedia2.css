@@ -341,8 +341,9 @@
         font-size: 0.7rem;
         color: #FFFFFF;
         text-shadow: #000000 0 0 0.2rem;
-
-
+    }
+    .feedback__checkbox-error-text {     
+        color: red;
     }
     .feedback__opinion textarea {
         height: auto;

@@ -1194,6 +1194,13 @@ html {
     background-color: #FFFFFF;
     /*background: url('../images/whiteCheckMark.svg') no-repeat  50% 50% / cover;*/
 }
+.feedback__checkbox-error {     
+    box-shadow: 0 0 0 0.1rem rgba(243, 77, 77, 0.52);
+}
+.feedback__checkbox-error-text {     
+    color: red;
+}
+
 
 .feedback__input:checked + .feedback__fake-checkbox {
     background: url('../images/greencheckMark.svg') no-repeat  50% 50% / cover;
