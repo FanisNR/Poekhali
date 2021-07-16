@@ -1138,6 +1138,7 @@ html {
     font-weight: normal;
     cursor: pointer; 
     padding-top: 0.05rem;
+    position: relative;
 }
 .feedback__seat {
     -webkit-appearance: none;
@@ -1608,7 +1609,10 @@ cursor: pointer;
 }
 
 .input__error .input__input,
-select.input__error {
+select.input__error,
+.input__error {
+    border:  #f9a2a2;
+    border-radius: 0.4rem;
     box-shadow: 0 0 0 0.25rem rgba(243, 77, 77, 0.52);
 }
 
